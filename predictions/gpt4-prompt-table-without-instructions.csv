@@ -1,0 +1,71 @@
+,raw_prompt_output
+0,"Column 1: Phone Number, Column 2: Business Name, Column 3: Zip Code, Column 4: State, Column 5: Country, Column 6: Longitude, Column 7: Latitude, Column 8: Operating Hours, Column 9: Operating Days"
+1,"Column 1: Phone Number, Column 2: Restaurant Name, Column 3: Restaurant Description, Column 4: Country Code, Column 5: Operating Days, Column 6: Opening Time"
+2,"Column 1: Restaurant Name, Column 2: Postal Code, Column 3: Payment Methods, Column 4: State, Column 5: City"
+3,"Column 1: Restaurant Name, Column 2: Phone Number, Column 3: Description, Column 4: City, Column 5: State, Column 6: Payment Methods, Column 7: Zip Code, Column 8: Longitude, Column 9: Latitude, Column 10: Opening Hours, Column 11: Days of Operation"
+4,"Column 1: Restaurant Name, Column 2: Price Range, Column 3: Contact Number"
+5,"Column 1: Restaurant Name, Column 2: Restaurant Phone Number, Column 3: Price Range, Column 4: Country Code, Column 5: Region, Column 6: Postal Code, Column 7: Longitude, Column 8: Latitude, Column 9: City, Column 10: Description"
+6,"Column 1: Restaurant Name, Column 2: Restaurant Phone Number, Column 3: Restaurant Location, Column 4: Restaurant Postal Code"
+7,"Column 1: Restaurant Name, Column 2: Restaurant Phone Number, Column 3: Restaurant Description, Column 4: State, Column 5: Price Range, Column 6: Country, Column 7: City, Column 8: Zip Code"
+8,"Column 1: Restaurant Name, Column 2: Restaurant Phone Number, Column 3: Restaurant Cuisine, Column 4: Price Range, Column 5: Zip Code, Column 6: Longitude, Column 7: Latitude, Column 8: State"
+9,"Column 1: Phone Number, Column 2: Restaurant Name, Column 3: Price Range, Column 4: City, Column 5: Postal Code, Column 6: Longitude, Column 7: Latitude, Column 8: Country Code, Column 9: Description"
+10,"Column 1: Restaurant Name, Column 2: Unique Identifier, Column 3: Restaurant Description, Column 4: Price Range, Column 5: Country Code, Column 6: City, Column 7: Payment Methods, Column 8: Longitude, Column 9: Latitude, Column 10: Opening Hours, Column 11: Operating Days, Column 12: Customer Reviews."
+11,"Column 1: Event Start Time, Column 2: Event Title, Column 3: Event Description, Column 4: Event End Time, Column 5: Event Schema URL"
+12,"Column 1: Event Start Date and Time, Column 2: Event Description, Column 3: Event Status, Column 4: Event End Date and Time, Column 5: Event Attendance Mode"
+13,"Column 1: Event Start Date and Time
+Column 2: Event Name
+Column 3: Event Description
+Column 4: Event End Date and Time
+Column 5: Event Status URL
+Column 6: Event Attendance Mode URL
+Column 7: Currency Type
+Column 8: Event Organizer"
+14,"Column 1: Event Start Time, Column 2: Event Name, Column 3: Event Description, Column 4: Event End Time, Column 5: Currency Symbol"
+15,"Column 1: Event Name and Date, Column 2: Event Date and Time in ISO 8601 Format, Column 3: Event Description, Column 4: Contact Number, Column 5: Event Location"
+16,"Column 1: Event Date, Column 2: Event Name, Column 3: Event Description, Column 4: Event End Date, Column 5: Event Attendance Mode, Column 6: Event Status"
+17,"Column 1: Event Name, Column 2: Event Status, Column 3: Event Description, Column 4: Event Location, Column 5: Attendance Mode"
+18,"Column 1: Event Start Date, Column 2: Event Name, Column 3: Event End Date, Column 4: Event Mode, Column 5: Currency, Column 6: Event Description"
+19,"Column 1: Event Start Date
+Column 2: Event Name
+Column 3: Event End Date
+Column 4: Event Description
+Column 5: Event Attendance Mode
+Column 6: Event Currency
+Column 7: Event Status"
+20,"Column 1: Event Name, Column 2: Lecture Title, Column 3: Lecture Description, Column 4: Attendance Mode, Column 5: Event Date, Column 6: Organizing Body, Column 7: Contact Number."
+21,"Column 1: Hotel and Attraction Name, Column 2: Hotel Contact Information, Column 3: Hotel Email Address, Column 4: Hotel Fax Number, Column 5: Hotel Booking Information, Column 6: Postal Code, Column 7: Country"
+22,"Column 1: Hotel Name, Column 2: Hotel Contact Number, Column 3: Hotel Description, Column 4: Hotel Alternate Contact Number, Column 5: Check-in Time, Column 6: City, Column 7: Postal Code, Column 8: Check-out Time, Column 9: Country, Column 10: Special Amenities."
+23,"Column 1: Hotel Name
+Column 2: Contact Number
+Column 3: Description
+Column 4: Check-in Time
+Column 5: Check-out Time
+Column 6: Postal Code
+Column 7: City
+Column 8: Country
+Column 9: Price Range per Night
+Column 10: Amenities and Services"
+24,"Column 1: Hotel Name, Column 2: Hotel Description, Column 3: Hotel Rating, Column 4: Pricing and Meal Plan"
+25,"Column 1: Hotel Name
+Column 2: Hotel Description
+Column 3: Hotel Image URL
+Column 4: Check-in Time
+Column 5: Price Range
+Column 6: Hotel Rating
+Column 7: Check-out Time
+Column 8: Hotel Amenities"
+26,"Column 1: City, Column 2: Hotel Name, Column 3: Hotel Rating, Column 4: Country, Column 5: Guest Review"
+27,"Column 1: Hotel Name, Column 2: Reservation Email, Column 3: Image URL, Column 4: Country, Column 5: City, Column 6: Rating, Column 7: Description/Offers"
+28,"Column 1: Hotel Name, Column 2: Hotel Description, Column 3: Check-out Time, Column 4: Check-in Time, Column 5: Postal Code, Column 6: City, Column 7: Country, Column 8: Rating, Column 9: Amenities, Column 10: Accepted Payment Methods"
+29,"Column 1: Park or Resort Name, Column 2: Contact Email, Column 3: Description or Activity, Column 4: Image URL"
+30,"Column 1: Hotel Name, Column 2: Hotel Description, Column 3: Payment Methods, Column 4: Rating, Column 5: Contact Information"
+31,"Column 1: Song Title, Column 2: Song Duration, Column 3: Album Name, Column 4: Artist Name"
+32,"Column 1: Song Title, Column 2: Song Duration, Column 3: Album Name, Column 4: Artist Name"
+33,"Column 1: Song Title, Column 2: Song Duration, Column 3: Artist Name"
+34,"Column 1: Song Title, Column 2: Song Duration, Column 3: Album Name"
+35,"Column 1: Song Title, Column 2: Song Duration, Column 3: Artist Name, Column 4: Album Name"
+36,"Column 1: Duration of Song, Column 2: Song Title, Column 3: Album Title, Column 4: Artist Name"
+37,"Column 1: Song Title, Column 2: Song Duration, Column 3: Artist Name, Column 4: Album Name"
+38,"Column 1: Song Title and Featured Artist, Column 2: Song Duration, Column 3: Song Producer"
+39,"Column 1: Song Title, Column 2: Song Duration, Column 3: Album or Category, Column 4: Artist or Speaker"
+40,"Column 1: Song Title, Column 2: Song Duration, Column 3: Song Title (Duplicate), Column 4: Artist Name"

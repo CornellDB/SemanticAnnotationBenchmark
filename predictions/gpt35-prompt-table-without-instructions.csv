@@ -1,0 +1,251 @@
+,raw_prompt_output
+0,"Column 1: Phone number
+Column 2: Name of establishment
+Column 3: Zip code
+Column 4: State
+Column 5: Country
+Column 6: Longitude
+Column 7: Latitude
+Column 8: Hours of operation
+Column 9: Days of the week"
+1,"Column 1: Phone number
+Column 2: Restaurant name
+Column 3: Restaurant description
+Column 4: Location (Singapore)
+Column 5: Operating days
+Column 6: Operating hours"
+2,"Column 1: Restaurant Name
+Column 2: Postal Code
+Column 3: Payment Methods
+Column 4: State
+Column 5: Suburb"
+3,"Column 1: Restaurant name
+Column 2: Phone number
+Column 3: Description of menu items
+Column 4: City
+Column 5: State
+Column 6: Accepted payment methods
+Column 7: Zip code
+Column 8: Longitude
+Column 9: Latitude
+Column 10: Hours of operation
+Column 11: Days of the week"
+4,"Column 1: Restaurant/Bakery Name
+Column 2: Price Range
+Column 3: Phone Number"
+5,"Column 1: Restaurant name
+Column 2: Phone number
+Column 3: Price range
+Column 4: Country
+Column 5: Region
+Column 6: Postal code
+Column 7: Longitude
+Column 8: Latitude
+Column 9: City/town
+Column 10: Description of the restaurant."
+6,"Column 1: Restaurant name
+Column 2: Phone number
+Column 3: Location (borough)
+Column 4: Postal code"
+7,"Column 1: Restaurant name
+Column 2: Phone number
+Column 3: Menu items
+Column 4: State
+Column 5: Price range
+Column 6: Country
+Column 7: City
+Column 8: Zip code"
+8,"Column 1: Restaurant name
+Column 2: Phone number
+Column 3: Type of cuisine
+Column 4: Price range
+Column 5: Zip code
+Column 6: Longitude
+Column 7: Latitude
+Column 8: State abbreviation"
+9,"Column 1: Phone number
+Column 2: Restaurant name
+Column 3: Price range
+Column 4: City
+Column 5: Postal code
+Column 6: Longitude
+Column 7: Latitude
+Column 8: Country code
+Column 9: Description/Review"
+10,"Column 1: Restaurant name
+Column 2: Menu item or service availability
+Column 3: Description of food or service
+Column 4: Price range
+Column 5: Country code (UG for Uganda)
+Column 6: City or location
+Column 7: Payment methods accepted
+Column 8: Latitude coordinates
+Column 9: Longitude coordinates
+Column 10: Opening hours
+Column 11: Days of the week open
+Column 12: Customer review or feedback"
+11,"Column 1: Date and Time
+Column 2: Event Title
+Column 3: Event Description
+Column 4: Event End Time
+Column 5: Event Scheduled Status"
+12,"Column 1: Date and Time
+Column 2: Event Title or Description
+Column 3: Event Scheduled Time
+Column 4: Event End Time
+Column 5: Event Attendance Mode"
+13,"Column 1: Date and Time
+Column 2: Gun Show Name
+Column 3: Gun Show Description
+Column 4: Date and Time
+Column 5: Event Scheduled URL
+Column 6: Offline Event Attendance Mode URL
+Column 7: Currency
+Column 8: Gun Show Organizer/Organization"
+14,"Column 1: Date and Time
+Column 2: Cooking Class Title
+Column 3: Description of Cooking Class
+Column 4: End Time
+Column 5: Price (in USD)"
+15,"Column 1: Event name/date
+Column 2: Event date/time in ISO format
+Column 3: Event description
+Column 4: Contact phone number
+Column 5: Event location"
+16,"Column 1: Date
+Column 2: Event/Program Name
+Column 3: Description/Details
+Column 4: Event Date
+Column 5: Event Attendance Mode
+Column 6: Event Schedule/Time"
+17,"Column 1: Event name or description
+Column 2: EventScheduled
+Column 3: Jury or instructor names
+Column 4: Venue or location
+Column 5: OfflineEventAttendanceMode"
+18,"Column 1: Date
+Column 2: Event Name
+Column 3: End Date
+Column 4: Event Attendance Mode
+Column 5: Currency
+Column 6: Event Description"
+19,"Column 1: Date
+Column 2: Event Name
+Column 3: Date
+Column 4: Event Location/Details
+Column 5: Event Attendance Mode
+Column 6: Currency
+Column 7: Event Status (Scheduled, Cancelled, Rescheduled)"
+20,"Column 1: Event title
+Column 2: Lecture title
+Column 3: Presenter name
+Column 4: Seminar description
+Column 5: Event attendance mode
+Column 6: Contact information"
+21,"Column 1: Location/Attraction
+Column 2: Contact Information
+Column 3: Email Address
+Column 4: Phone Number
+Column 5: Description/Tagline
+Column 6: Postal Code
+Column 7: Country"
+22,"Column 1: Hotel Name
+Column 2: Phone Number
+Column 3: Description of Hotel Rooms and Amenities
+Column 4: Hotel Phone Number for Reservations
+Column 5: City
+Column 6: Postal Code
+Column 7: Check-in Time
+Column 8: Country
+Column 9: Check-out Time
+Column 10: Not Applicable (NONE)"
+23,"Column 1: Name of Aparthotel
+Column 2: Phone number
+Column 3: Description of location
+Column 4: Check-in time
+Column 5: Check-out time
+Column 6: Postal code
+Column 7: City
+Column 8: Country
+Column 9: Price range
+Column 10: Amenities (wifi, pets, smoking, wheelchair access, parking, air conditioning, business corner, sports, square games, kids, fiber, pool, lotus, airport shuttle) and check-in/check-out information."
+24,"Column 1: Name of Accommodation
+Column 2: Description of Accommodation
+Column 3: Accommodation Rating
+Column 4: Accommodation Package and Price Information"
+25,"Column 1: Hotel Name
+Column 2: Description of the Hotel or Location
+Column 3: Image URL
+Column 4: Check-in Time
+Column 5: Room Rates
+Column 6: Hotel Rating
+Column 7: Check-out Time
+Column 8: Room Amenities"
+26,"Column 1: Location
+Column 2: Hotel/Resort Name
+Column 3: Rating/Score
+Column 4: Country
+Column 5: Review/Feedback Details"
+27,"Column 1: Hotel name
+Column 2: Email address for reservations
+Column 3: URL for hotel image
+Column 4: Country
+Column 5: City
+Column 6: Hotel rating
+Column 7: Hotel description and offers"
+28,"Column 1: Hotel Name
+Column 2: Description of Hotel
+Column 3: Check-in Time
+Column 4: Check-out Time
+Column 5: Postal Code
+Column 6: City
+Column 7: Country
+Column 8: Hotel Rating
+Column 9: Hotel Amenities
+Column 10: Accepted Payment Methods"
+29,"Column 1: Location/Name
+Column 2: Email
+Column 3: Description/Experience
+Column 4: Website/URL"
+30,"Column 1: Hotel Name
+Column 2: Description of Hotel/Location
+Column 3: Accepted Payment Methods
+Column 4: Hotel Rating
+Column 5: Fax Number"
+31,"Column 1: Song Titles
+Column 2: Duration
+Column 3: Category/Genre
+Column 4: Artist/Band Name"
+32,"Column 1: Song title
+Column 2: Duration
+Column 3: Category/Genre
+Column 4: Artist name"
+33,"Column 1: Song Title
+Column 2: Duration
+Column 3: Artist Name"
+34,"Column 1: Song title or name
+Column 2: Duration or length of the song
+Column 3: Cost or price of the song (possibly for a music streaming or purchasing service)"
+35,"Column 1: Title
+Column 2: Duration
+Column 3: Artist
+Column 4: Album/Mixtape"
+36,"Column 1: Duration
+Column 2: Title of Music Piece
+Column 3: Instrument or Music Genre
+Column 4: Composer or Performer"
+37,"Column 1: Song Title
+Column 2: Duration
+Column 3: Artist Name
+Column 4: Album/EP Title"
+38,"Column 1: Song title
+Column 2: Duration
+Column 3: Artist/Producer"
+39,"Column 1: Title of a work
+Column 2: Duration of a media file
+Column 3: Author or creator of a work
+Column 4: Artist or performer"
+40,"Column 1: Song title
+Column 2: Duration
+Column 3: Song title (repeated)
+Column 4: Artist/Band name"

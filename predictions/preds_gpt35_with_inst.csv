@@ -1,0 +1,251 @@
+,prompt_output_id,label,parsed_col_pred,class_pred_using_bert,highest_bertscore
+0,0,telephone,phone number,telephone,0.9295373558998108
+1,0,Restaurant/name,restaurant name,Restaurant/name,0.9305041432380676
+2,0,postalCode,zip code,postalCode,0.8968527317047119
+3,0,addressRegion,state,Country,0.9274347424507141
+4,0,Country,country,Country,0.9999999403953552
+5,0,CoordinateAT,longitude,Duration,0.8656346201896667
+6,0,CoordinateAT,latitude,CoordinateAT,0.8676142692565918
+7,0,Time,operating hours,Time,0.897517204284668
+8,0,DayOfWeek,days of the week,DayOfWeek,0.9341294765472412
+9,1,telephone,phone number,telephone,0.9295373558998108
+10,1,Restaurant/name,restaurant name,Restaurant/name,0.9305041432380676
+11,1,Restaurant/description,restaurant description,Restaurant/description,0.9295175671577454
+12,1,Country,location,Duration,0.949138879776001
+13,1,DayOfWeek,operating days,Time,0.8840101361274719
+14,1,Time,operating hours,Time,0.897517204284668
+15,2,Restaurant/name,restaurant name,Restaurant/name,0.9305041432380676
+16,2,postalCode,postal code,postalCode,0.9999999403953552
+17,2,paymentAccepted,payment methods,priceRange,0.9217021465301514
+18,2,addressRegion,state,Country,0.9274347424507141
+19,2,addressLocality,suburb,Photograph,0.8904809355735779
+20,3,Restaurant/name,restaurant name,Restaurant/name,0.9305041432380676
+21,3,telephone,phone number,telephone,0.9295373558998108
+22,3,Restaurant/description,menu description,Event/description,0.9471174478530884
+23,3,addressLocality,city,Country,0.944637656211853
+24,3,addressRegion,state,Country,0.9274347424507141
+25,3,paymentAccepted,accepted payment methods,paymentAccepted,0.8812751770019531
+26,3,postalCode,zip code,postalCode,0.8968527317047119
+27,3,CoordinateAT,longitude,Duration,0.8656346201896667
+28,3,CoordinateAT,latitude,CoordinateAT,0.8676142692565918
+29,3,Time,opening hours,Duration,0.8801085948944092
+30,3,DayOfWeek,days of the week,DayOfWeek,0.9341294765472412
+31,4,Restaurant/name,restaurant name,Restaurant/name,0.9305041432380676
+32,4,priceRange,price range,priceRange,1.000000238418579
+33,4,telephone,phone number,telephone,0.9295373558998108
+34,5,Restaurant/name,restaurant name,Restaurant/name,0.9305041432380676
+35,5,telephone,phone number,telephone,0.9295373558998108
+36,5,priceRange,price range,priceRange,1.000000238418579
+37,5,Country,country code,Country,0.9468234181404114
+38,5,addressRegion,department/region,Country,0.8828449249267578
+39,5,postalCode,postal code,postalCode,0.9999999403953552
+40,5,CoordinateAT,longitude,Duration,0.8656346201896667
+41,5,CoordinateAT,latitude,CoordinateAT,0.8676142692565918
+42,5,addressLocality,city/town,Country,0.9220682382583618
+43,5,Review,description/characteristics of the restaurant,Restaurant/description,0.9486865401268005
+44,6,Restaurant/name,restaurant name,Restaurant/name,0.9305041432380676
+45,6,telephone,phone number,telephone,0.9295373558998108
+46,6,addressLocality,borough,Duration,0.913311243057251
+47,6,postalCode,postal code,postalCode,0.9999999403953552
+48,7,Restaurant/name,restaurant name,Restaurant/name,0.9305041432380676
+49,7,telephone,phone number,telephone,0.9295373558998108
+50,7,Restaurant/description,menu items,Duration,0.9180716872215271
+51,7,addressRegion,state,Country,0.9274347424507141
+52,7,priceRange,price range,priceRange,1.000000238418579
+53,7,Country,country,Country,0.9999999403953552
+54,7,addressLocality,city,Country,0.944637656211853
+55,7,postalCode,zip code,postalCode,0.8968527317047119
+56,8,Restaurant/name,restaurant name,Restaurant/name,0.9305041432380676
+57,8,telephone,phone number,telephone,0.9295373558998108
+58,8,Restaurant/description,type of cuisine,Restaurant/name,0.9319480657577515
+59,8,priceRange,price range,priceRange,1.000000238418579
+60,8,postalCode,zip code,postalCode,0.8968527317047119
+61,8,CoordinateAT,longitude,Duration,0.8656346201896667
+62,8,CoordinateAT,latitude,CoordinateAT,0.8676142692565918
+63,8,addressRegion,state abbreviation,Country,0.901151180267334
+64,9,telephone,phone number,telephone,0.9295373558998108
+65,9,Restaurant/name,restaurant name,Restaurant/name,0.9305041432380676
+66,9,priceRange,price range,priceRange,1.000000238418579
+67,9,addressLocality,city,Country,0.944637656211853
+68,9,postalCode,postal code,postalCode,0.9999999403953552
+69,9,CoordinateAT,longitude,Duration,0.8656346201896667
+70,9,CoordinateAT,latitude,CoordinateAT,0.8676142692565918
+71,9,Country,country code,Country,0.9468234181404114
+72,9,Review,description of restaurant or menu,Restaurant/description,0.9447225332260132
+73,10,Restaurant/name,restaurant name,Restaurant/name,0.9305041432380676
+74,10,telephone,n/a,Organization,0.876169741153717
+75,10,Restaurant/description,menu description,Event/description,0.9471174478530884
+76,10,priceRange,price range,priceRange,1.000000238418579
+77,10,Country,country code,Country,0.9468234181404114
+78,10,addressLocality,city,Country,0.944637656211853
+79,10,paymentAccepted,payment methods,priceRange,0.9217021465301514
+80,10,CoordinateAT,latitude,CoordinateAT,0.8676142692565918
+81,10,CoordinateAT,longitude,Duration,0.8656346201896667
+82,10,Time,opening hours,Duration,0.8801085948944092
+83,10,DayOfWeek,customer reviews,Review,0.9103525876998901
+84,10,Review,additional comments/notes,Organization,0.876745343208313
+85,11,DateTime,date and time,DateTime,1.000000238418579
+86,11,Event/name,event title,Event/name,0.9616721272468567
+87,11,Event/description,event description,Event/description,1.0
+88,11,DateTime,end date and time,DateTime,0.9458933472633362
+89,11,EventStatusType,event scheduled url,Event/name,0.9212892055511475
+90,12,DateTime,date and time,DateTime,1.000000238418579
+91,12,Event/name,event title,Event/name,0.9616721272468567
+92,12,EventStatusType,event scheduled time,EventStatusType,0.9251720309257507
+93,12,DateTime,event end time,EventStatusType,0.9143704175949097
+94,12,EventAttendanceModeEnumeration,event attendance mode,EventAttendanceModeEnumeration,1.0
+95,13,DateTime,date and time,DateTime,1.000000238418579
+96,13,Event/name,event name,Event/name,1.0
+97,13,Event/description,event description,Event/description,1.0
+98,13,DateTime,end date and time,DateTime,0.9458933472633362
+99,13,EventStatusType,schema,Duration,0.904611349105835
+100,13,EventAttendanceModeEnumeration,schema,Duration,0.904611349105835
+101,13,currency,currency,currency,1.000000238418579
+102,13,Organization,event organizer/organization,EventStatusType,0.9145533442497253
+103,14,DateTime,date and time,DateTime,1.000000238418579
+104,14,Event/name,cooking class title,Event/name,0.9200044870376587
+105,14,Event/description,description of cooking class,Event/description,0.9520723819732666
+106,14,DateTime,end time,Date,0.9537440538406372
+107,14,currency,price,priceRange,0.9433408975601196
+108,15,Event/name,event date,EventStatusType,0.9439413547515869
+109,15,DateTime,event time,EventStatusType,0.9505937099456787
+110,15,Event/description,event description,Event/description,1.0
+111,15,telephone,contact number,faxNumber,0.901248574256897
+112,15,Organization,event location,Event/description,0.9553745985031128
+113,16,Date,date,Date,0.9999997019767761
+114,16,Event/name,event/program name,Event/name,0.9601585268974304
+115,16,Event/description,description/details,Event/description,0.9048013091087341
+116,16,Date,event date,EventStatusType,0.9439413547515869
+117,16,EventAttendanceModeEnumeration,event attendance mode,EventAttendanceModeEnumeration,1.0
+118,16,EventStatusType,event schedule/time,Event/description,0.9285176396369934
+119,17,Event/name,event or course name,Event/name,0.9432790279388428
+120,17,EventStatusType,event scheduled,EventStatusType,0.9348434209823608
+121,17,Event/description,jury or instructor names,Event/name,0.8794988989830017
+122,17,Organization,venue or institution name,Event/name,0.8944969177246094
+123,17,EventAttendanceModeEnumeration,offline event attendance mode,EventAttendanceModeEnumeration,0.9413925409317017
+124,18,Date,date,Date,0.9999997019767761
+125,18,Event/name,event name,Event/name,1.0
+126,18,Date,end date,Date,0.9999999403953552
+127,18,EventAttendanceModeEnumeration,event attendance mode,EventAttendanceModeEnumeration,1.0
+128,18,currency,currency,currency,1.000000238418579
+129,18,Event/description,event description,Event/description,1.0
+130,19,Date,date,Date,0.9999997019767761
+131,19,Event/name,motorcycle rally name,Event/name,0.8990393877029419
+132,19,Date,date,Date,0.9999997019767761
+133,19,Event/description,location or information about the rally,Event/description,0.8945387005805969
+134,19,EventAttendanceModeEnumeration,attendance mode,EventAttendanceModeEnumeration,0.9365993142127991
+135,19,currency,currency,currency,1.000000238418579
+136,19,EventStatusType,event status,EventStatusType,0.9999997615814209
+137,20,Event/name,event title,Event/name,0.9616721272468567
+138,20,Event/description,lecture topic,Event/description,0.9055631160736084
+139,20,EventAttendanceModeEnumeration,presenter name,Event/name,0.938014030456543
+140,20,DateTime,seminar description,Event/description,0.9111436605453491
+141,20,Organization,online event attendance mode,EventAttendanceModeEnumeration,0.9622122049331665
+142,20,telephone,contact information,Time,0.8692063093185425
+143,21,Hotel/name,hotel name,LocationFeatureSpecification,0.9526121616363525
+144,21,telephone,contact information,Time,0.8692063093185425
+145,21,email,email address,email,1.0
+146,21,faxNumber,phone number,telephone,0.9295373558998108
+147,21,Hotel/description,tourist attraction,LocationFeatureSpecification,0.8967369794845581
+148,21,postalCode,hotel booking information,LocationFeatureSpecification,0.9410590529441833
+149,21,Country,location/country,Country,0.9202157855033875
+150,22,Hotel/name,hotel name,LocationFeatureSpecification,0.9526121616363525
+151,22,telephone,hotel phone number,LocationFeatureSpecification,0.9317126274108887
+152,22,Hotel/description,hotel description,LocationFeatureSpecification,0.9475786685943604
+153,22,faxNumber,hotel reservation phone number,LocationFeatureSpecification,0.9107822775840759
+154,22,Time,city,Country,0.944637656211853
+155,22,addressLocality,postal code,postalCode,0.9999999403953552
+156,22,postalCode,check-in time,Time,1.0000001192092896
+157,22,Time,country,Country,0.9999999403953552
+158,22,Country,check-out time,Time,1.0000001192092896
+159,22,LocationFeatureSpecification,additional information,EventStatusType,0.8906165361404419
+160,23,Hotel/name,name of aparthotel,Hotel/name,1.0000001192092896
+161,23,telephone,phone number,telephone,0.9295373558998108
+162,23,Hotel/description,location description,Event/description,0.9535768032073975
+163,23,Time,check-in time,Time,1.0000001192092896
+164,23,Time,check-out time,Time,1.0000001192092896
+165,23,postalCode,postal code,postalCode,0.9999999403953552
+166,23,addressLocality,city,Country,0.944637656211853
+167,23,Country,country,Country,0.9999999403953552
+168,23,priceRange,price range,priceRange,1.000000238418579
+169,23,LocationFeatureSpecification,amenities and services offered,LocationFeatureSpecification,0.9139012098312378
+170,24,Hotel/name,name of accommodation,Hotel/name,0.9605623483657837
+171,24,Hotel/description,description of accommodation,Hotel/description,0.9619791507720947
+172,24,Rating,accommodation rating,-,0.8471941351890564
+173,24,priceRange,accommodation package and price information,LocationFeatureSpecification,0.8810515403747559
+174,25,Hotel/name,hotel name,LocationFeatureSpecification,0.9526121616363525
+175,25,Hotel/description,description of the hotel location,Hotel/description,0.9730274677276611
+176,25,Photograph,hotel image,Photograph,0.8707922697067261
+177,25,Time,check-in time,Time,1.0000001192092896
+178,25,priceRange,room rates,LocationFeatureSpecification,0.9172616004943848
+179,25,Rating,hotel rating,LocationFeatureSpecification,0.9311434030532837
+180,25,Time,check-out time,Time,1.0000001192092896
+181,25,LocationFeatureSpecification,room amenities,LocationFeatureSpecification,0.9999998807907104
+182,26,addressLocality,location/city,DateTime,0.9202191233634949
+183,26,Hotel/name,hotel/resort name,LocationFeatureSpecification,0.9162270426750183
+184,26,Rating,rating/score,Rating,0.9299789071083069
+185,26,Country,country,Country,0.9999999403953552
+186,26,Review,guest review/feedback,Review,0.8835716247558594
+187,27,Hotel/name,hotel name,LocationFeatureSpecification,0.9526121616363525
+188,27,email,email address,email,1.0
+189,27,Photograph,image url,Event/name,0.8964096307754517
+190,27,Country,country,Country,0.9999999403953552
+191,27,addressLocality,city,Country,0.944637656211853
+192,27,Rating,rating,Rating,0.9999999403953552
+193,27,Hotel/description,hotel description/information,LocationFeatureSpecification,0.9256908297538757
+194,28,Hotel/name,hotel name,LocationFeatureSpecification,0.9526121616363525
+195,28,Hotel/description,description of hotel,Hotel/description,1.0
+196,28,Time,check-in time,Time,1.0000001192092896
+197,28,Time,check-out time,Time,1.0000001192092896
+198,28,postalCode,postal code,postalCode,0.9999999403953552
+199,28,addressLocality,city,Country,0.944637656211853
+200,28,Country,country,Country,0.9999999403953552
+201,28,Rating,hotel rating,LocationFeatureSpecification,0.9311434030532837
+202,28,LocationFeatureSpecification,hotel amenities,LocationFeatureSpecification,1.0
+203,28,paymentAccepted,accepted payment methods,paymentAccepted,0.8812751770019531
+204,29,Hotel/name,location/name of amusement park,Hotel/name,0.9307106733322144
+205,29,email,contact email,email,0.9174087643623352
+206,29,Hotel/description,description of amusement park attraction,Restaurant/description,0.9411301612854004
+207,29,Photograph,url to amusement park attraction or information page,Hotel/name,0.8685237765312195
+208,30,Hotel/name,hotel name,LocationFeatureSpecification,0.9526121616363525
+209,30,Hotel/description,description of hotel,Hotel/description,1.0
+210,30,paymentAccepted,accepted payment methods,paymentAccepted,0.8812751770019531
+211,30,Rating,hotel rating,LocationFeatureSpecification,0.9311434030532837
+212,30,faxNumber,fax number,faxNumber,1.0
+213,31,MusicRecording/name,song titles,Event/name,0.936876654624939
+214,31,Duration,duration,Duration,0.9999998807907104
+215,31,MusicAlbum/name,album/artist,MusicAlbum/name,0.9144881963729858
+216,31,MusicArtistAT,artist/band,MusicAlbum/name,0.909397304058075
+217,32,MusicRecording/name,song title,Event/name,0.9455978274345398
+218,32,Duration,duration,Duration,0.9999998807907104
+219,32,MusicAlbum/name,category,Duration,0.9519668221473694
+220,32,MusicArtistAT,artist/band name,Event/name,0.9194056391716003
+221,33,MusicRecording/name,song title,Event/name,0.9455978274345398
+222,33,Duration,duration,Duration,0.9999998807907104
+223,33,MusicArtistAT,artist name,Event/name,0.9529215097427368
+224,34,MusicRecording/name,song title,Event/name,0.9455978274345398
+225,34,Duration,duration,Duration,0.9999998807907104
+226,34,MusicArtistAT,additional information/notes,Organization,0.881592333316803
+227,35,MusicRecording/name,song title,Event/name,0.9455978274345398
+228,35,Duration,duration,Duration,0.9999998807907104
+229,35,MusicArtistAT,artist,MusicArtistAT,0.9313982725143433
+230,35,MusicAlbum/name,album/mixtape name,MusicAlbum/name,0.926964282989502
+231,36,Duration,duration,Duration,0.9999998807907104
+232,36,MusicRecording/name,theme/topic,DateTime,0.908625066280365
+233,36,MusicAlbum/name,music title,Event/name,0.8876221776008606
+234,36,MusicArtistAT,composer/performer,Restaurant/name,0.8859556913375854
+235,37,MusicRecording/name,song title,Event/name,0.9455978274345398
+236,37,Duration,duration,Duration,0.9999998807907104
+237,37,MusicArtistAT,artist name,Event/name,0.9529215097427368
+238,37,MusicAlbum/name,album/ep title,MusicAlbum/name,0.9053037762641907
+239,38,MusicRecording/name,song title,Event/name,0.9455978274345398
+240,38,Duration,duration,Duration,0.9999998807907104
+241,38,MusicArtistAT,producer/album name,MusicAlbum/name,0.9171678423881531
+242,39,MusicRecording/name,song title/reference,MusicRecording/name,0.9076707363128662
+243,39,Duration,duration,Duration,0.9999998807907104
+244,39,MusicAlbum/name,category/genre,DateTime,0.9015901684761047
+245,39,MusicArtistAT,artist/band name,Event/name,0.9194056391716003
+246,40,MusicRecording/name,song title,Event/name,0.9455978274345398
+247,40,Duration,duration,Duration,0.9999998807907104
+248,40,MusicAlbum/name,song title,Event/name,0.9455978274345398
+249,40,MusicArtistAT,artist/band name,Event/name,0.9194056391716003

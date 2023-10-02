@@ -1,251 +1,251 @@
-,prompt_output_id,label,parsed_col_pred,class_pred_using_bert,highest_bertscore
-0,0,telephone,phone number,telephone,0.9295373558998108
-1,0,Restaurant/name,restaurant name,Restaurant/name,0.9305041432380676
-2,0,postalCode,zip code,postalCode,0.8968527317047119
-3,0,addressRegion,state,Country,0.9274347424507141
-4,0,Country,country,Country,0.9999999403953552
-5,0,CoordinateAT,longitude,Duration,0.8656346201896667
-6,0,CoordinateAT,latitude,CoordinateAT,0.8676142692565918
-7,0,Time,operating hours,Time,0.897517204284668
-8,0,DayOfWeek,days of the week,DayOfWeek,0.9341294765472412
-9,1,telephone,phone number,telephone,0.9295373558998108
-10,1,Restaurant/name,restaurant name,Restaurant/name,0.9305041432380676
-11,1,Restaurant/description,restaurant description,Restaurant/description,0.9295175671577454
-12,1,Country,location,Duration,0.949138879776001
-13,1,DayOfWeek,operating days,Time,0.8840101361274719
-14,1,Time,operating hours,Time,0.897517204284668
-15,2,Restaurant/name,restaurant name,Restaurant/name,0.9305041432380676
-16,2,postalCode,postal code,postalCode,0.9999999403953552
-17,2,paymentAccepted,payment methods,priceRange,0.9217021465301514
-18,2,addressRegion,state,Country,0.9274347424507141
-19,2,addressLocality,suburb,Photograph,0.8904809355735779
-20,3,Restaurant/name,restaurant name,Restaurant/name,0.9305041432380676
-21,3,telephone,phone number,telephone,0.9295373558998108
-22,3,Restaurant/description,menu description,Event/description,0.9471174478530884
-23,3,addressLocality,city,Country,0.944637656211853
-24,3,addressRegion,state,Country,0.9274347424507141
-25,3,paymentAccepted,accepted payment methods,paymentAccepted,0.8812751770019531
-26,3,postalCode,zip code,postalCode,0.8968527317047119
-27,3,CoordinateAT,longitude,Duration,0.8656346201896667
-28,3,CoordinateAT,latitude,CoordinateAT,0.8676142692565918
-29,3,Time,opening hours,Duration,0.8801085948944092
-30,3,DayOfWeek,days of the week,DayOfWeek,0.9341294765472412
-31,4,Restaurant/name,restaurant name,Restaurant/name,0.9305041432380676
-32,4,priceRange,price range,priceRange,1.000000238418579
-33,4,telephone,phone number,telephone,0.9295373558998108
-34,5,Restaurant/name,restaurant name,Restaurant/name,0.9305041432380676
-35,5,telephone,phone number,telephone,0.9295373558998108
-36,5,priceRange,price range,priceRange,1.000000238418579
-37,5,Country,country code,Country,0.9468234181404114
-38,5,addressRegion,department/region,Country,0.8828449249267578
-39,5,postalCode,postal code,postalCode,0.9999999403953552
-40,5,CoordinateAT,longitude,Duration,0.8656346201896667
-41,5,CoordinateAT,latitude,CoordinateAT,0.8676142692565918
-42,5,addressLocality,city/town,Country,0.9220682382583618
-43,5,Review,description/characteristics of the restaurant,Restaurant/description,0.9486865401268005
-44,6,Restaurant/name,restaurant name,Restaurant/name,0.9305041432380676
-45,6,telephone,phone number,telephone,0.9295373558998108
-46,6,addressLocality,borough,Duration,0.913311243057251
-47,6,postalCode,postal code,postalCode,0.9999999403953552
-48,7,Restaurant/name,restaurant name,Restaurant/name,0.9305041432380676
-49,7,telephone,phone number,telephone,0.9295373558998108
-50,7,Restaurant/description,menu items,Duration,0.9180716872215271
-51,7,addressRegion,state,Country,0.9274347424507141
-52,7,priceRange,price range,priceRange,1.000000238418579
-53,7,Country,country,Country,0.9999999403953552
-54,7,addressLocality,city,Country,0.944637656211853
-55,7,postalCode,zip code,postalCode,0.8968527317047119
-56,8,Restaurant/name,restaurant name,Restaurant/name,0.9305041432380676
-57,8,telephone,phone number,telephone,0.9295373558998108
-58,8,Restaurant/description,type of cuisine,Restaurant/name,0.9319480657577515
-59,8,priceRange,price range,priceRange,1.000000238418579
-60,8,postalCode,zip code,postalCode,0.8968527317047119
-61,8,CoordinateAT,longitude,Duration,0.8656346201896667
-62,8,CoordinateAT,latitude,CoordinateAT,0.8676142692565918
-63,8,addressRegion,state abbreviation,Country,0.901151180267334
-64,9,telephone,phone number,telephone,0.9295373558998108
-65,9,Restaurant/name,restaurant name,Restaurant/name,0.9305041432380676
-66,9,priceRange,price range,priceRange,1.000000238418579
-67,9,addressLocality,city,Country,0.944637656211853
-68,9,postalCode,postal code,postalCode,0.9999999403953552
-69,9,CoordinateAT,longitude,Duration,0.8656346201896667
-70,9,CoordinateAT,latitude,CoordinateAT,0.8676142692565918
-71,9,Country,country code,Country,0.9468234181404114
-72,9,Review,description of restaurant or menu,Restaurant/description,0.9447225332260132
-73,10,Restaurant/name,restaurant name,Restaurant/name,0.9305041432380676
-74,10,telephone,n/a,Organization,0.876169741153717
-75,10,Restaurant/description,menu description,Event/description,0.9471174478530884
-76,10,priceRange,price range,priceRange,1.000000238418579
-77,10,Country,country code,Country,0.9468234181404114
-78,10,addressLocality,city,Country,0.944637656211853
-79,10,paymentAccepted,payment methods,priceRange,0.9217021465301514
-80,10,CoordinateAT,latitude,CoordinateAT,0.8676142692565918
-81,10,CoordinateAT,longitude,Duration,0.8656346201896667
-82,10,Time,opening hours,Duration,0.8801085948944092
-83,10,DayOfWeek,customer reviews,Review,0.9103525876998901
-84,10,Review,additional comments/notes,Organization,0.876745343208313
-85,11,DateTime,date and time,DateTime,1.000000238418579
-86,11,Event/name,event title,Event/name,0.9616721272468567
-87,11,Event/description,event description,Event/description,1.0
-88,11,DateTime,end date and time,DateTime,0.9458933472633362
-89,11,EventStatusType,event scheduled url,Event/name,0.9212892055511475
-90,12,DateTime,date and time,DateTime,1.000000238418579
-91,12,Event/name,event title,Event/name,0.9616721272468567
-92,12,EventStatusType,event scheduled time,EventStatusType,0.9251720309257507
-93,12,DateTime,event end time,EventStatusType,0.9143704175949097
-94,12,EventAttendanceModeEnumeration,event attendance mode,EventAttendanceModeEnumeration,1.0
-95,13,DateTime,date and time,DateTime,1.000000238418579
-96,13,Event/name,event name,Event/name,1.0
-97,13,Event/description,event description,Event/description,1.0
-98,13,DateTime,end date and time,DateTime,0.9458933472633362
-99,13,EventStatusType,schema,Duration,0.904611349105835
-100,13,EventAttendanceModeEnumeration,schema,Duration,0.904611349105835
-101,13,currency,currency,currency,1.000000238418579
-102,13,Organization,event organizer/organization,EventStatusType,0.9145533442497253
-103,14,DateTime,date and time,DateTime,1.000000238418579
-104,14,Event/name,cooking class title,Event/name,0.9200044870376587
-105,14,Event/description,description of cooking class,Event/description,0.9520723819732666
-106,14,DateTime,end time,Date,0.9537440538406372
-107,14,currency,price,priceRange,0.9433408975601196
-108,15,Event/name,event date,EventStatusType,0.9439413547515869
-109,15,DateTime,event time,EventStatusType,0.9505937099456787
-110,15,Event/description,event description,Event/description,1.0
-111,15,telephone,contact number,faxNumber,0.901248574256897
-112,15,Organization,event location,Event/description,0.9553745985031128
-113,16,Date,date,Date,0.9999997019767761
-114,16,Event/name,event/program name,Event/name,0.9601585268974304
-115,16,Event/description,description/details,Event/description,0.9048013091087341
-116,16,Date,event date,EventStatusType,0.9439413547515869
-117,16,EventAttendanceModeEnumeration,event attendance mode,EventAttendanceModeEnumeration,1.0
-118,16,EventStatusType,event schedule/time,Event/description,0.9285176396369934
-119,17,Event/name,event or course name,Event/name,0.9432790279388428
-120,17,EventStatusType,event scheduled,EventStatusType,0.9348434209823608
-121,17,Event/description,jury or instructor names,Event/name,0.8794988989830017
-122,17,Organization,venue or institution name,Event/name,0.8944969177246094
-123,17,EventAttendanceModeEnumeration,offline event attendance mode,EventAttendanceModeEnumeration,0.9413925409317017
-124,18,Date,date,Date,0.9999997019767761
-125,18,Event/name,event name,Event/name,1.0
-126,18,Date,end date,Date,0.9999999403953552
-127,18,EventAttendanceModeEnumeration,event attendance mode,EventAttendanceModeEnumeration,1.0
-128,18,currency,currency,currency,1.000000238418579
-129,18,Event/description,event description,Event/description,1.0
-130,19,Date,date,Date,0.9999997019767761
-131,19,Event/name,motorcycle rally name,Event/name,0.8990393877029419
-132,19,Date,date,Date,0.9999997019767761
-133,19,Event/description,location or information about the rally,Event/description,0.8945387005805969
-134,19,EventAttendanceModeEnumeration,attendance mode,EventAttendanceModeEnumeration,0.9365993142127991
-135,19,currency,currency,currency,1.000000238418579
-136,19,EventStatusType,event status,EventStatusType,0.9999997615814209
-137,20,Event/name,event title,Event/name,0.9616721272468567
-138,20,Event/description,lecture topic,Event/description,0.9055631160736084
-139,20,EventAttendanceModeEnumeration,presenter name,Event/name,0.938014030456543
-140,20,DateTime,seminar description,Event/description,0.9111436605453491
-141,20,Organization,online event attendance mode,EventAttendanceModeEnumeration,0.9622122049331665
-142,20,telephone,contact information,Time,0.8692063093185425
-143,21,Hotel/name,hotel name,LocationFeatureSpecification,0.9526121616363525
-144,21,telephone,contact information,Time,0.8692063093185425
-145,21,email,email address,email,1.0
-146,21,faxNumber,phone number,telephone,0.9295373558998108
-147,21,Hotel/description,tourist attraction,LocationFeatureSpecification,0.8967369794845581
-148,21,postalCode,hotel booking information,LocationFeatureSpecification,0.9410590529441833
-149,21,Country,location/country,Country,0.9202157855033875
-150,22,Hotel/name,hotel name,LocationFeatureSpecification,0.9526121616363525
-151,22,telephone,hotel phone number,LocationFeatureSpecification,0.9317126274108887
-152,22,Hotel/description,hotel description,LocationFeatureSpecification,0.9475786685943604
-153,22,faxNumber,hotel reservation phone number,LocationFeatureSpecification,0.9107822775840759
-154,22,Time,city,Country,0.944637656211853
-155,22,addressLocality,postal code,postalCode,0.9999999403953552
-156,22,postalCode,check-in time,Time,1.0000001192092896
-157,22,Time,country,Country,0.9999999403953552
-158,22,Country,check-out time,Time,1.0000001192092896
-159,22,LocationFeatureSpecification,additional information,EventStatusType,0.8906165361404419
-160,23,Hotel/name,name of aparthotel,Hotel/name,1.0000001192092896
-161,23,telephone,phone number,telephone,0.9295373558998108
-162,23,Hotel/description,location description,Event/description,0.9535768032073975
-163,23,Time,check-in time,Time,1.0000001192092896
-164,23,Time,check-out time,Time,1.0000001192092896
-165,23,postalCode,postal code,postalCode,0.9999999403953552
-166,23,addressLocality,city,Country,0.944637656211853
-167,23,Country,country,Country,0.9999999403953552
-168,23,priceRange,price range,priceRange,1.000000238418579
-169,23,LocationFeatureSpecification,amenities and services offered,LocationFeatureSpecification,0.9139012098312378
-170,24,Hotel/name,name of accommodation,Hotel/name,0.9605623483657837
-171,24,Hotel/description,description of accommodation,Hotel/description,0.9619791507720947
-172,24,Rating,accommodation rating,-,0.8471941351890564
-173,24,priceRange,accommodation package and price information,LocationFeatureSpecification,0.8810515403747559
-174,25,Hotel/name,hotel name,LocationFeatureSpecification,0.9526121616363525
-175,25,Hotel/description,description of the hotel location,Hotel/description,0.9730274677276611
-176,25,Photograph,hotel image,Photograph,0.8707922697067261
-177,25,Time,check-in time,Time,1.0000001192092896
-178,25,priceRange,room rates,LocationFeatureSpecification,0.9172616004943848
-179,25,Rating,hotel rating,LocationFeatureSpecification,0.9311434030532837
-180,25,Time,check-out time,Time,1.0000001192092896
-181,25,LocationFeatureSpecification,room amenities,LocationFeatureSpecification,0.9999998807907104
-182,26,addressLocality,location/city,DateTime,0.9202191233634949
-183,26,Hotel/name,hotel/resort name,LocationFeatureSpecification,0.9162270426750183
-184,26,Rating,rating/score,Rating,0.9299789071083069
-185,26,Country,country,Country,0.9999999403953552
-186,26,Review,guest review/feedback,Review,0.8835716247558594
-187,27,Hotel/name,hotel name,LocationFeatureSpecification,0.9526121616363525
-188,27,email,email address,email,1.0
-189,27,Photograph,image url,Event/name,0.8964096307754517
-190,27,Country,country,Country,0.9999999403953552
-191,27,addressLocality,city,Country,0.944637656211853
-192,27,Rating,rating,Rating,0.9999999403953552
-193,27,Hotel/description,hotel description/information,LocationFeatureSpecification,0.9256908297538757
-194,28,Hotel/name,hotel name,LocationFeatureSpecification,0.9526121616363525
-195,28,Hotel/description,description of hotel,Hotel/description,1.0
-196,28,Time,check-in time,Time,1.0000001192092896
-197,28,Time,check-out time,Time,1.0000001192092896
-198,28,postalCode,postal code,postalCode,0.9999999403953552
-199,28,addressLocality,city,Country,0.944637656211853
-200,28,Country,country,Country,0.9999999403953552
-201,28,Rating,hotel rating,LocationFeatureSpecification,0.9311434030532837
-202,28,LocationFeatureSpecification,hotel amenities,LocationFeatureSpecification,1.0
-203,28,paymentAccepted,accepted payment methods,paymentAccepted,0.8812751770019531
-204,29,Hotel/name,location/name of amusement park,Hotel/name,0.9307106733322144
-205,29,email,contact email,email,0.9174087643623352
-206,29,Hotel/description,description of amusement park attraction,Restaurant/description,0.9411301612854004
-207,29,Photograph,url to amusement park attraction or information page,Hotel/name,0.8685237765312195
-208,30,Hotel/name,hotel name,LocationFeatureSpecification,0.9526121616363525
-209,30,Hotel/description,description of hotel,Hotel/description,1.0
-210,30,paymentAccepted,accepted payment methods,paymentAccepted,0.8812751770019531
-211,30,Rating,hotel rating,LocationFeatureSpecification,0.9311434030532837
-212,30,faxNumber,fax number,faxNumber,1.0
-213,31,MusicRecording/name,song titles,Event/name,0.936876654624939
-214,31,Duration,duration,Duration,0.9999998807907104
-215,31,MusicAlbum/name,album/artist,MusicAlbum/name,0.9144881963729858
-216,31,MusicArtistAT,artist/band,MusicAlbum/name,0.909397304058075
-217,32,MusicRecording/name,song title,Event/name,0.9455978274345398
-218,32,Duration,duration,Duration,0.9999998807907104
-219,32,MusicAlbum/name,category,Duration,0.9519668221473694
-220,32,MusicArtistAT,artist/band name,Event/name,0.9194056391716003
-221,33,MusicRecording/name,song title,Event/name,0.9455978274345398
-222,33,Duration,duration,Duration,0.9999998807907104
-223,33,MusicArtistAT,artist name,Event/name,0.9529215097427368
-224,34,MusicRecording/name,song title,Event/name,0.9455978274345398
-225,34,Duration,duration,Duration,0.9999998807907104
-226,34,MusicArtistAT,additional information/notes,Organization,0.881592333316803
-227,35,MusicRecording/name,song title,Event/name,0.9455978274345398
-228,35,Duration,duration,Duration,0.9999998807907104
-229,35,MusicArtistAT,artist,MusicArtistAT,0.9313982725143433
-230,35,MusicAlbum/name,album/mixtape name,MusicAlbum/name,0.926964282989502
-231,36,Duration,duration,Duration,0.9999998807907104
-232,36,MusicRecording/name,theme/topic,DateTime,0.908625066280365
-233,36,MusicAlbum/name,music title,Event/name,0.8876221776008606
-234,36,MusicArtistAT,composer/performer,Restaurant/name,0.8859556913375854
-235,37,MusicRecording/name,song title,Event/name,0.9455978274345398
-236,37,Duration,duration,Duration,0.9999998807907104
-237,37,MusicArtistAT,artist name,Event/name,0.9529215097427368
-238,37,MusicAlbum/name,album/ep title,MusicAlbum/name,0.9053037762641907
-239,38,MusicRecording/name,song title,Event/name,0.9455978274345398
-240,38,Duration,duration,Duration,0.9999998807907104
-241,38,MusicArtistAT,producer/album name,MusicAlbum/name,0.9171678423881531
-242,39,MusicRecording/name,song title/reference,MusicRecording/name,0.9076707363128662
-243,39,Duration,duration,Duration,0.9999998807907104
-244,39,MusicAlbum/name,category/genre,DateTime,0.9015901684761047
-245,39,MusicArtistAT,artist/band name,Event/name,0.9194056391716003
-246,40,MusicRecording/name,song title,Event/name,0.9455978274345398
-247,40,Duration,duration,Duration,0.9999998807907104
-248,40,MusicAlbum/name,song title,Event/name,0.9455978274345398
-249,40,MusicArtistAT,artist/band name,Event/name,0.9194056391716003
+,prompt_output_id,label,parsed_col_pred,class_pred_using_bert,highest_bertscore,top_5_preds,lionel_annot
+0,0,telephone,phone number,telephone,[0.90746641 0.91230839 0.91649085 0.9181211  0.92953736],"['Event/name', 'Date', 'faxNumber', 'priceRange', 'telephone']",telephone
+1,0,Restaurant/name,restaurant name,Restaurant/name,[0.90765798 0.90860718 0.91736311 0.91822797 0.93050414],"['Restaurant/description', 'Hotel/name', 'Restaurant/description', 'Event/name', 'Restaurant/name']",Restaurant/name
+2,0,postalCode,zip code,postalCode,[0.85932994 0.86107123 0.8723675  0.8726126  0.89685273],"['Event/description', 'Duration', 'Event/name', 'faxNumber', 'postalCode']",postalCode
+3,0,addressRegion,state,Country,[0.89595306 0.89995229 0.90346491 0.90814996 0.92743474],"['Time', 'Duration', 'currency', 'Date', 'Country']",addressRegion
+4,0,Country,country,Country,[0.91340989 0.91425383 0.9207198  0.93141145 0.99999994],"['Duration', 'currency', 'Time', 'Date', 'Country']",Country
+5,0,CoordinateAT,longitude,Duration,[0.83698356 0.84759694 0.85060126 0.85120958 0.86563462],"['EventAttendanceModeEnumeration', 'CoordinateAT', 'Time', 'Date', 'Duration']",CoordinateAT
+6,0,CoordinateAT,latitude,CoordinateAT,[0.85926288 0.86177307 0.86406332 0.86723506 0.86761427],"['Country', 'Time', 'Date', 'Duration', 'CoordinateAT']",CoordinateAT
+7,0,Time,operating hours,Time,[0.88924748 0.89077222 0.89082575 0.89236259 0.8975172 ],"['Organization', 'EventStatusType', 'LocationFeatureSpecification', 'Time', 'Time']",Time
+8,0,DayOfWeek,days of the week,DayOfWeek,[0.87481481 0.87664068 0.87943923 0.88027143 0.93412948],"['Event/name', 'Time', 'Time', 'Time', 'DayOfWeek']",DayOfWeek
+9,1,telephone,phone number,telephone,[0.90746641 0.91230839 0.91649085 0.9181211  0.92953736],"['Event/name', 'Date', 'faxNumber', 'priceRange', 'telephone']",telephone
+10,1,Restaurant/name,restaurant name,Restaurant/name,[0.90765798 0.90860718 0.91736311 0.91822797 0.93050414],"['Restaurant/description', 'Hotel/name', 'Restaurant/description', 'Event/name', 'Restaurant/name']",Restaurant/name
+11,1,Restaurant/description,restaurant description,Restaurant/description,[0.90204847 0.91261387 0.91370535 0.92097604 0.92951757],"['Hotel/description', 'Event/description', 'Restaurant/description', 'Restaurant/name', 'Restaurant/description']",Restaurant/description
+12,1,Country,location,Duration,[0.92442    0.93460578 0.93477595 0.94617695 0.94913888],"['CoordinateAT', 'Country', 'Time', 'Date', 'Duration']",Country
+13,1,DayOfWeek,operating days,Time,[0.87996209 0.88092738 0.88131863 0.88347614 0.88401014],"['Time', 'priceRange', 'Organization', 'Duration', 'Time']",DayOfWeek
+14,1,Time,operating hours,Time,[0.88924748 0.89077222 0.89082575 0.89236259 0.8975172 ],"['Organization', 'EventStatusType', 'LocationFeatureSpecification', 'Time', 'Time']",Time
+15,2,Restaurant/name,restaurant name,Restaurant/name,[0.90765798 0.90860718 0.91736311 0.91822797 0.93050414],"['Restaurant/description', 'Hotel/name', 'Restaurant/description', 'Event/name', 'Restaurant/name']",Restaurant/name
+16,2,postalCode,postal code,postalCode,[0.88954216 0.88961637 0.8896479  0.89414907 0.99999994],"['Restaurant/name', 'Hotel/name', 'Organization', 'Event/name', 'postalCode']",postalCode
+17,2,paymentAccepted,payment methods,priceRange,[0.91022265 0.91256583 0.91287291 0.91392308 0.92170215],"['Duration', 'EventStatusType', 'LocationFeatureSpecification', 'paymentAccepted', 'priceRange']",paymentAccepted
+18,2,addressRegion,state,Country,[0.89595306 0.89995229 0.90346491 0.90814996 0.92743474],"['Time', 'Duration', 'currency', 'Date', 'Country']",addressRegion
+19,2,addressLocality,suburb,Photograph,[0.88347805 0.8869096  0.88701397 0.88891715 0.89048094],"['priceRange', 'Duration', 'CoordinateAT', 'telephone', 'Photograph']",addressLocality
+20,3,Restaurant/name,restaurant name,Restaurant/name,[0.90765798 0.90860718 0.91736311 0.91822797 0.93050414],"['Restaurant/description', 'Hotel/name', 'Restaurant/description', 'Event/name', 'Restaurant/name']",Restaurant/name
+21,3,telephone,phone number,telephone,[0.90746641 0.91230839 0.91649085 0.9181211  0.92953736],"['Event/name', 'Date', 'faxNumber', 'priceRange', 'telephone']",telephone
+22,3,Restaurant/description,menu description,Event/description,[0.89634454 0.90258545 0.91479957 0.92993748 0.94711745],"['priceRange', 'Duration', 'EventStatusType', 'Event/name', 'Event/description']",Restaurant/description
+23,3,addressLocality,city,Country,[0.90776747 0.91942078 0.91990697 0.92295796 0.94463766],"['Duration', 'Time', 'currency', 'Date', 'Country']",addressLocality
+24,3,addressRegion,state,Country,[0.89595306 0.89995229 0.90346491 0.90814996 0.92743474],"['Time', 'Duration', 'currency', 'Date', 'Country']",addressRegion
+25,3,paymentAccepted,accepted payment methods,paymentAccepted,[0.85901135 0.86031342 0.86226094 0.86897665 0.88127518],"['priceRange', 'Time', 'EventStatusType', 'Time', 'paymentAccepted']",paymentAccepted
+26,3,postalCode,zip code,postalCode,[0.85932994 0.86107123 0.8723675  0.8726126  0.89685273],"['Event/description', 'Duration', 'Event/name', 'faxNumber', 'postalCode']",postalCode
+27,3,CoordinateAT,longitude,Duration,[0.83698356 0.84759694 0.85060126 0.85120958 0.86563462],"['EventAttendanceModeEnumeration', 'CoordinateAT', 'Time', 'Date', 'Duration']",CoordinateAT
+28,3,CoordinateAT,latitude,CoordinateAT,[0.85926288 0.86177307 0.86406332 0.86723506 0.86761427],"['Country', 'Time', 'Date', 'Duration', 'CoordinateAT']",CoordinateAT
+29,3,Time,opening hours,Duration,[0.8730368  0.8749246  0.87718052 0.87868208 0.88010859],"['Date', 'Time', 'Time', 'priceRange', 'Duration']",Time
+30,3,DayOfWeek,days of the week,DayOfWeek,[0.87481481 0.87664068 0.87943923 0.88027143 0.93412948],"['Event/name', 'Time', 'Time', 'Time', 'DayOfWeek']",DayOfWeek
+31,4,Restaurant/name,restaurant name,Restaurant/name,[0.90765798 0.90860718 0.91736311 0.91822797 0.93050414],"['Restaurant/description', 'Hotel/name', 'Restaurant/description', 'Event/name', 'Restaurant/name']",Restaurant/name
+32,4,priceRange,price range,priceRange,[0.91023839 0.91261685 0.91614968 0.91853905 1.00000024],"['Time', 'Country', 'Duration', 'Date', 'priceRange']",priceRange
+33,4,telephone,phone number,telephone,[0.90746641 0.91230839 0.91649085 0.9181211  0.92953736],"['Event/name', 'Date', 'faxNumber', 'priceRange', 'telephone']",telephone
+34,5,Restaurant/name,restaurant name,Restaurant/name,[0.90765798 0.90860718 0.91736311 0.91822797 0.93050414],"['Restaurant/description', 'Hotel/name', 'Restaurant/description', 'Event/name', 'Restaurant/name']",Restaurant/name
+35,5,telephone,phone number,telephone,[0.90746641 0.91230839 0.91649085 0.9181211  0.92953736],"['Event/name', 'Date', 'faxNumber', 'priceRange', 'telephone']",telephone
+36,5,priceRange,price range,priceRange,[0.91023839 0.91261685 0.91614968 0.91853905 1.00000024],"['Time', 'Country', 'Duration', 'Date', 'priceRange']",priceRange
+37,5,Country,country code,Country,[0.90089709 0.90380812 0.90925038 0.91450453 0.94682342],"['Date', 'priceRange', 'Event/name', 'postalCode', 'Country']",Country
+38,5,addressRegion,department/region,Country,[0.86704832 0.87294269 0.87355804 0.87612563 0.88284492],"['addressRegion', 'Date', 'Organization', 'DateTime', 'Country']",addressRegion
+39,5,postalCode,postal code,postalCode,[0.88954216 0.88961637 0.8896479  0.89414907 0.99999994],"['Restaurant/name', 'Hotel/name', 'Organization', 'Event/name', 'postalCode']",postalCode
+40,5,CoordinateAT,longitude,Duration,[0.83698356 0.84759694 0.85060126 0.85120958 0.86563462],"['EventAttendanceModeEnumeration', 'CoordinateAT', 'Time', 'Date', 'Duration']",CoordinateAT
+41,5,CoordinateAT,latitude,CoordinateAT,[0.85926288 0.86177307 0.86406332 0.86723506 0.86761427],"['Country', 'Time', 'Date', 'Duration', 'CoordinateAT']",CoordinateAT
+42,5,addressLocality,city/town,Country,[0.89355338 0.89444405 0.89453065 0.90972197 0.92206824],"['Date', 'Organization', 'Restaurant/name', 'DateTime', 'Country']",addressLocality
+43,5,Review,description/characteristics of the restaurant,Restaurant/description,[0.92198431 0.92540038 0.92843759 0.93499619 0.94868654],"['Restaurant/name', 'Event/description', 'Hotel/description', 'Restaurant/description', 'Restaurant/description']",Restaurant/description
+44,6,Restaurant/name,restaurant name,Restaurant/name,[0.90765798 0.90860718 0.91736311 0.91822797 0.93050414],"['Restaurant/description', 'Hotel/name', 'Restaurant/description', 'Event/name', 'Restaurant/name']",Restaurant/name
+45,6,telephone,phone number,telephone,[0.90746641 0.91230839 0.91649085 0.9181211  0.92953736],"['Event/name', 'Date', 'faxNumber', 'priceRange', 'telephone']",telephone
+46,6,addressLocality,borough,Duration,[0.87630242 0.87959296 0.8809092  0.89751899 0.91331124],"['currency', 'email', 'Review', 'Rating', 'Duration']",addressLocality
+47,6,postalCode,postal code,postalCode,[0.88954216 0.88961637 0.8896479  0.89414907 0.99999994],"['Restaurant/name', 'Hotel/name', 'Organization', 'Event/name', 'postalCode']",postalCode
+48,7,Restaurant/name,restaurant name,Restaurant/name,[0.90765798 0.90860718 0.91736311 0.91822797 0.93050414],"['Restaurant/description', 'Hotel/name', 'Restaurant/description', 'Event/name', 'Restaurant/name']",Restaurant/name
+49,7,telephone,phone number,telephone,[0.90746641 0.91230839 0.91649085 0.9181211  0.92953736],"['Event/name', 'Date', 'faxNumber', 'priceRange', 'telephone']",telephone
+50,7,Restaurant/description,menu items,Duration,[0.91238832 0.91251945 0.91484553 0.91762316 0.91807169],"['Time', 'Event/name', 'priceRange', 'EventStatusType', 'Duration']",Restaurant/description
+51,7,addressRegion,state,Country,[0.89595306 0.89995229 0.90346491 0.90814996 0.92743474],"['Time', 'Duration', 'currency', 'Date', 'Country']",addressRegion
+52,7,priceRange,price range,priceRange,[0.91023839 0.91261685 0.91614968 0.91853905 1.00000024],"['Time', 'Country', 'Duration', 'Date', 'priceRange']",priceRange
+53,7,Country,country,Country,[0.91340989 0.91425383 0.9207198  0.93141145 0.99999994],"['Duration', 'currency', 'Time', 'Date', 'Country']",Country
+54,7,addressLocality,city,Country,[0.90776747 0.91942078 0.91990697 0.92295796 0.94463766],"['Duration', 'Time', 'currency', 'Date', 'Country']",addressLocality
+55,7,postalCode,zip code,postalCode,[0.85932994 0.86107123 0.8723675  0.8726126  0.89685273],"['Event/description', 'Duration', 'Event/name', 'faxNumber', 'postalCode']",postalCode
+56,8,Restaurant/name,restaurant name,Restaurant/name,[0.90765798 0.90860718 0.91736311 0.91822797 0.93050414],"['Restaurant/description', 'Hotel/name', 'Restaurant/description', 'Event/name', 'Restaurant/name']",Restaurant/name
+57,8,telephone,phone number,telephone,[0.90746641 0.91230839 0.91649085 0.9181211  0.92953736],"['Event/name', 'Date', 'faxNumber', 'priceRange', 'telephone']",telephone
+58,8,Restaurant/description,type of cuisine,Restaurant/name,[0.91770715 0.92070079 0.92109931 0.92562568 0.93194807],"['Hotel/name', 'Restaurant/description', 'Organization', 'Restaurant/description', 'Restaurant/name']",Restaurant/description
+59,8,priceRange,price range,priceRange,[0.91023839 0.91261685 0.91614968 0.91853905 1.00000024],"['Time', 'Country', 'Duration', 'Date', 'priceRange']",priceRange
+60,8,postalCode,zip code,postalCode,[0.85932994 0.86107123 0.8723675  0.8726126  0.89685273],"['Event/description', 'Duration', 'Event/name', 'faxNumber', 'postalCode']",postalCode
+61,8,CoordinateAT,longitude,Duration,[0.83698356 0.84759694 0.85060126 0.85120958 0.86563462],"['EventAttendanceModeEnumeration', 'CoordinateAT', 'Time', 'Date', 'Duration']",CoordinateAT
+62,8,CoordinateAT,latitude,CoordinateAT,[0.85926288 0.86177307 0.86406332 0.86723506 0.86761427],"['Country', 'Time', 'Date', 'Duration', 'CoordinateAT']",CoordinateAT
+63,8,addressRegion,state abbreviation,Country,[0.87548131 0.87794739 0.88107568 0.89303857 0.90115118],"['Event/description', 'Date', 'EventStatusType', 'Event/name', 'Country']",addressRegion
+64,9,telephone,phone number,telephone,[0.90746641 0.91230839 0.91649085 0.9181211  0.92953736],"['Event/name', 'Date', 'faxNumber', 'priceRange', 'telephone']",telephone
+65,9,Restaurant/name,restaurant name,Restaurant/name,[0.90765798 0.90860718 0.91736311 0.91822797 0.93050414],"['Restaurant/description', 'Hotel/name', 'Restaurant/description', 'Event/name', 'Restaurant/name']",Restaurant/name
+66,9,priceRange,price range,priceRange,[0.91023839 0.91261685 0.91614968 0.91853905 1.00000024],"['Time', 'Country', 'Duration', 'Date', 'priceRange']",priceRange
+67,9,addressLocality,city,Country,[0.90776747 0.91942078 0.91990697 0.92295796 0.94463766],"['Duration', 'Time', 'currency', 'Date', 'Country']",addressLocality
+68,9,postalCode,postal code,postalCode,[0.88954216 0.88961637 0.8896479  0.89414907 0.99999994],"['Restaurant/name', 'Hotel/name', 'Organization', 'Event/name', 'postalCode']",postalCode
+69,9,CoordinateAT,longitude,Duration,[0.83698356 0.84759694 0.85060126 0.85120958 0.86563462],"['EventAttendanceModeEnumeration', 'CoordinateAT', 'Time', 'Date', 'Duration']",CoordinateAT
+70,9,CoordinateAT,latitude,CoordinateAT,[0.85926288 0.86177307 0.86406332 0.86723506 0.86761427],"['Country', 'Time', 'Date', 'Duration', 'CoordinateAT']",CoordinateAT
+71,9,Country,country code,Country,[0.90089709 0.90380812 0.90925038 0.91450453 0.94682342],"['Date', 'priceRange', 'Event/name', 'postalCode', 'Country']",Country
+72,9,Review,description of restaurant or menu,Restaurant/description,[0.91647929 0.91659683 0.92929161 0.93948406 0.94472253],"['Hotel/description', 'Hotel/description', 'Restaurant/name', 'Restaurant/description', 'Restaurant/description']",Restaurant/description
+73,10,Restaurant/name,restaurant name,Restaurant/name,[0.90765798 0.90860718 0.91736311 0.91822797 0.93050414],"['Restaurant/description', 'Hotel/name', 'Restaurant/description', 'Event/name', 'Restaurant/name']",Restaurant/name
+74,10,telephone,n/a,Organization,[0.87166029 0.87258291 0.87365443 0.87442839 0.87616974],"['MusicAlbum/name', 'MusicRecording/name', 'Event/name', 'Restaurant/name', 'Organization']",-
+75,10,Restaurant/description,menu description,Event/description,[0.89634454 0.90258545 0.91479957 0.92993748 0.94711745],"['priceRange', 'Duration', 'EventStatusType', 'Event/name', 'Event/description']",Restaurant/description
+76,10,priceRange,price range,priceRange,[0.91023839 0.91261685 0.91614968 0.91853905 1.00000024],"['Time', 'Country', 'Duration', 'Date', 'priceRange']",priceRange
+77,10,Country,country code,Country,[0.90089709 0.90380812 0.90925038 0.91450453 0.94682342],"['Date', 'priceRange', 'Event/name', 'postalCode', 'Country']",Country
+78,10,addressLocality,city,Country,[0.90776747 0.91942078 0.91990697 0.92295796 0.94463766],"['Duration', 'Time', 'currency', 'Date', 'Country']",addressLocality
+79,10,paymentAccepted,payment methods,priceRange,[0.91022265 0.91256583 0.91287291 0.91392308 0.92170215],"['Duration', 'EventStatusType', 'LocationFeatureSpecification', 'paymentAccepted', 'priceRange']",paymentAccepted
+80,10,CoordinateAT,latitude,CoordinateAT,[0.85926288 0.86177307 0.86406332 0.86723506 0.86761427],"['Country', 'Time', 'Date', 'Duration', 'CoordinateAT']",CoordinateAT
+81,10,CoordinateAT,longitude,Duration,[0.83698356 0.84759694 0.85060126 0.85120958 0.86563462],"['EventAttendanceModeEnumeration', 'CoordinateAT', 'Time', 'Date', 'Duration']",CoordinateAT
+82,10,Time,opening hours,Duration,[0.8730368  0.8749246  0.87718052 0.87868208 0.88010859],"['Date', 'Time', 'Time', 'priceRange', 'Duration']",Time
+83,10,DayOfWeek,customer reviews,Review,[0.87981743 0.88451272 0.88702494 0.8894968  0.91035259],"['Event/name', 'Time', 'EventStatusType', 'Rating', 'Review']",Review
+84,10,Review,additional comments/notes,Organization,[0.87540919 0.87541658 0.87555528 0.87638718 0.87674534],"['Event/description', 'EventStatusType', 'Event/name', 'DateTime', 'Organization']",-
+85,11,DateTime,date and time,DateTime,[0.9194141  0.92085248 0.92538655 0.94021839 1.00000024],"['Hotel/name', 'Organization', 'Event/name', 'Date', 'DateTime']",DateTime
+86,11,Event/name,event title,Event/name,[0.90364701 0.9050433  0.93026853 0.93042833 0.96167213],"['EventAttendanceModeEnumeration', 'Event/name', 'EventStatusType', 'Event/description', 'Event/name']",Event/name
+87,11,Event/description,event description,Event/description,[0.92300826 0.94042134 0.95376408 0.9630934  1.        ],"['Event/name', 'Event/description', 'EventStatusType', 'Event/name', 'Event/description']",Event/description
+88,11,DateTime,end date and time,DateTime,[0.88949162 0.89103585 0.89338171 0.94479263 0.94589335],"['Time', 'Time', 'Event/name', 'Date', 'DateTime']",DateTime
+89,11,EventStatusType,event scheduled url,Event/name,[0.88502443 0.88745147 0.9042235  0.90768743 0.92128921],"['Date', 'Event/name', 'Event/description', 'EventStatusType', 'Event/name']",-
+90,12,DateTime,date and time,DateTime,[0.9194141  0.92085248 0.92538655 0.94021839 1.00000024],"['Hotel/name', 'Organization', 'Event/name', 'Date', 'DateTime']",DateTime
+91,12,Event/name,event title,Event/name,[0.90364701 0.9050433  0.93026853 0.93042833 0.96167213],"['EventAttendanceModeEnumeration', 'Event/name', 'EventStatusType', 'Event/description', 'Event/name']",Event/name
+92,12,EventStatusType,event scheduled time,EventStatusType,[0.90866876 0.91610688 0.91665637 0.92168427 0.92517203],"['Time', 'Time', 'Event/description', 'Event/name', 'EventStatusType']",DateTime
+93,12,DateTime,event end time,EventStatusType,[0.89251238 0.90058184 0.91323739 0.91386783 0.91437042],"['Time', 'Time', 'Event/name', 'Date', 'EventStatusType']",DateTime
+94,12,EventAttendanceModeEnumeration,event attendance mode,EventAttendanceModeEnumeration,[0.91106194 0.91307157 0.91758454 0.91862208 1.        ],"['EventAttendanceModeEnumeration', 'Event/name', 'EventStatusType', 'LocationFeatureSpecification', 'EventAttendanceModeEnumeration']",EventAttendanceModeEnumeration
+95,13,DateTime,date and time,DateTime,[0.9194141  0.92085248 0.92538655 0.94021839 1.00000024],"['Hotel/name', 'Organization', 'Event/name', 'Date', 'DateTime']",DateTime
+96,13,Event/name,event name,Event/name,[0.91699421 0.93657881 0.95079172 0.9630934  1.        ],"['Organization', 'Event/name', 'EventStatusType', 'Event/description', 'Event/name']",Event/name
+97,13,Event/description,event description,Event/description,[0.92300826 0.94042134 0.95376408 0.9630934  1.        ],"['Event/name', 'Event/description', 'EventStatusType', 'Event/name', 'Event/description']",Event/description
+98,13,DateTime,end date and time,DateTime,[0.88949162 0.89103585 0.89338171 0.94479263 0.94589335],"['Time', 'Time', 'Event/name', 'Date', 'DateTime']",DateTime
+99,13,EventStatusType,schema,Duration,[0.88989598 0.89282608 0.90114677 0.90295625 0.90461135],"['priceRange', 'Photograph', 'CoordinateAT', 'Organization', 'Duration']",-
+100,13,EventAttendanceModeEnumeration,schema,Duration,[0.88989598 0.89282608 0.90114677 0.90295625 0.90461135],"['priceRange', 'Photograph', 'CoordinateAT', 'Organization', 'Duration']",-
+101,13,currency,currency,currency,[0.90870512 0.91425383 0.91883945 0.92668802 1.00000024],"['Date', 'Country', 'Time', 'Duration', 'currency']",currency
+102,13,Organization,event organizer/organization,EventStatusType,[0.9014374  0.9053756  0.9074614  0.91333461 0.91455334],"['Organization', 'Event/name', 'Event/name', 'Event/description', 'EventStatusType']",Organization
+103,14,DateTime,date and time,DateTime,[0.9194141  0.92085248 0.92538655 0.94021839 1.00000024],"['Hotel/name', 'Organization', 'Event/name', 'Date', 'DateTime']",DateTime
+104,14,Event/name,cooking class title,Event/name,[0.90137619 0.90189844 0.90432936 0.90690452 0.92000449],"['EventStatusType', 'Time', 'Event/description', 'Event/name', 'Event/name']",Event/name
+105,14,Event/description,description of cooking class,Event/description,[0.93349844 0.93763125 0.94446081 0.95139474 0.95207238],"['Hotel/description', 'Hotel/description', 'Restaurant/description', 'Restaurant/description', 'Event/description']",Event/description
+106,14,DateTime,end time,Date,[0.90144104 0.90180564 0.9090789  0.91437888 0.95374405],"['Time', 'Time', 'DateTime', 'Time', 'Date']",DateTime
+107,14,currency,price,priceRange,[0.92581743 0.93008029 0.93065232 0.94268155 0.9433409 ],"['Time', 'currency', 'Date', 'Duration', 'priceRange']",priceRange
+108,15,Event/name,event date,EventStatusType,[0.92674804 0.93317443 0.93464851 0.94310409 0.94394135],"['Date', 'Date', 'Event/description', 'Event/name', 'EventStatusType']",Date
+109,15,DateTime,event time,EventStatusType,[0.92920351 0.92937458 0.93783891 0.94863749 0.95059371],"['Time', 'Time', 'Event/description', 'Event/name', 'EventStatusType']",DateTime
+110,15,Event/description,event description,Event/description,[0.92300826 0.94042134 0.95376408 0.9630934  1.        ],"['Event/name', 'Event/description', 'EventStatusType', 'Event/name', 'Event/description']",Event/description
+111,15,telephone,contact number,faxNumber,[0.86918604 0.87401652 0.87475538 0.87998039 0.90124857],"['Event/name', 'Time', 'priceRange', 'telephone', 'faxNumber']",telephone
+112,15,Organization,event location,Event/description,[0.92414773 0.92543983 0.94537938 0.95099407 0.9553746 ],"['Event/name', 'Time', 'Event/name', 'EventStatusType', 'Event/description']",Event/description
+113,16,Date,date,Date,[0.93141145 0.93412334 0.94021839 0.94864035 0.9999997 ],"['Country', 'Duration', 'DateTime', 'Time', 'Date']",Date
+114,16,Event/name,event/program name,Event/name,[0.90278059 0.91892314 0.92600209 0.92990088 0.96015853],"['Organization', 'Event/name', 'EventStatusType', 'Event/description', 'Event/name']",Event/name
+115,16,Event/description,description/details,Event/description,[0.89651453 0.89668864 0.90014935 0.90237492 0.90480131],"['DateTime', 'Hotel/description', 'Restaurant/description', 'Restaurant/description', 'Event/description']",Event/description
+116,16,Date,event date,EventStatusType,[0.92674804 0.93317443 0.93464851 0.94310409 0.94394135],"['Date', 'Date', 'Event/description', 'Event/name', 'EventStatusType']",Date
+117,16,EventAttendanceModeEnumeration,event attendance mode,EventAttendanceModeEnumeration,[0.91106194 0.91307157 0.91758454 0.91862208 1.        ],"['EventAttendanceModeEnumeration', 'Event/name', 'EventStatusType', 'LocationFeatureSpecification', 'EventAttendanceModeEnumeration']",EventAttendanceModeEnumeration
+118,16,EventStatusType,event schedule/time,Event/description,[0.91140842 0.91426855 0.9176749  0.9272536  0.92851764],"['Event/description', 'DateTime', 'Time', 'EventStatusType', 'Event/description']",Event/description
+119,17,Event/name,event or course name,Event/name,[0.89291722 0.90413272 0.9108032  0.91116804 0.94327903],"['DateTime', 'Event/name', 'EventStatusType', 'Event/description', 'Event/name']",Event/name
+120,17,EventStatusType,event scheduled,EventStatusType,[0.90925515 0.91504806 0.92585516 0.92949212 0.93484342],"['Time', 'Event/name', 'Event/name', 'Event/description', 'EventStatusType']",-
+121,17,Event/description,jury or instructor names,Event/name,[0.85738182 0.8575201  0.85901666 0.85922718 0.8794989 ],"['Organization', 'Restaurant/name', 'Event/name', 'Time', 'Event/name']",-
+122,17,Organization,venue or institution name,Event/name,[0.86746103 0.86940193 0.8715536  0.87835866 0.89449692],"['Restaurant/name', 'Duration', 'Event/name', 'Organization', 'Event/name']",Organization
+123,17,EventAttendanceModeEnumeration,offline event attendance mode,EventAttendanceModeEnumeration,[0.88683444 0.88756931 0.89204764 0.90435404 0.94139254],"['Event/description', 'LocationFeatureSpecification', 'Event/name', 'EventAttendanceModeEnumeration', 'EventAttendanceModeEnumeration']",EventAttendanceModeEnumeration
+124,18,Date,date,Date,[0.93141145 0.93412334 0.94021839 0.94864035 0.9999997 ],"['Country', 'Duration', 'DateTime', 'Time', 'Date']",Date
+125,18,Event/name,event name,Event/name,[0.91699421 0.93657881 0.95079172 0.9630934  1.        ],"['Organization', 'Event/name', 'EventStatusType', 'Event/description', 'Event/name']",Event/name
+126,18,Date,end date,Date,[0.88634837 0.89067978 0.89512753 0.92587429 0.99999994],"['Duration', 'priceRange', 'DateTime', 'Date', 'Date']",Date
+127,18,EventAttendanceModeEnumeration,event attendance mode,EventAttendanceModeEnumeration,[0.91106194 0.91307157 0.91758454 0.91862208 1.        ],"['EventAttendanceModeEnumeration', 'Event/name', 'EventStatusType', 'LocationFeatureSpecification', 'EventAttendanceModeEnumeration']",EventAttendanceModeEnumeration
+128,18,currency,currency,currency,[0.90870512 0.91425383 0.91883945 0.92668802 1.00000024],"['Date', 'Country', 'Time', 'Duration', 'currency']",currency
+129,18,Event/description,event description,Event/description,[0.92300826 0.94042134 0.95376408 0.9630934  1.        ],"['Event/name', 'Event/description', 'EventStatusType', 'Event/name', 'Event/description']",Event/description
+130,19,Date,date,Date,[0.93141145 0.93412334 0.94021839 0.94864035 0.9999997 ],"['Country', 'Duration', 'DateTime', 'Time', 'Date']",Date
+131,19,Event/name,motorcycle rally name,Event/name,[0.87632316 0.87738711 0.87803108 0.88078183 0.89903939],"['Event/name', 'Organization', 'Hotel/name', 'Restaurant/name', 'Event/name']",Event/name
+132,19,Date,date,Date,[0.93141145 0.93412334 0.94021839 0.94864035 0.9999997 ],"['Country', 'Duration', 'DateTime', 'Time', 'Date']",Date
+133,19,Event/description,location or information about the rally,Event/description,[0.88550383 0.88612008 0.89222115 0.89225423 0.8945387 ],"['Time', 'Organization', 'Time', 'Event/name', 'Event/description']",Event/description
+134,19,EventAttendanceModeEnumeration,attendance mode,EventAttendanceModeEnumeration,[0.89286375 0.89312971 0.9012773  0.90256739 0.93659931],"['Time', 'LocationFeatureSpecification', 'LocationFeatureSpecification', 'EventAttendanceModeEnumeration', 'EventAttendanceModeEnumeration']",EventAttendanceModeEnumeration
+135,19,currency,currency,currency,[0.90870512 0.91425383 0.91883945 0.92668802 1.00000024],"['Date', 'Country', 'Time', 'Duration', 'currency']",currency
+136,19,EventStatusType,event status,EventStatusType,[0.91947085 0.91983473 0.95079172 0.95376408 0.99999976],"['Event/name', 'Time', 'Event/name', 'Event/description', 'EventStatusType']",EventStatusType
+137,20,Event/name,event title,Event/name,[0.90364701 0.9050433  0.93026853 0.93042833 0.96167213],"['EventAttendanceModeEnumeration', 'Event/name', 'EventStatusType', 'Event/description', 'Event/name']",Event/name
+138,20,Event/description,lecture topic,Event/description,[0.88922155 0.89538574 0.90320617 0.90478504 0.90556312],"['LocationFeatureSpecification', 'Time', 'Event/name', 'EventStatusType', 'Event/description']",Event/description
+139,20,EventAttendanceModeEnumeration,presenter name,Event/name,[0.90174842 0.90343314 0.9042998  0.9064467  0.93801403],"['EventStatusType', 'Organization', 'Event/description', 'Event/name', 'Event/name']",-
+140,20,DateTime,seminar description,Event/description,[0.88780445 0.89067382 0.89209253 0.89711201 0.91114366],"['EventStatusType', 'Event/name', 'Event/description', 'Event/name', 'Event/description']",Event/description
+141,20,Organization,online event attendance mode,EventAttendanceModeEnumeration,[0.90200305 0.90212429 0.90692592 0.92412144 0.9622122 ],"['LocationFeatureSpecification', 'EventStatusType', 'Event/name', 'EventAttendanceModeEnumeration', 'EventAttendanceModeEnumeration']",EventAttendanceModeEnumeration
+142,20,telephone,contact information,Time,[0.8648352  0.86523938 0.8654083  0.8662824  0.86920631],"['EventStatusType', 'email', 'Event/name', 'Event/description', 'Time']",telephone
+143,21,Hotel/name,hotel name,LocationFeatureSpecification,[0.92288011 0.9286111  0.93001628 0.9383058  0.95261216],"['Hotel/name', 'Hotel/name', 'Event/name', 'LocationFeatureSpecification', 'LocationFeatureSpecification']",Hotel/name
+144,21,telephone,contact information,Time,[0.8648352  0.86523938 0.8654083  0.8662824  0.86920631],"['EventStatusType', 'email', 'Event/name', 'Event/description', 'Time']",telephone
+145,21,email,email address,email,[0.84718537 0.84736085 0.84754741 0.92607594 1.        ],"['Date', 'Restaurant/name', 'Event/name', 'email', 'email']",email
+146,21,faxNumber,phone number,telephone,[0.90746641 0.91230839 0.91649085 0.9181211  0.92953736],"['Event/name', 'Date', 'faxNumber', 'priceRange', 'telephone']",telephone
+147,21,Hotel/description,tourist attraction,LocationFeatureSpecification,[0.87704748 0.87860227 0.87995821 0.89314592 0.89673698],"['Restaurant/name', 'Hotel/name', 'Hotel/name', 'LocationFeatureSpecification', 'LocationFeatureSpecification']",-
+148,21,postalCode,hotel booking information,LocationFeatureSpecification,[0.90406173 0.90627927 0.90967566 0.93569899 0.94105905],"['Hotel/description', 'Hotel/name', 'Hotel/name', 'LocationFeatureSpecification', 'LocationFeatureSpecification']",Hotel/description
+149,21,Country,location/country,Country,[0.88962466 0.88997239 0.8971765  0.91236448 0.92021579],"['EventStatusType', 'Hotel/name', 'Date', 'DateTime', 'Country']",Country
+150,22,Hotel/name,hotel name,LocationFeatureSpecification,[0.92288011 0.9286111  0.93001628 0.9383058  0.95261216],"['Hotel/name', 'Hotel/name', 'Event/name', 'LocationFeatureSpecification', 'LocationFeatureSpecification']",Hotel/name
+151,22,telephone,hotel phone number,LocationFeatureSpecification,[0.90214795 0.90682834 0.91564709 0.92310858 0.93171263],"['Hotel/name', 'Hotel/name', 'telephone', 'LocationFeatureSpecification', 'LocationFeatureSpecification']",telephone
+152,22,Hotel/description,hotel description,LocationFeatureSpecification,[0.9131707  0.92127728 0.92495394 0.93961263 0.94757867],"['Hotel/name', 'Hotel/description', 'Event/description', 'LocationFeatureSpecification', 'LocationFeatureSpecification']",Hotel/description
+153,22,faxNumber,hotel reservation phone number,LocationFeatureSpecification,[0.88657248 0.88874733 0.8923862  0.9076755  0.91078228],"['Hotel/name', 'Hotel/name', 'telephone', 'LocationFeatureSpecification', 'LocationFeatureSpecification']",telephone
+154,22,Time,city,Country,[0.90776747 0.91942078 0.91990697 0.92295796 0.94463766],"['Duration', 'Time', 'currency', 'Date', 'Country']",addressLocality
+155,22,addressLocality,postal code,postalCode,[0.88954216 0.88961637 0.8896479  0.89414907 0.99999994],"['Restaurant/name', 'Hotel/name', 'Organization', 'Event/name', 'postalCode']",postalCode
+156,22,postalCode,check-in time,Time,[0.91983473 0.93463814 0.95654434 0.98176515 1.00000012],"['EventStatusType', 'Time', 'Time', 'Time', 'Time']",Time
+157,22,Time,country,Country,[0.91340989 0.91425383 0.9207198  0.93141145 0.99999994],"['Duration', 'currency', 'Time', 'Date', 'Country']",Country
+158,22,Country,check-out time,Time,[0.91353369 0.93339902 0.94050753 0.98176515 1.00000012],"['EventStatusType', 'Time', 'Time', 'Time', 'Time']",Time
+159,22,LocationFeatureSpecification,additional information,EventStatusType,[0.88116163 0.88302994 0.88544613 0.88627279 0.89061654],"['Time', 'Event/name', 'Event/description', 'Duration', 'EventStatusType']",-
+160,23,Hotel/name,name of aparthotel,Hotel/name,[0.8867051  0.88709414 0.88840026 0.88841587 1.00000012],"['Hotel/name', 'Organization', 'Hotel/name', 'Event/name', 'Hotel/name']",Hotel/name
+161,23,telephone,phone number,telephone,[0.90746641 0.91230839 0.91649085 0.9181211  0.92953736],"['Event/name', 'Date', 'faxNumber', 'priceRange', 'telephone']",telephone
+162,23,Hotel/description,location description,Event/description,[0.90561157 0.91083825 0.91647166 0.92794806 0.9535768 ],"['LocationFeatureSpecification', 'Duration', 'EventStatusType', 'Event/name', 'Event/description']",Hotel/description
+163,23,Time,check-in time,Time,[0.91983473 0.93463814 0.95654434 0.98176515 1.00000012],"['EventStatusType', 'Time', 'Time', 'Time', 'Time']",Time
+164,23,Time,check-out time,Time,[0.91353369 0.93339902 0.94050753 0.98176515 1.00000012],"['EventStatusType', 'Time', 'Time', 'Time', 'Time']",Time
+165,23,postalCode,postal code,postalCode,[0.88954216 0.88961637 0.8896479  0.89414907 0.99999994],"['Restaurant/name', 'Hotel/name', 'Organization', 'Event/name', 'postalCode']",postalCode
+166,23,addressLocality,city,Country,[0.90776747 0.91942078 0.91990697 0.92295796 0.94463766],"['Duration', 'Time', 'currency', 'Date', 'Country']",addressLocality
+167,23,Country,country,Country,[0.91340989 0.91425383 0.9207198  0.93141145 0.99999994],"['Duration', 'currency', 'Time', 'Date', 'Country']",Country
+168,23,priceRange,price range,priceRange,[0.91023839 0.91261685 0.91614968 0.91853905 1.00000024],"['Time', 'Country', 'Duration', 'Date', 'priceRange']",priceRange
+169,23,LocationFeatureSpecification,amenities and services offered,LocationFeatureSpecification,[0.85337496 0.8547796  0.85783035 0.88580197 0.91390121],"['Time', 'LocationFeatureSpecification', 'LocationFeatureSpecification', 'LocationFeatureSpecification', 'LocationFeatureSpecification']",LocationFeatureSpecification
+170,24,Hotel/name,name of accommodation,Hotel/name,[0.95470273 0.95472503 0.9548108  0.95669413 0.96056235],"['Restaurant/name', 'Organization', 'Event/name', 'Hotel/name', 'Hotel/name']",Hotel/name
+171,24,Hotel/description,description of accommodation,Hotel/description,[0.94855702 0.95141888 0.95702797 0.96009099 0.96197915],"['Event/description', 'Restaurant/description', 'Restaurant/description', 'Hotel/description', 'Hotel/description']",Hotel/description
+172,24,Rating,accommodation rating,-,[0.83846921 0.84286654 0.84418935 0.84713566 0.84719414],"['Hotel/description', 'Time', 'LocationFeatureSpecification', 'LocationFeatureSpecification', 'Time']",Rating
+173,24,priceRange,accommodation package and price information,LocationFeatureSpecification,[0.87098539 0.87307894 0.87472028 0.87869018 0.88105154],"['Hotel/description', 'Hotel/name', 'Time', 'LocationFeatureSpecification', 'LocationFeatureSpecification']",priceRange
+174,25,Hotel/name,hotel name,LocationFeatureSpecification,[0.92288011 0.9286111  0.93001628 0.9383058  0.95261216],"['Hotel/name', 'Hotel/name', 'Event/name', 'LocationFeatureSpecification', 'LocationFeatureSpecification']",Hotel/name
+175,25,Hotel/description,description of the hotel location,Hotel/description,[0.95184416 0.95401764 0.95736486 0.96329314 0.97302747],"['Event/description', 'LocationFeatureSpecification', 'Restaurant/description', 'Hotel/description', 'Hotel/description']",Hotel/description
+176,25,Photograph,hotel image,Photograph,[0.84218407 0.84892941 0.84975725 0.8634463  0.87079227],"['postalCode', 'LocationFeatureSpecification', 'Duration', 'LocationFeatureSpecification', 'Photograph']",Photograph
+177,25,Time,check-in time,Time,[0.91983473 0.93463814 0.95654434 0.98176515 1.00000012],"['EventStatusType', 'Time', 'Time', 'Time', 'Time']",Time
+178,25,priceRange,room rates,LocationFeatureSpecification,[0.88015556 0.88093817 0.88294685 0.88444537 0.9172616 ],"['Time', 'EventStatusType', 'Duration', 'LocationFeatureSpecification', 'LocationFeatureSpecification']",priceRange
+179,25,Rating,hotel rating,LocationFeatureSpecification,[0.89247906 0.89313889 0.90346998 0.92344898 0.9311434 ],"['Hotel/name', 'Hotel/name', 'Rating', 'LocationFeatureSpecification', 'LocationFeatureSpecification']",Rating
+180,25,Time,check-out time,Time,[0.91353369 0.93339902 0.94050753 0.98176515 1.00000012],"['EventStatusType', 'Time', 'Time', 'Time', 'Time']",Time
+181,25,LocationFeatureSpecification,room amenities,LocationFeatureSpecification,[0.88007474 0.89279175 0.90109599 0.91691405 0.99999988],"['EventStatusType', 'LocationFeatureSpecification', 'LocationFeatureSpecification', 'LocationFeatureSpecification', 'LocationFeatureSpecification']",LocationFeatureSpecification
+182,26,addressLocality,location/city,DateTime,[0.89515162 0.89585799 0.90040559 0.90808713 0.92021912],"['LocationFeatureSpecification', 'Hotel/name', 'Date', 'Country', 'DateTime']",addressLocality
+183,26,Hotel/name,hotel/resort name,LocationFeatureSpecification,[0.90114039 0.90581262 0.9080264  0.91311115 0.91622704],"['Restaurant/name', 'LocationFeatureSpecification', 'Hotel/name', 'Hotel/name', 'LocationFeatureSpecification']",Hotel/name
+184,26,Rating,rating/score,Rating,[0.88894957 0.89112616 0.89157325 0.90345752 0.92997891],"['Time', 'Time', 'EventStatusType', 'DateTime', 'Rating']",Rating
+185,26,Country,country,Country,[0.91340989 0.91425383 0.9207198  0.93141145 0.99999994],"['Duration', 'currency', 'Time', 'Date', 'Country']",Country
+186,26,Review,guest review/feedback,Review,[0.86707455 0.86739409 0.86891258 0.86913562 0.88357162],"['Organization', 'Restaurant/name', 'Event/name', 'Time', 'Review']",Review
+187,27,Hotel/name,hotel name,LocationFeatureSpecification,[0.92288011 0.9286111  0.93001628 0.9383058  0.95261216],"['Hotel/name', 'Hotel/name', 'Event/name', 'LocationFeatureSpecification', 'LocationFeatureSpecification']",Hotel/name
+188,27,email,email address,email,[0.84718537 0.84736085 0.84754741 0.92607594 1.        ],"['Date', 'Restaurant/name', 'Event/name', 'email', 'email']",email
+189,27,Photograph,image url,Event/name,[0.87429821 0.87737352 0.87964338 0.88379085 0.89640963],"['priceRange', 'Event/description', 'Duration', 'EventStatusType', 'Event/name']",Photograph
+190,27,Country,country,Country,[0.91340989 0.91425383 0.9207198  0.93141145 0.99999994],"['Duration', 'currency', 'Time', 'Date', 'Country']",Country
+191,27,addressLocality,city,Country,[0.90776747 0.91942078 0.91990697 0.92295796 0.94463766],"['Duration', 'Time', 'currency', 'Date', 'Country']",addressLocality
+192,27,Rating,rating,Rating,[0.89614618 0.90445495 0.91656798 0.92599422 0.99999994],"['Time', 'Date', 'Duration', 'Review', 'Rating']",Rating
+193,27,Hotel/description,hotel description/information,LocationFeatureSpecification,[0.90476543 0.90613133 0.90663344 0.91848809 0.92569083],"['Hotel/name', 'Event/description', 'Hotel/description', 'LocationFeatureSpecification', 'LocationFeatureSpecification']",Hotel/description
+194,28,Hotel/name,hotel name,LocationFeatureSpecification,[0.92288011 0.9286111  0.93001628 0.9383058  0.95261216],"['Hotel/name', 'Hotel/name', 'Event/name', 'LocationFeatureSpecification', 'LocationFeatureSpecification']",Hotel/name
+195,28,Hotel/description,description of hotel,Hotel/description,[0.9638657  0.96952915 0.97377247 0.98573977 1.        ],"['Hotel/name', 'LocationFeatureSpecification', 'Restaurant/description', 'Hotel/description', 'Hotel/description']",Hotel/description
+196,28,Time,check-in time,Time,[0.91983473 0.93463814 0.95654434 0.98176515 1.00000012],"['EventStatusType', 'Time', 'Time', 'Time', 'Time']",Time
+197,28,Time,check-out time,Time,[0.91353369 0.93339902 0.94050753 0.98176515 1.00000012],"['EventStatusType', 'Time', 'Time', 'Time', 'Time']",Time
+198,28,postalCode,postal code,postalCode,[0.88954216 0.88961637 0.8896479  0.89414907 0.99999994],"['Restaurant/name', 'Hotel/name', 'Organization', 'Event/name', 'postalCode']",postalCode
+199,28,addressLocality,city,Country,[0.90776747 0.91942078 0.91990697 0.92295796 0.94463766],"['Duration', 'Time', 'currency', 'Date', 'Country']",addressLocality
+200,28,Country,country,Country,[0.91340989 0.91425383 0.9207198  0.93141145 0.99999994],"['Duration', 'currency', 'Time', 'Date', 'Country']",Country
+201,28,Rating,hotel rating,LocationFeatureSpecification,[0.89247906 0.89313889 0.90346998 0.92344898 0.9311434 ],"['Hotel/name', 'Hotel/name', 'Rating', 'LocationFeatureSpecification', 'LocationFeatureSpecification']",Rating
+202,28,LocationFeatureSpecification,hotel amenities,LocationFeatureSpecification,[0.90443456 0.91691405 0.93784618 0.97346622 1.        ],"['Hotel/name', 'LocationFeatureSpecification', 'LocationFeatureSpecification', 'LocationFeatureSpecification', 'LocationFeatureSpecification']",LocationFeatureSpecification
+203,28,paymentAccepted,accepted payment methods,paymentAccepted,[0.85901135 0.86031342 0.86226094 0.86897665 0.88127518],"['priceRange', 'Time', 'EventStatusType', 'Time', 'paymentAccepted']",paymentAccepted
+204,29,Hotel/name,location/name of amusement park,Hotel/name,[0.91814035 0.9190768  0.91999519 0.9289245  0.93071067],"['Organization', 'Event/name', 'Hotel/name', 'Restaurant/name', 'Hotel/name']",-
+205,29,email,contact email,email,[0.85588026 0.85828251 0.85969347 0.90885413 0.91740876],"['Restaurant/name', 'telephone', 'Time', 'email', 'email']",email
+206,29,Hotel/description,description of amusement park attraction,Restaurant/description,[0.92903209 0.93307441 0.93711931 0.93884683 0.94113016],"['Hotel/description', 'Restaurant/description', 'Hotel/description', 'Event/description', 'Restaurant/description']",Hotel/description
+207,29,Photograph,url to amusement park attraction or information page,Hotel/name,[0.86390138 0.86484617 0.86797231 0.86852115 0.86852378],"['Event/name', 'LocationFeatureSpecification', 'Hotel/name', 'Restaurant/name', 'Hotel/name']",-
+208,30,Hotel/name,hotel name,LocationFeatureSpecification,[0.92288011 0.9286111  0.93001628 0.9383058  0.95261216],"['Hotel/name', 'Hotel/name', 'Event/name', 'LocationFeatureSpecification', 'LocationFeatureSpecification']",Hotel/name
+209,30,Hotel/description,description of hotel,Hotel/description,[0.9638657  0.96952915 0.97377247 0.98573977 1.        ],"['Hotel/name', 'LocationFeatureSpecification', 'Restaurant/description', 'Hotel/description', 'Hotel/description']",Hotel/description
+210,30,paymentAccepted,accepted payment methods,paymentAccepted,[0.85901135 0.86031342 0.86226094 0.86897665 0.88127518],"['priceRange', 'Time', 'EventStatusType', 'Time', 'paymentAccepted']",paymentAccepted
+211,30,Rating,hotel rating,LocationFeatureSpecification,[0.89247906 0.89313889 0.90346998 0.92344898 0.9311434 ],"['Hotel/name', 'Hotel/name', 'Rating', 'LocationFeatureSpecification', 'LocationFeatureSpecification']",Rating
+212,30,faxNumber,fax number,faxNumber,[0.8766402  0.88246423 0.88529468 0.88802326 1.        ],"['Date', 'postalCode', 'Event/name', 'Duration', 'faxNumber']",faxNumber
+213,31,MusicRecording/name,song titles,Event/name,[0.90708083 0.9088068  0.90921891 0.90991187 0.93687665],"['MusicRecording/name', 'Event/description', 'MusicRecording/name', 'EventStatusType', 'Event/name']",MusicRecording/name
+214,31,Duration,duration,Duration,[0.9172405  0.92668802 0.93412334 0.93802845 0.99999988],"['CoordinateAT', 'currency', 'Date', 'Time', 'Duration']",Duration
+215,31,MusicAlbum/name,album/artist,MusicAlbum/name,[0.89424062 0.89970893 0.9056868  0.90869325 0.9144882 ],"['MusicAlbum/name', 'MusicArtistAT', 'MusicAlbum/name', 'MusicArtistAT', 'MusicAlbum/name']",MusicAlbum/name
+216,31,MusicArtistAT,artist/band,MusicAlbum/name,[0.90042508 0.90264821 0.90467459 0.90765715 0.9093973 ],"['MusicArtistAT', 'Organization', 'MusicRecording/name', 'MusicArtistAT', 'MusicAlbum/name']",MusicArtistAT
+217,32,MusicRecording/name,song title,Event/name,[0.91584957 0.9164905  0.91892147 0.92237163 0.94559783],"['MusicAlbum/name', 'EventStatusType', 'Event/description', 'MusicRecording/name', 'Event/name']",MusicRecording/name
+218,32,Duration,duration,Duration,[0.9172405  0.92668802 0.93412334 0.93802845 0.99999988],"['CoordinateAT', 'currency', 'Date', 'Time', 'Duration']",Duration
+219,32,MusicAlbum/name,category,Duration,[0.92339218 0.92361301 0.92840266 0.92848724 0.95196682],"['Rating', 'currency', 'Country', 'Date', 'Duration']",-
+220,32,MusicArtistAT,artist/band name,Event/name,[0.91021073 0.91125703 0.9144218  0.91857564 0.91940564],"['MusicArtistAT', 'Organization', 'MusicRecording/name', 'MusicAlbum/name', 'Event/name']",MusicArtistAT
+221,33,MusicRecording/name,song title,Event/name,[0.91584957 0.9164905  0.91892147 0.92237163 0.94559783],"['MusicAlbum/name', 'EventStatusType', 'Event/description', 'MusicRecording/name', 'Event/name']",MusicRecording/name
+222,33,Duration,duration,Duration,[0.9172405  0.92668802 0.93412334 0.93802845 0.99999988],"['CoordinateAT', 'currency', 'Date', 'Time', 'Duration']",Duration
+223,33,MusicArtistAT,artist name,Event/name,[0.9071874  0.91196823 0.91361135 0.9186399  0.95292151],"['MusicAlbum/name', 'Event/description', 'EventStatusType', 'MusicArtistAT', 'Event/name']",MusicArtistAT
+224,34,MusicRecording/name,song title,Event/name,[0.91584957 0.9164905  0.91892147 0.92237163 0.94559783],"['MusicAlbum/name', 'EventStatusType', 'Event/description', 'MusicRecording/name', 'Event/name']",MusicRecording/name
+225,34,Duration,duration,Duration,[0.9172405  0.92668802 0.93412334 0.93802845 0.99999988],"['CoordinateAT', 'currency', 'Date', 'Time', 'Duration']",Duration
+226,34,MusicArtistAT,additional information/notes,Organization,[0.87690479 0.87690759 0.87938666 0.88135123 0.88159233],"['EventStatusType', 'DateTime', 'Event/name', 'Event/description', 'Organization']",MusicArtistAT
+227,35,MusicRecording/name,song title,Event/name,[0.91584957 0.9164905  0.91892147 0.92237163 0.94559783],"['MusicAlbum/name', 'EventStatusType', 'Event/description', 'MusicRecording/name', 'Event/name']",MusicRecording/name
+228,35,Duration,duration,Duration,[0.9172405  0.92668802 0.93412334 0.93802845 0.99999988],"['CoordinateAT', 'currency', 'Date', 'Time', 'Duration']",Duration
+229,35,MusicArtistAT,artist,MusicArtistAT,[0.90042424 0.90250993 0.90279585 0.92567253 0.93139827],"['currency', 'Rating', 'Date', 'Duration', 'MusicArtistAT']",MusicArtistAT
+230,35,MusicAlbum/name,album/mixtape name,MusicAlbum/name,[0.89340287 0.9013738  0.90678984 0.91301984 0.92696428],"['Organization', 'MusicRecording/name', 'Event/name', 'MusicAlbum/name', 'MusicAlbum/name']",MusicAlbum/name
+231,36,Duration,duration,Duration,[0.9172405  0.92668802 0.93412334 0.93802845 0.99999988],"['CoordinateAT', 'currency', 'Date', 'Time', 'Duration']",Duration
+232,36,MusicRecording/name,theme/topic,DateTime,[0.89614099 0.89805144 0.89853752 0.90515167 0.90862507],"['Organization', 'EventStatusType', 'Event/name', 'Duration', 'DateTime']",-
+233,36,MusicAlbum/name,music title,Event/name,[0.8717736  0.87515038 0.87744385 0.88381237 0.88762218],"['MusicAlbum/name', 'MusicRecording/name', 'MusicAlbum/name', 'MusicArtistAT', 'Event/name']",MusicRecording/name
+234,36,MusicArtistAT,composer/performer,Restaurant/name,[0.88098419 0.88169581 0.88311893 0.88433498 0.88595569],"['MusicAlbum/name', 'MusicRecording/name', 'MusicArtistAT', 'Organization', 'Restaurant/name']",MusicArtistAT
+235,37,MusicRecording/name,song title,Event/name,[0.91584957 0.9164905  0.91892147 0.92237163 0.94559783],"['MusicAlbum/name', 'EventStatusType', 'Event/description', 'MusicRecording/name', 'Event/name']",MusicRecording/name
+236,37,Duration,duration,Duration,[0.9172405  0.92668802 0.93412334 0.93802845 0.99999988],"['CoordinateAT', 'currency', 'Date', 'Time', 'Duration']",Duration
+237,37,MusicArtistAT,artist name,Event/name,[0.9071874  0.91196823 0.91361135 0.9186399  0.95292151],"['MusicAlbum/name', 'Event/description', 'EventStatusType', 'MusicArtistAT', 'Event/name']",MusicArtistAT
+238,37,MusicAlbum/name,album/ep title,MusicAlbum/name,[0.87543207 0.87791634 0.89039081 0.89097053 0.90530378],"['MusicAlbum/name', 'MusicRecording/name', 'MusicAlbum/name', 'Event/name', 'MusicAlbum/name']",MusicAlbum/name
+239,38,MusicRecording/name,song title,Event/name,[0.91584957 0.9164905  0.91892147 0.92237163 0.94559783],"['MusicAlbum/name', 'EventStatusType', 'Event/description', 'MusicRecording/name', 'Event/name']",MusicRecording/name
+240,38,Duration,duration,Duration,[0.9172405  0.92668802 0.93412334 0.93802845 0.99999988],"['CoordinateAT', 'currency', 'Date', 'Time', 'Duration']",Duration
+241,38,MusicArtistAT,producer/album name,MusicAlbum/name,[0.8883127  0.89008236 0.89304316 0.90020603 0.91716784],"['MusicArtistAT', 'Event/name', 'MusicRecording/name', 'MusicAlbum/name', 'MusicAlbum/name']",MusicAlbum/name
+242,39,MusicRecording/name,song title/reference,MusicRecording/name,[0.89418626 0.89691377 0.9021759  0.90703362 0.90767074],"['Event/description', 'EventStatusType', 'MusicAlbum/name', 'Event/name', 'MusicRecording/name']",MusicRecording/name
+243,39,Duration,duration,Duration,[0.9172405  0.92668802 0.93412334 0.93802845 0.99999988],"['CoordinateAT', 'currency', 'Date', 'Time', 'Duration']",Duration
+244,39,MusicAlbum/name,category/genre,DateTime,[0.89519018 0.8958751  0.8986823  0.90136307 0.90159017],"['Event/name', 'Restaurant/name', 'Country', 'Organization', 'DateTime']",-
+245,39,MusicArtistAT,artist/band name,Event/name,[0.91021073 0.91125703 0.9144218  0.91857564 0.91940564],"['MusicArtistAT', 'Organization', 'MusicRecording/name', 'MusicAlbum/name', 'Event/name']",MusicArtistAT
+246,40,MusicRecording/name,song title,Event/name,[0.91584957 0.9164905  0.91892147 0.92237163 0.94559783],"['MusicAlbum/name', 'EventStatusType', 'Event/description', 'MusicRecording/name', 'Event/name']",MusicRecording/name
+247,40,Duration,duration,Duration,[0.9172405  0.92668802 0.93412334 0.93802845 0.99999988],"['CoordinateAT', 'currency', 'Date', 'Time', 'Duration']",Duration
+248,40,MusicAlbum/name,song title,Event/name,[0.91584957 0.9164905  0.91892147 0.92237163 0.94559783],"['MusicAlbum/name', 'EventStatusType', 'Event/description', 'MusicRecording/name', 'Event/name']",MusicRecording/name
+249,40,MusicArtistAT,artist/band name,Event/name,[0.91021073 0.91125703 0.9144218  0.91857564 0.91940564],"['MusicArtistAT', 'Organization', 'MusicRecording/name', 'MusicAlbum/name', 'Event/name']",MusicArtistAT

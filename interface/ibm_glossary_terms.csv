@@ -1,0 +1,187 @@
+,terms
+0,accountability
+1,active learning
+2,active metadata
+3,active runtime
+4,AI
+5,AI ethics
+6,AI governance
+7,AI safety
+8,AI system
+9,algorithm
+10,analytics
+11,artificial intelligence (AI)
+12,artificial intelligence system (AI system)
+13,asset
+14,AutoAI experiment
+15,batch deployment
+16,bias
+17,bias detection
+18,binary classification
+19,business term
+20,business vocabulary
+21,catalog
+22,category
+23,classification
+24,cleanse
+25,collaborator
+26,combinatorial problem
+27,compute resources
+28,confusion matrix
+29,connected data
+30,connection
+31,constraint
+32,continuous learning
+33,Core ML deployment
+34,curate
+35,data asset
+36,data class
+37,data integration
+38,data lake
+39,data lakehouse
+40,data mining
+41,data model
+42,data product
+43,data protection rule
+44,data quality analysis
+45,data quality definition
+46,data quality rule
+47,data science
+48,data set
+49,data source
+50,data table
+51,data warehouse
+52,Decision Optimization model
+53,decision variable
+54,deployment
+55,deployment space
+56,DevOps
+57,DOcplex
+58,endpoint URL
+59,environment
+60,environment runtime
+61,environment template
+62,explainability
+63,fairness
+64,feature
+65,feature engineering
+66,feature selection
+67,feature store
+68,feature transformation
+69,federated learning
+70,flow
+71,Gantt chart
+72,governance artifact
+73,governance rule
+74,governance workflow
+75,governed catalog
+76,GPU
+77,graphical builder
+78,graphics processing unit (GPU)
+79,hold-out set
+80,human oversight
+81,hyperparameter
+82,image
+83,ingest
+84,insight
+85,intent
+86,job
+87,Jupyter notebook
+88,labeled data
+89,large language model
+90,lineage
+91,logical model
+92,machine learning (ML)
+93,machine learning framework
+94,machine learning model
+95,mask
+96,masking flow
+97,master data
+98,mathematical programming (MP)
+99,metadata import
+100,misalignment
+101,ML
+102,MLOps
+103,model
+104,model formulation
+105,ModelOps
+106,MP
+107,natural language
+108,natural language processing (NLP)
+109,natural language processing library
+110,neural network
+111,NLP
+112,node
+113,notebook
+114,notebook kernel
+115,obfuscate
+116,object storage
+117,objective function
+118,one-shot learning
+119,online deployment
+120,ontology
+121,operational asset
+122,OPL model
+123,optimal solution
+124,optimization
+125,orchestration
+126,parameter
+127,party
+128,payload
+129,payload logging
+130,physical model
+131,pipeline
+132,pipeline leaderboard
+133,placeholder
+134,policy
+135,predictive analytics
+136,pretrained model
+137,primary category
+138,privacy
+139,profile
+140,project
+141,publish
+142,Python
+143,Python DOcplex model
+144,Python function
+145,quality rule
+146,R
+147,read
+148,redact
+149,reference data set
+150,refine
+151,reinforcement learning
+152,reward
+153,rule
+154,runtime environment
+155,scoring
+156,script
+157,secondary category
+158,self-attention
+159,self-supervised learning
+160,sensitive data
+161,shape
+162,small data
+163,SQL pushback
+164,structured data
+165,structured information
+166,substitute
+167,supernode
+168,supervised learning
+169,text classification
+170,time series
+171,trained model
+172,training
+173,training data
+174,training set
+175,transfer learning
+176,transparency
+177,Turing test
+178,unbounded problem
+179,unstructured data
+180,unstructured information
+181,unsupervised learning
+182,validation set
+183,virtual agent
+184,visualization
+185,weight

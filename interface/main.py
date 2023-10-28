@@ -14,7 +14,7 @@ CUSTOM_OPTION = "Another option..."
 
 
 def load_data():
-    with open("../data/cta-test-table-wise.pkl", "rb") as f:
+    with open("cta-test-table-wise.pkl", "rb") as f:
         data = pickle.load(f)
     return data
 

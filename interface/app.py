@@ -1,4 +1,5 @@
-import pickle
+import boto3
+
 
 from dotenv import dotenv_values
 import streamlit as st
@@ -11,24 +12,16 @@ from datetime import datetime
 
 
 CUSTOM_OPTION = "Another option..."
-
-
-def load_data():
-    with open("cta-test-table-wise.pkl", "rb") as f:
-        data = pickle.load(f)
-    return data
+BUCKET = "semantic-annotation-tables"
 
 
 def get_next_table():
     st.session_state.table_id += 1
-    example = examples[st.session_state.table_id]
-    lines = example.split("\n")
-    table = [line.split("||") for line in lines[1:]]
-    column_name = lines[0].strip().split("||")
-    if column_name[-1] == "":
-        column_name = column_name[:-1]
-        table = [row[:-1] for row in table]
-    st.session_state.df = pd.DataFrame(table, columns=column_name)
+    example = tables["name"][st.session_state.table_id]
+    file_format = tables["file_format"][st.session_state.table_id]
+    if file_format == "csv":
+        obj = s3.get_object(Bucket=BUCKET, Key=example)
+        st.session_state.df = pd.read_csv(obj["Body"], index_col=0)
 
 
 def append_labels():
@@ -38,7 +31,7 @@ def append_labels():
             column_labels.append(st.session_state[f"custom_col{i}"])
         else:
             column_labels.append(st.session_state[f"col{i}"])
-    new_row = [data[st.session_state.table_id][0], datetime.utcnow(), selected_annotator, column_labels]
+    new_row = [tables["name"][st.session_state.table_id], datetime.utcnow(), selected_annotator, column_labels]
     with open("labels.csv", "a") as f_object:
         writer_object = writer(f_object)
         writer_object.writerow(new_row)
@@ -46,6 +39,9 @@ def append_labels():
 
 # Load env file with API KEY using full path
 config = dotenv_values("../.env")
+s3 = boto3.client(
+    "s3", aws_access_key_id=config["AWS_ACCESS_KEY_ID"], aws_secret_access_key=config["AWS_SECRET_ACCESS_KEY"]
+)
 
 
 @st.cache_resource
@@ -66,8 +62,7 @@ st.set_page_config(page_title="Semantic Annotation Benchmark", layout="wide")
 model = init_model()
 index = init_index()
 
-data = load_data()
-examples = [example[1] for example in data]
+tables = pd.read_csv("current_dataset.csv")
 st.title("Semantic Annotation Benchmark Creator")
 annotators = ["Lionel", "Udayan", "Sainyam Galhotra"]
 selected_annotator = st.selectbox("Annotator", annotators)

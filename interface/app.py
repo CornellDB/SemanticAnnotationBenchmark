@@ -17,11 +17,19 @@ BUCKET = "semantic-annotation-tables"
 
 def get_next_table():
     st.session_state.table_id += 1
-    example = tables["name"][st.session_state.table_id]
-    file_format = tables["file_format"][st.session_state.table_id]
+    example = tables["name"].iloc[st.session_state.table_id]
+    file_format = tables["file_format"].iloc[st.session_state.table_id]
+    obj = s3.get_object(Bucket=BUCKET, Key=example)
     if file_format == "csv":
-        obj = s3.get_object(Bucket=BUCKET, Key=example)
         st.session_state.df = pd.read_csv(obj["Body"], index_col=0)
+    elif file_format == "tsv":
+        st.session_state.df = pd.read_csv(obj["Body"], sep="\t")
+
+
+# def get_dataset():
+#     print("Get new dataset", st.session_state.selected_dataset)
+#     st.session_state.table_id = 0
+#     st.session_state.filtered_table = tables[tables["dataset"] == st.session_state.selected_dataset]
 
 
 def append_labels():
@@ -29,9 +37,17 @@ def append_labels():
     for i in range(len(st.session_state.df.columns)):
         if st.session_state[f"col{i}"] == CUSTOM_OPTION:
             column_labels.append(st.session_state[f"custom_col{i}"])
+            st.session_state[f"custom_col{i}"] = ""
         else:
             column_labels.append(st.session_state[f"col{i}"])
-    new_row = [tables["name"][st.session_state.table_id], datetime.utcnow(), selected_annotator, column_labels]
+        st.session_state[f"col{i}"] = ""
+        st.session_state[f"concept_col{i}"] = ""
+    new_row = [
+        tables["name"].iloc[st.session_state.table_id],
+        datetime.utcnow(),
+        selected_annotator,
+        column_labels,
+    ]
     with open("labels.csv", "a") as f_object:
         writer_object = writer(f_object)
         writer_object.writerow(new_row)
@@ -83,6 +99,17 @@ if "df" not in st.session_state:
     st.session_state.table_id = -1
     get_next_table()
 
+
+def form_submission():
+    # Checking if all the fields are non empty
+    for i in range(len(st.session_state.df.columns)):
+        if st.session_state[f"col{i}"] is not None:
+            append_labels()
+            break
+    # else:
+    #     st.warning("Please fill at least one field")
+
+
 with left_column:
     st.subheader("Current table to label")
     st.dataframe(st.session_state.df, use_container_width=True)
@@ -99,14 +126,6 @@ with right_column:
             selection = st.selectbox(f"Select suggested concepts", options, key=f"col{i}")
             if selection == CUSTOM_OPTION:
                 otherOption = st.text_input("Enter your other option...", key=f"custom_col{i}")
-    submit_form = st.button("Submit")
-
-    # Checking if all the fields are non empty
+    submit_form = st.button("Submit", on_click=form_submission)
     if submit_form:
-        for i in range(len(st.session_state.df.columns)):
-            if st.session_state[f"col{i}"] is not None:
-                append_labels()
-                st.success("Submitted")
-                break
-        else:
-            st.warning("Please fill at least one field")
+        st.success("Submitted")

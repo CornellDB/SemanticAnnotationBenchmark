@@ -36,7 +36,7 @@ def get_data_from_s3(example_name: str, file_format: str):
 def get_initial_table():
     print("Get initial table")
     st.session_state.table_id = conn.query(
-        f"SELECT current_table_id FROM annotators WHERE name = '{st.session_state.selected_annotator}';"
+        f"SELECT current_table_id FROM annotators WHERE name = '{st.session_state.selected_annotator}';", ttl=0
     ).iloc[0]["current_table_id"]
     print(st.session_state.table_id)
     example = tables["name"].iloc[st.session_state.table_id]
@@ -53,9 +53,9 @@ def get_next_table():
     while True:
         st.session_state.table_id += 1
         example = tables["name"].iloc[st.session_state.table_id]
-        label_count = conn.query(f"SELECT count(table_name) FROM labels WHERE table_name = '{example}';").iloc[0][
-            "count(table_name)"
-        ]
+        label_count = conn.query(f"SELECT count(table_name) FROM labels WHERE table_name = '{example}';", ttl=0).iloc[
+            0
+        ]["count(table_name)"]
         print(f"Label count {label_count}, table {st.session_state.table_id}")
         if label_count < 3:
             break
@@ -171,7 +171,7 @@ with conn.session as s:
             "CREATE TABLE IF NOT EXISTS labels (table_name TEXT, date TEXT, annotator TEXT, labels TEXT, custom_labeled_cols TEXT, suggested_terms TEXT);"
         )
     )
-    row_length = conn.query("SELECT count(name) FROM annotators;")
+    row_length = conn.query("SELECT count(name) FROM annotators;", ttl=0)
     if row_length.loc[0]["count(name)"] == 0:
         s.execute(
             text("DELETE FROM annotators;"),
@@ -183,7 +183,7 @@ with conn.session as s:
                 params=dict(name=k, current_table_id=id),
             )
     s.commit()
-annotators_names = conn.query("SELECT name FROM annotators")["name"].to_list()
+annotators_names = conn.query("SELECT name FROM annotators", ttl=0)["name"].to_list()
 selected_annotator = st.selectbox("Annotator", annotators_names, key="selected_annotator", on_change=get_initial_table)
 
 if "df" not in st.session_state:

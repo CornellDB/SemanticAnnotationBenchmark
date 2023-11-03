@@ -16,17 +16,21 @@ st.set_page_config(page_title="Semantic Annotation Benchmark", layout="wide")
 
 CUSTOM_OPTION = "Another option..."
 BUCKET = "semantic-annotation-tables"
+MAX_ROWS = 100
+MAX_COLS = 10
 
 
 def get_data_from_s3(example_name: str, file_format: str):
     print(example_name)
     obj = s3.get_object(Bucket=BUCKET, Key=example_name)
+    df = None
     if file_format == "csv":
-        return pd.read_csv(obj["Body"], index_col=0)
+        df = pd.read_csv(obj["Body"], index_col=0)
     elif file_format == "csv_3rows":
-        return pd.read_csv(obj["Body"], index_col=0, header=[0, 1, 2])
+        df = pd.read_csv(obj["Body"]yyp, index_col=0, header=[0, 1, 2])
     elif file_format == "tsv":
-        return pd.read_csv(obj["Body"], sep="\t")
+        df = pd.read_csv(obj["Body"], sep="\t")
+    return df.iloc[:MAX_ROWS, :MAX_COLS]
 
 
 def get_initial_table():
@@ -49,10 +53,10 @@ def get_next_table():
     while True:
         st.session_state.table_id += 1
         example = tables["name"].iloc[st.session_state.table_id]
-        label_count = conn.query(f"SELECT count(table_name) FROM labels WHERE table_name = '{example}'").iloc[0][
+        label_count = conn.query(f"SELECT count(table_name) FROM labels WHERE table_name = '{example}';").iloc[0][
             "count(table_name)"
         ]
-        print(label_count)
+        print(f"Label count {label_count}, table {st.session_state.table_id}")
         if label_count < 3:
             break
     with conn.session as s:
@@ -90,6 +94,7 @@ def validate_submission() -> bool:
 
 def upload_submission():
     if not validate_submission():
+        st.session_state["submission_success"] = False
         return
     print("Append label")
     column_labels = []
@@ -126,6 +131,8 @@ def upload_submission():
             params=new_row,
         )
         s.commit()
+    get_next_table()
+    st.session_state["submission_success"] = True
 
 
 # Load env file with API KEY using full path
@@ -169,7 +176,7 @@ with conn.session as s:
         s.execute(
             text("DELETE FROM annotators;"),
         )
-        annotators_init = {"Lionel": 0, "Udayan": 0, "Sainyam Galhotra": 0}
+        annotators_init = {"Lionel": 0, "Udayan": 0, "Sainyam Galhotra": 0, "Participant 1": 0}
         for k, id in annotators_init.items():
             s.execute(
                 text("INSERT INTO annotators (name, current_table_id) VALUES (:name, :current_table_id);"),
@@ -188,6 +195,7 @@ left_column, right_column = st.columns([3, 2], gap="medium")
 
 with left_column:
     st.subheader("Current table to label")
+    st.write(f"Table Id: {st.session_state.table_id}")
     st.dataframe(st.session_state.df, use_container_width=True)
     next_table = st.button("Get next table", on_click=get_next_table)
 
@@ -206,7 +214,7 @@ with right_column:
             unable_to_label = st.checkbox("Unable to label", key=f"unable_col{i}")
     submit_form = st.button("Submit", on_click=upload_submission)
     if submit_form:
-        if validate_submission():
+        if st.session_state["submission_success"]:
             st.success("Submitted")
         else:
             st.warning(

@@ -1,0 +1,623 @@
+,prompt_output_id,col_idx,label,original_pred,class_pred_using_bert,highest_bertscore,class_pred_using_bert,lionel_annot
+0,0,0,social network,"Column 0: Website names
+Column 1: Website categories
+Column 2: Number of users/members
+Column 3: Accessibility type
+Column 4: Geographic focus",social network,0.8815115094184875,-,-
+1,1,0,state of the United States,"Column 0: State abbreviation
+Column 1: Numeric value (unknown context)",state of the United States,0.8662457466125488,state of the United States,state of the United States
+2,2,2,percentage,"Column 0: Keywords/Topics
+Column 1: Frequency/Count
+Column 2: Percentage
+Column 3: Ranking/Order",percentage,0.8786221742630005,percentage,percentage
+3,3,0,occupation,"Column 0: Occupation 
+Column 1: Political affiliation",occupation,0.8836454153060913,occupation,occupation
+4,4,0,camera model,"Column 0: Camera model
+Column 1: Price
+Column 2: Megapixels
+Column 3: Number of lenses
+Column 4: Camera type
+Column 5: Weight (in ounces)",camera model,0.8889231085777283,camera model,camera model
+5,5,3,postal code,"Column 0: Unknown
+Column 1: Location Name
+Column 2: State Abbreviation
+Column 3: Zip Code",postal code,0.8693593144416809,postal code,postal code
+6,6,0,high school,"Column 0: School Name
+Column 1: School Location (Street and Borough)
+Column 2: Zip Code
+Column 3: School Phone Number
+Column 4: School Grade Levels
+Column 5: Number of Students Enrolled
+Column 6: Number of Teachers
+Column 7: Number of Advanced Regents Diplomas
+Column 8: Number of Regents Diplomas
+Column 9: Number of Local Diplomas
+Column 10: Number of Students with an IEP
+Column 11: Graduation Rate
+Column 12: Percentage of Students who met College Readiness Standards in ELA
+Column 13: Percentage of Students who met College Readiness Standards in Math
+Column 14: Percentage of Students who graduated with a Regents Diploma with Advanced Designation
+Column 15: Percentage of Students who graduated with a Career and Technical Education (CTE) Endorsement
+Column 16: Percentage of Students who graduated with a Arts Endorsement
+Column 17: Percentage of Students who graduated with a Biliteracy Endorsement
+Column 18: Percentage of Students who graduated with a Humanities Endorsement
+Column 19: School Type
+Column 20: Number of Programs Offered
+Column 21: School Neighborhood
+Column 22: School Admissions Type
+Column 23: Number of Students in English Language Learners (ELL) Programs
+Column 24: ELL Progress Index
+Column 25: Percentage of Students who are Chronically Absent
+Column 26: Average Teacher Attendance Rate",high school,0.8657506704330444,high school,high school
+7,7,0,greeks,"Column 0: Author
+Column 1: Year of composition
+Column 2: Title of work
+Column 3: Genre/Type of literature",greeks,0.8704925179481506,-,-
+8,8,0,human,"Column 0: Person's name
+Column 1: Occupation or title
+Column 2: Place or location",human,0.8821901679039001,human,human
+9,9,0,lunar mare,"Column 0: Name of lakes
+Column 1: Temperature in Celsius
+Column 2: Elevation in meters
+Column 3: Area in square kilometers
+Column 4: Descriptive name of lakes",-,0.8301331400871277,-,-
+10,10,0,human,"Column 0: Names
+Column 1: People who know Fernanda",human,0.8821901679039001,human,human
+11,11,1,company,"Column 0: Person Name
+Column 1: Company Name
+Column 2: Location/City",company,0.8912208080291748,company,company
+12,12,0,email,"Column 0: Email addresses
+Column 1: Day of the week
+Column 2: Month
+Column 3: Day of the month
+Column 4: Time of day",email,0.854579508304596,email,email
+13,13,0,human,"Column 0: Names
+Column 1: Suffixes
+Column 2: Year
+Column 3: Positions/Positions played
+Column 4: Days of the month
+Column 5: Age
+Column 6: Games played
+Column 7: Minutes played
+Column 8: Field goal percentage
+Column 9: Offensive rebounds
+Column 10: Defensive rebounds
+Column 11: Three-point field goal percentage
+Column 12: Total rebounds
+Column 13: Assists
+Column 14: Free throw percentage
+Column 15: Points scored
+Column 16: Player efficiency rating
+Column 17: Blocks
+Column 18: Turnovers
+Column 19: Steals
+Column 20: Personal fouls
+Column 21: Double-doubles
+Column 22: Points per game
+Column 23: Total minutes played
+Column 24: Total points scored",human,0.8821901679039001,human,human
+14,14,0,doi,"Column 0: info:doi
+Column 1: topic/subject (mantle, disks, disk, dust, solar)",doi,0.8511415719985962,doi,doi
+15,15,1,organization,"Column 0: Product name
+Column 1: Brand or company name/Environmental initiatives or campaigns",organization,0.8794585466384888,organization,organization
+16,16,1,organization,"Column 0: Date
+Column 1: Company Name
+Column 2: Country
+Column 3: Business Type
+Column 4: Industry
+Column 5: Type of Cyber Attack
+Column 6: Type of Personal Information Compromised
+Column 7: Unknown
+Column 8: Location of Cyber Attack
+Column 9: Successful Cyber Attack
+Column 10: Unknown
+Column 11: Cost of Cyber Attack
+Column 12: Webpage Affected
+Column 13: Data Leak Identifier
+Column 14: Unknown
+Column 15: Payment Method Compromised
+Column 16: Account Compromised
+Column 17: Malware Used
+Column 18: Phishing Attack Used",organization,0.8860411643981934,organization,organization
+17,17,0,song,"Column 0: Song Titles
+Column 1: Artist/Band Name
+Column 2: Numeric Value (possibly indicating track number or chart position)",song,0.8960537910461426,song,song
+18,18,3,population,"Column 0: State names
+Column 1: Percentage of land covered by water
+Column 2: Percentage of land covered by forests
+Column 3: Population of each state",population,0.8581164479255676,population,population
+19,19,0,company,"Column 0: Production Companies
+Column 1: Ratings
+Column 2: Box Office Gross (in dollars)",company,0.8811414837837219,company,company
+20,20,2,human,"Column 0: No Limit
+Column 1: Gender
+Column 2: Name
+Column 3: Year
+Column 4: Country
+Column 5: Height (in cm)",human,0.914146363735199,human,human
+21,21,1,country code,"Column 0: Date
+Column 1: Company Name
+Column 2: Country
+Column 3: Business Type
+Column 4: Industry
+Column 5: Type of Cyber Attack
+Column 6: Type of Personal Information Compromised
+Column 7: Unknown
+Column 8: Location of Cyber Attack
+Column 9: Evidence of Data Exfiltration
+Column 10: Unknown
+Column 11: Cost of Cyber Attack
+Column 12: Webpage Affected
+Column 13: Data Leak Identifier
+Column 14: Unknown
+Column 15: Payment Method Compromised
+Column 16: Financial Loss
+Column 17: Legal Action Taken
+Column 18: Insurance Coverage",country code,0.9314115047454834,country code,-
+22,22,0,liberal arts college in the United States,"Column 0: College/University name
+Column 1: Year
+Column 2: Number of students enrolled
+Column 3: Number of faculty members
+Column 4: Endowment amount
+Column 5: Latitude/Longitude coordinates",liberal arts college in the United States,0.8561195731163025,liberal arts college in the United States,liberal arts college in the United States
+23,23,0,state of the United States,"Column 0: State abbreviation
+Column 1-6: Numeric data (unspecified)
+Column 7: Elevation (in feet)
+Column 8-13: Numeric data (unspecified)",state of the United States,0.8662457466125488,state of the United States,state of the United States
+24,24,0,human,"Column 0: Names
+Column 1: Date
+Column 2: Numeric data
+Column 3: Numeric data
+Column 4: Numeric data
+Column 5: Empty/Unknown
+Column 6: Numeric data",human,0.8821901679039001,human,human
+25,25,0,occupation,"Column 0: Occupation 
+Column 1: Location 
+Column 2: Political affiliation 
+Column 3: District/Region",occupation,0.8836454153060913,occupation,occupation
+26,26,0,video game,"Column 0: Security companies
+Column 1: Number of locations or offices for each company (assuming there is a missing column header for this information)",video game,0.8838120698928833,-,-
+27,27,1,occupation,"Column 0: Location
+Column 1: Occupation
+Column 2: Political affiliation
+Column 3: Electoral district",occupation,0.9195815920829773,occupation,occupation
+28,28,0,human,"Column 0: Names
+Column 1: People who know Fernanda",human,0.8821901679039001,human,human
+29,29,0,occupation,"Column 0: Job Titles
+Column 1: Employment Percentage
+Column 2: Median Annual Salary",occupation,0.8836454153060913,occupation,occupation
+30,30,0,senator,"Column 0: Names
+Column 1: State Abbreviations
+Column 2: State Codes
+Column 3: Zip Codes
+Column 4: Longitude Coordinates
+Column 5: Latitude Coordinates",senator,0.8561195731163025,-,-
+31,31,0,star system,"Column 0: Location 
+Column 1: Species or Type of Crab",star system,0.8801494240760803,-,-
+32,31,1,star system,"Column 0: Location 
+Column 1: Species or Type of Crab",star system,0.8884207010269165,-,-
+33,32,1,organization,"Column 0: Product name
+Column 1: Brand or company name/Environmental initiatives or campaigns",organization,0.8794585466384888,organization,organization
+34,33,0,human,"Column 0: Person Name
+Column 1: Job Title/Position",human,0.8821901679039001,human,human
+35,34,2,percentage,"Column 0: Keywords/Topics
+Column 1: Number of occurrences
+Column 2: Percentage
+Column 3: Duration/Time",percentage,0.8909323215484619,percentage,percentage
+36,35,5,occupation,"Column 0: Person's name
+Column 1: Age
+Column 2: Gender
+Column 3: Occupation/Job
+Column 4: Place of residence
+Column 5: Occupation/Job (if applicable)
+Column 6: Place of origin/birth",occupation,0.8733219504356384,occupation,occupation
+37,36,0,congressperson,"Column 0: Name
+Column 1: Political Party
+Column 2: State
+Column 3: Population
+Column 4: Net Worth
+Column 5: Total Income",congressperson,0.8561196327209473,-,-
+38,37,0,doi,"Column 0: info:doi (identifiers for scientific articles)
+Column 1: geological features (mantle), astronomical objects (disks, solar), materials (dust)",doi,0.8511415719985962,doi,doi
+39,38,2,occupation,"Column 0: Province/State
+Column 1: Name
+Column 2: Profession/Occupation
+Column 3: Birthplace
+Column 4: Political Affiliation
+Column 5: Electoral District/Region",occupation,0.9094836115837097,occupation,occupation
+40,38,1,member of parliament of canada,"Column 0: Province/State
+Column 1: Name
+Column 2: Profession/Occupation
+Column 3: Birthplace
+Column 4: Political Affiliation
+Column 5: Electoral District/Region",member of parliament of canada,0.8784279227256775,member of parliament of canada,-
+41,39,0,country,"Column 0: Country 
+Column 1: Population (in thousands)",country,0.8792340159416199,country,country
+42,40,0,lunar mare,"Column 0: Lunar Mare Names
+Column 1: Latitude Coordinates
+Column 2: Longitude Coordinates
+Column 3: Diameter (in kilometers)
+Column 4: Lunar Mare Descriptions/Features",-,0.8301331400871277,lunar mare,lunar mare
+43,41,0,language,"Column 0: Language
+Column 1: Number of speakers/population of speakers",language,0.868813157081604,language,language
+44,42,1,business,"Column 0: Index/ID
+Column 1: Company/Bank Name
+Column 2: Country/Region
+Column 3: Industry/Sector
+Column 4: Stock Price (in USD)
+Column 5: Earnings per Share (in USD)
+Column 6: Market Capitalization (in billions of USD)
+Column 7: Dividend Yield (in percentage)",-,0.801423192024231,business,business
+45,43,1,association football player,"Column 0: Index/ID
+Column 1: Player name
+Column 2: Team/City
+Column 3: Salary/Compensation",-,0.8009660840034485,-,-
+46,44,1,billionaire,"Column 0: Index/ID
+Column 1: Name
+Column 2: Net worth (in USD)
+Column 3: Age
+Column 4: City of residence
+Column 5: State of residence
+Column 6: Business/Industry affiliation",-,0.7674067616462708,-,-
+47,45,2,airline,"Column 0: Details
+Column 1: Price
+Column 2: Airline
+Column 3: Route
+Column 4: Flight type
+Column 5: Date
+Column 6: Departure and arrival time
+Column 7: Flight duration
+Column 8: Class
+Column 9: Additional information
+Column 10: Unknown
+Column 11: Unknown",airline,0.9014700651168823,airline,airline
+48,45,5,date,"Column 0: Details
+Column 1: Price
+Column 2: Airline
+Column 3: Route
+Column 4: Flight type
+Column 5: Date
+Column 6: Departure and arrival time
+Column 7: Flight duration
+Column 8: Class
+Column 9: Additional information
+Column 10: Unknown
+Column 11: Unknown",date,0.8858056664466858,date,date
+49,45,6,time period,"Column 0: Details
+Column 1: Price
+Column 2: Airline
+Column 3: Route
+Column 4: Flight type
+Column 5: Date
+Column 6: Departure and arrival time
+Column 7: Flight duration
+Column 8: Class
+Column 9: Additional information
+Column 10: Unknown
+Column 11: Unknown",time period,0.9486403465270996,time period,time period
+50,45,7,duration,"Column 0: Details
+Column 1: Price
+Column 2: Airline
+Column 3: Route
+Column 4: Flight type
+Column 5: Date
+Column 6: Departure and arrival time
+Column 7: Flight duration
+Column 8: Class
+Column 9: Additional information
+Column 10: Unknown
+Column 11: Unknown",duration,0.869096577167511,duration,duration
+51,45,8,travel class,"Column 0: Details
+Column 1: Price
+Column 2: Airline
+Column 3: Route
+Column 4: Flight type
+Column 5: Date
+Column 6: Departure and arrival time
+Column 7: Flight duration
+Column 8: Class
+Column 9: Additional information
+Column 10: Unknown
+Column 11: Unknown",travel class,0.9053439497947693,travel class,travel class
+52,46,5,postal code,"Column 0: Longitude
+Column 1: Latitude
+Column 2: Address
+Column 3: City
+Column 4: State
+Column 5: Zip code
+Column 6: Company name
+Column 7: Job title
+Column 8: Salary (in dollars)
+Column 9: Bonus (in dollars)
+Column 10: Last name
+Column 11: First name",postal code,0.8595889806747437,postal code,postal code
+53,47,0,human,"Column 0: Person Name
+Column 1: Job Title/Position",human,0.8821901679039001,human,human
+54,48,1,organization,"Column 0: Date
+Column 1: Company Name
+Column 2: Country
+Column 3: Business Type
+Column 4: Industry
+Column 5: Type of Cyber Attack
+Column 6: Type of Personal Information Compromised
+Column 7: Unknown
+Column 8: Location of Cyber Attack
+Column 9: Data Breach
+Column 10: Unknown
+Column 11: Cost of Cyber Attack
+Column 12: Webpage Affected
+Column 13: Data Leak ID
+Column 14: Unknown
+Column 15: Payment Method Compromised
+Column 16: Social Security Number Compromised
+Column 17: National ID Compromised
+Column 18: Driver's License Compromised
+Column 19: Unknown",organization,0.8860411643981934,organization,organization
+55,49,0,year,"Column 0: Year
+Column 1: Percentage
+Column 2: Unknown
+Column 3: Unknown
+Column 4: Unknown
+Column 5: Latitude
+Column 6: Unknown
+Column 7: Unknown",year,0.8851324915885925,year,year
+56,50,1,age group,"Column 0: Index/ID
+Column 1: Age group
+Column 2: Gender
+Column 3: Binary response (yes/no)",-,0.8042435646057129,age group,age group
+57,51,0,human,"Column 0: Person Name
+Column 1: Job Title/Position",human,0.8821901679039001,human,human
+58,52,0,email,"Column 0: Email address
+Column 1: Month
+Column 2: Day of the month",email,0.854579508304596,email,email
+59,53,0,lunar mountain,"Column 0: Mountain names
+Column 1: Elevation in kilometers
+Column 2: Longitude in degrees
+Column 3: Number of craters on the mountain",lunar mountain,0.8519106507301331,lunar mountain,lunar mountain
+60,54,0,song,"Column 0: I don't know.
+Column 1: Location/Attraction Music.
+Column 2: Location/Attraction Music Album.
+Column 3: Track/Playlist Number.",song,0.8960537910461426,-,-
+61,55,61,age group,"Column 0: Index
+Column 1: City
+Column 2: Response to question 1
+Column 3: Response to question 2
+Column 4-63: Responses to questions 3-52
+Column 54: Response to question 53
+Column 55: Age range
+Column 56: Country
+Column 57-59: Unknown/empty
+Column 60: Gender
+Column 61: Age range
+Column 62: Education level
+Column 63: Income range",-,0,age group,age group
+62,56,0,occupation,"Column 0: Occupation 
+Column 1: Political affiliation 
+Column 2: Location/City",occupation,0.8629218935966492,occupation,occupation
+63,57,0,city,"Column 0: City
+Column 1: State",city,0.8706649541854858,city,city
+64,58,0,greeks,"Column 0: Author
+Column 1: Year of composition
+Column 2: Title of work
+Column 3: Genre/Type of literature",greeks,0.8704925179481506,-,greeks
+65,59,1,zip code,"Column 0: Industry sector
+Column 1: Revenue or sales
+Column 2: Number of employees or workforce size",zip code,0.8511065244674683,-,-
+66,60,1,organization,"Column 0: Product name
+Column 1: Brand or company name/Environmental initiatives or campaigns",organization,0.8794585466384888,organization,organization
+67,61,0,city,"Column 0: City
+Column 1: State/Province
+Column 2: Country",city,0.8706649541854858,city,city
+68,62,1,age,"Column 0: numerical values
+Column 1: numerical values
+Column 2: geographic regions",age,0.8698996305465698,-,-
+69,63,0,country,"Column 0: Country
+Column 1: Percentage or Rate
+Column 2: Decimal or Fraction",country,0.8792340159416199,country,country
+70,64,1,political party of the United States,"Column 0: Names
+Column 1: Political party affiliation
+Column 2: State abbreviation
+Column 3: Amount of money (in dollars)
+Column 4: Ranking or position",political party of the United States,0.9246224761009216,political party of the United States,political party of the United States
+71,65,1,doi,"Column 0: Astronomy terms
+Column 1: References/DOI numbers",-,0.8184804916381836,doi,doi
+72,66,0,protein,"Column 0: Identifier or Code
+Column 1: Identifier or Code",protein,0.8857241868972778,-,-
+73,66,1,protein,"Column 0: Identifier or Code
+Column 1: Identifier or Code",protein,0.8542228937149048,-,-
+74,67,1,population,"Column 0: State
+Column 1: Population
+Column 2: Number of Representatives in Congress
+Column 3: Electoral Votes
+Column 4: Land Area (in square miles)
+Column 5: Water Area (in square miles)
+Column 6: Percentage of Land Area covered by Water
+Column 7: Percentage of Population living in Urban Areas
+Column 8: Percentage of Population with Bachelor's Degree or Higher
+Column 9: Percentage of Population below Poverty Line",population,0.9000589847564697,population,population
+75,68,0,lunar crater,"Column 0: Names
+Column 1: Negative numbers
+Column 2: Positive numbers
+Column 3: Whole numbers",-,0.8396276235580444,-,-
+76,69,5,occupation,"Column 0: Name
+Column 1: Age
+Column 2: Gender
+Column 3: Occupation
+Column 4: Place of residence
+Column 5: Occupation (if applicable)
+Column 6: Place of origin",occupation,0.8733219504356384,occupation,occupation
+77,70,0,organization,"Column 0: Organization/Committee
+Column 1: Committee/Working Group",organization,0.8635815382003784,organization,organization
+78,71,3,frequency,"Column 0: Table Type
+Column 1: Table Name
+Column 2: Number of Rows
+Column 3: Number of Columns",frequency,0.8654615879058838,-,-
+79,72,0,surname,"Column 0: Names
+Column 1: Count/Number of occurrences",surname,0.85312819480896,surname,-
+80,73,0,senator,"Column 0: Name
+Column 1: Political Party
+Column 2: State
+Column 3: Age
+Column 4: Number of terms served",senator,0.8561195731163025,senator,-
+81,74,0,song,"Column 0: Song titles
+Column 1: Artist/band names
+Column 2: Various artists
+Column 3: Album titles
+Column 4: Blank
+Column 5: Music genres
+Column 6: Track IDs
+Column 7: Track numbers
+Column 8: Disc numbers
+Column 9: Total discs
+Column 10: Track lengths (in seconds)
+Column 11: Bit rates
+Column 12: Release years
+Column 13: Date added to library
+Column 14: Date modified
+Column 15: Sample rates
+Column 16: Audio bit depths
+Column 17: Blank
+Column 18: File formats
+Column 19-23: Blank
+Column 24: File sizes
+Column 25: Blank
+Column 26: File paths",song,0.8960537910461426,song,song
+82,75,1,frequency,"Column 0: Image URLs
+Column 1: Image ratings/scores",-,0.843966007232666,-,-
+83,76,0,fictional human,"Column 0: Employee names
+Column 1: Customer names",fictional human,0.8526182770729065,-,-
+84,77,0,enterprise,"Column 0: Company Name
+Column 1: State Abbreviation",enterprise,0.8687717914581299,enterprise,enterprise
+85,78,0,camera model,"Column 0: Camera model
+Column 1: Price
+Column 2: Megapixels
+Column 3: Zoom level
+Column 4: Camera type
+Column 5: Weight (in ounces)",camera model,0.8889231085777283,camera model,camera model
+86,79,5,hurricane,"Column 0: Year
+Column 1: Rating
+Column 2: Category
+Column 3: Sales
+Column 4: Percentage
+Column 5: Name",hurricane,0.8556227087974548,-,-
+87,80,0,occupation,"Column 0: Occupation 
+Column 1: Province/State 
+Column 2: Political Party 
+Column 3: Gender",occupation,0.8836454153060913,occupation,occupation
+88,81,0,filepath,"Column 0: File path
+Column 1: Number of items/records in dataset/file",filepath,0.8981524109840393,filepath,filepath
+89,82,0,video game,"Column 0: Game title
+Column 1: Number of downloads
+Column 2: Rating (out of 10)
+Column 3: Size (in KB)
+Column 4: Release date
+Column 5: Number of ratings
+Column 6: Total downloads
+Column 7: Game genre
+Column 8: Game perspective",video game,0.8838120698928833,video game,video game
+90,83,0,language code,"Column 0: Language code
+Column 1: Number of speakers or population count (for languages)",language code,0.8688130974769592,language code,language code
+91,84,0,human,"Column 0: Person Name
+Column 1: Job Title/Position",human,0.8821901679039001,human,human
+92,85,0,country,"Column 0: Country 
+Column 1: Percentage of something (not specified)",country,0.8792340159416199,country,country
+93,86,5,age,"Column 0: Player name
+Column 1: Team abbreviation
+Column 2: Jersey number
+Column 3: Position
+Column 4: Weight (in pounds)
+Column 5: Salary (in millions of dollars)",age,0.9202209115028381,-,age
+94,87,1,filename,"Column 0: File path or directory structure
+Column 1: Class or object name
+Column 2: Numeric identifier or count",filename,0.9251478314399719,-,filename
+95,88,3,count,"Column 0: State abbreviation
+Column 1: Zip code
+Column 2: Internet service type
+Column 3: Number of months using the internet service",-,0.8485901355743408,-,-
+96,89,0,human,"Column 0: Person's name
+Column 1: Occupation or title
+Column 2: Place or location",human,0.8821901679039001,human,human
+97,90,0,language,"Column 0: Language
+Column 1: Population (in millions)",language,0.868813157081604,language,language
+98,91,1,camera model,"Column 0: Camera brand
+Column 1: Camera model
+Column 2: Image resolution (in pixels)
+Column 3: Number of autofocus points
+Column 4: Number of lenses included
+Column 5: Weight (in ounces)",camera model,0.9356775283813477,camera model,camera model
+99,92,1,filename,"Column 0: File path or directory structure
+Column 1: Class or object names
+Column 2: Numeric values or identifiers",filename,0.9251478314399719,-,-
+100,93,0,state of the United States,"Column 0: State
+Column 1: Latitude (in degrees)",state of the United States,0.8662457466125488,state of the United States,state of the United States
+101,94,0,biblical place,"Column 0: Place names
+Column 1: Bible references",biblical place,0.8666673898696899,biblical place,biblical place
+102,95,1,doi,"Column 0: Astronomy terms
+Column 1: References/DOI numbers",-,0.8184804916381836,doi,doi
+103,96,1,political party of the United States,"Column 0: Last name of politicians
+Column 1: Political party affiliation
+Column 2: State represented
+Column 3: Amount of money (in USD)
+Column 4: Type of spending (Defense)",political party of the United States,0.8689253330230713,political party of the United States,political party of the United States
+104,97,1,year,"Column 0: Quantity/Number
+Column 1: Year
+Column 2: Quantity/Number
+Column 3: Age
+Column 4: Measurement/Score
+Column 5: Quantity/Number
+Column 6: Quantity/Number
+Column 7: Quantity/Number
+Column 8: Quantity/Number
+Column 9: Quantity/Number
+Column 10: Name/Label
+Column 11: Name/Label",year,0.8843835592269897,year,year
+105,98,0,city,"Column 0: City
+Column 1: State/Province
+Column 2: Country",city,0.8706649541854858,city,city
+106,99,1,university,"Column 0: Index
+Column 1: University Name
+Column 2: Number of Games Played
+Column 3: Total Yards Gained
+Column 4: Total Points Scored
+Column 5: Average Yards per Play
+Column 6: Average Yards per Game
+Column 7: Number of Wins
+Column 8: Average Yards per Point Scored
+Column 9: Total Number of Plays
+Column 10: Average Yards per Play Allowed
+Column 11: Number of Losses
+Column 12: Total Yards Allowed
+Column 13: Conference Championship Won (1 for yes, 0 for no)
+Column 14: Bowl Games Played
+Column 15: Bowl Games Won
+Column 16: National Championships Won",university,0.8681159019470215,university,university
+107,100,0,identifier,"Column 0: Index or ID
+Column 1: Age",identifier,0.8884705305099487,identifier,identifier
+108,101,0,song,"Column 0: Song/Track Titles
+Column 1: Artist/Band Names
+Column 2: Album/Location Names
+Column 3: Numeric IDs/Track Numbers",song,0.8960537910461426,song,song
+109,102,0,member of the US House of Representatives,"Column 0: Name
+Column 1: Political Party
+Column 2: State
+Column 3: Total Votes
+Column 4: Vote Percentage Change
+Column 5: Final Vote Count",member of the US House of Representatives,0.8561195731163025,-,-
+110,103,0,filepath,"Column 0: File path
+Column 1: Number of items/records in dataset/file",filepath,0.8981524109840393,filepath,filepath
+111,104,0,liberal arts college in the United States,"Column 0: Security companies
+Column 1: Number of employees or staff members (in thousands)",liberal arts college in the United States,0.8760774731636047,-,-
+112,105,0,Member of Parliament of Canada,"Column 0: Person name
+Column 1: Profession
+Column 2: Place of origin
+Column 3: Political affiliation
+Column 4: Electoral district
+Column 5: Province/state",Member of Parliament of Canada,0.8613691329956055,-,-
+113,106,0,company,"Column 0: Company/Stock Ticker
+Column 1: Numeric Value/Quantity",company,0.8811414837837219,company,company
+114,107,0,enterprise,"Column 0: Company/Organization Name
+Column 1: State Abbreviation",enterprise,0.8687717914581299,enterprise,enterprise
+115,108,0,motherboard,"Column 0: Product name
+Column 1: Quantity
+Column 2: Price
+Column 3: SKU (Stock Keeping Unit)",-,0.8408864140510559,-,-

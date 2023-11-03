@@ -1,0 +1,504 @@
+,prompt_output_id,label,original_pred,parsed_col_pred,class_pred_using_bert,highest_bertscore,top_5_preds,lionel_annot
+0,0,telephone,"Description of restaurant, locality of address, postal code, region of address, country, telephone, time, day of week.",description of restaurant,Restaurant/description,[0.96344411 0.96372652 0.97377247 0.98280478 0.99999988],"['Hotel/description', 'Event/description', 'Hotel/description', 'Restaurant/description', 'Restaurant/description']",Restaurant/description
+1,0,Restaurant/name,"Description of restaurant, locality of address, postal code, region of address, country, telephone, time, day of week.",locality of address,addressLocality,[0.9142319  0.91784942 0.91849869 0.9463371  1.00000012],"['Restaurant/name', 'Event/name', 'Organization', 'addressRegion', 'addressLocality']",addressLocality
+2,0,postalCode,"Description of restaurant, locality of address, postal code, region of address, country, telephone, time, day of week.",postal code,postalCode,[0.88954216 0.88961637 0.8896479  0.89414907 0.99999994],"['Restaurant/name', 'Hotel/name', 'Organization', 'Event/name', 'postalCode']",postalCode
+3,0,addressRegion,"Description of restaurant, locality of address, postal code, region of address, country, telephone, time, day of week.",region of address,addressRegion,[0.91913378 0.92036927 0.92133033 0.94633704 0.99999982],"['Organization', 'Event/name', 'EventAttendanceModeEnumeration', 'addressLocality', 'addressRegion']",addressRegion
+4,0,Country,"Description of restaurant, locality of address, postal code, region of address, country, telephone, time, day of week.",country,Country,[0.91340989 0.91425383 0.9207198  0.93141145 0.99999994],"['Duration', 'currency', 'Time', 'Date', 'Country']",Country
+5,0,CoordinateAT,"Description of restaurant, locality of address, postal code, region of address, country, telephone, time, day of week.",telephone,telephone,[0.89243859 0.89333737 0.89716375 0.90874869 0.99999994],"['priceRange', 'MusicRecording/name', 'Date', 'Duration', 'telephone']",telephone
+6,0,CoordinateAT,"Description of restaurant, locality of address, postal code, region of address, country, telephone, time, day of week.",time,Time,[0.91883945 0.9207198  0.93802845 0.94864035 1.00000012],"['currency', 'Country', 'Duration', 'Date', 'Time']",Time
+7,0,Time,"Description of restaurant, locality of address, postal code, region of address, country, telephone, time, day of week.",day of week,DayOfWeek,[0.89901298 0.89937884 0.90221512 0.90234852 1.00000036],"['Organization', 'DateTime', 'addressRegion', 'Event/name', 'DayOfWeek']",DayOfWeek
+8,0,DayOfWeek,"Description of restaurant, locality of address, postal code, region of address, country, telephone, time, day of week.",-,-,0,[],-
+9,1,telephone,"Classify the columns of a given table with only one of the following classes that are separated with comma: description of event, description of restaurant, locality of address, postal code, region of address, country, price range, telephone, date, name of restaurant, payment accepted, day of week, review, organization, date and time, coordinate, name of event, event attendance mode, event status, currency, time, description of hotel, name of hotel, location feature, rating, fax number, email, photograph, name of music recording, music artist, name of album, duration.
+
+Column 1: telephone
+Column 2: name of restaurant
+Column 3: description of restaurant
+Column 4: locality of address
+Column 5: day of week
+Column 6: time",description of event,Event/description,[0.95340085 0.95842171 0.96372652 0.96891713 1.        ],"['Restaurant/description', 'Hotel/description', 'Restaurant/description', 'Event/name', 'Event/description']",telephone
+10,1,Restaurant/name,"Classify the columns of a given table with only one of the following classes that are separated with comma: description of event, description of restaurant, locality of address, postal code, region of address, country, price range, telephone, date, name of restaurant, payment accepted, day of week, review, organization, date and time, coordinate, name of event, event attendance mode, event status, currency, time, description of hotel, name of hotel, location feature, rating, fax number, email, photograph, name of music recording, music artist, name of album, duration.
+
+Column 1: telephone
+Column 2: name of restaurant
+Column 3: description of restaurant
+Column 4: locality of address
+Column 5: day of week
+Column 6: time",telephone,telephone,[0.89243859 0.89333737 0.89716375 0.90874869 0.99999994],"['priceRange', 'MusicRecording/name', 'Date', 'Duration', 'telephone']",Restaurant/name
+11,1,Restaurant/description,"Classify the columns of a given table with only one of the following classes that are separated with comma: description of event, description of restaurant, locality of address, postal code, region of address, country, price range, telephone, date, name of restaurant, payment accepted, day of week, review, organization, date and time, coordinate, name of event, event attendance mode, event status, currency, time, description of hotel, name of hotel, location feature, rating, fax number, email, photograph, name of music recording, music artist, name of album, duration.
+
+Column 1: telephone
+Column 2: name of restaurant
+Column 3: description of restaurant
+Column 4: locality of address
+Column 5: day of week
+Column 6: time",name of restaurant,Restaurant/name,[0.96583289 0.96584755 0.96740007 0.97968745 0.99999988],"['Hotel/name', 'Event/name', 'Organization', 'Hotel/name', 'Restaurant/name']",Restaurant/description
+12,1,Country,"Classify the columns of a given table with only one of the following classes that are separated with comma: description of event, description of restaurant, locality of address, postal code, region of address, country, price range, telephone, date, name of restaurant, payment accepted, day of week, review, organization, date and time, coordinate, name of event, event attendance mode, event status, currency, time, description of hotel, name of hotel, location feature, rating, fax number, email, photograph, name of music recording, music artist, name of album, duration.
+
+Column 1: telephone
+Column 2: name of restaurant
+Column 3: description of restaurant
+Column 4: locality of address
+Column 5: day of week
+Column 6: time",description of restaurant,Restaurant/description,[0.96344411 0.96372652 0.97377247 0.98280478 0.99999988],"['Hotel/description', 'Event/description', 'Hotel/description', 'Restaurant/description', 'Restaurant/description']",addressLocality
+13,1,DayOfWeek,"Classify the columns of a given table with only one of the following classes that are separated with comma: description of event, description of restaurant, locality of address, postal code, region of address, country, price range, telephone, date, name of restaurant, payment accepted, day of week, review, organization, date and time, coordinate, name of event, event attendance mode, event status, currency, time, description of hotel, name of hotel, location feature, rating, fax number, email, photograph, name of music recording, music artist, name of album, duration.
+
+Column 1: telephone
+Column 2: name of restaurant
+Column 3: description of restaurant
+Column 4: locality of address
+Column 5: day of week
+Column 6: time",locality of address,addressLocality,[0.9142319  0.91784942 0.91849869 0.9463371  1.00000012],"['Restaurant/name', 'Event/name', 'Organization', 'addressRegion', 'addressLocality']",DayOfWeek
+14,1,Time,"Classify the columns of a given table with only one of the following classes that are separated with comma: description of event, description of restaurant, locality of address, postal code, region of address, country, price range, telephone, date, name of restaurant, payment accepted, day of week, review, organization, date and time, coordinate, name of event, event attendance mode, event status, currency, time, description of hotel, name of hotel, location feature, rating, fax number, email, photograph, name of music recording, music artist, name of album, duration.
+
+Column 1: telephone
+Column 2: name of restaurant
+Column 3: description of restaurant
+Column 4: locality of address
+Column 5: day of week
+Column 6: time",day of week,DayOfWeek,[0.89901298 0.89937884 0.90221512 0.90234852 1.00000036],"['Organization', 'DateTime', 'addressRegion', 'Event/name', 'DayOfWeek']",Time
+15,2,Restaurant/name,"Column 1: Name of restaurant
+Column 2: Postal code
+Column 3: Payment accepted
+Column 4: Region of address
+Column 5: Locality of address",name of restaurant,Restaurant/name,[0.96583289 0.96584755 0.96740007 0.97968745 0.99999988],"['Hotel/name', 'Event/name', 'Organization', 'Hotel/name', 'Restaurant/name']",Restaurant/name
+16,2,postalCode,"Column 1: Name of restaurant
+Column 2: Postal code
+Column 3: Payment accepted
+Column 4: Region of address
+Column 5: Locality of address",postal code,postalCode,[0.88954216 0.88961637 0.8896479  0.89414907 0.99999994],"['Restaurant/name', 'Hotel/name', 'Organization', 'Event/name', 'postalCode']",postalCode
+17,2,paymentAccepted,"Column 1: Name of restaurant
+Column 2: Postal code
+Column 3: Payment accepted
+Column 4: Region of address
+Column 5: Locality of address",payment accepted,paymentAccepted,[0.86827344 0.87291992 0.87366402 0.87661231 1.        ],"['LocationFeatureSpecification', 'EventStatusType', 'priceRange', 'Time', 'paymentAccepted']",paymentAccepted
+18,2,addressRegion,"Column 1: Name of restaurant
+Column 2: Postal code
+Column 3: Payment accepted
+Column 4: Region of address
+Column 5: Locality of address",region of address,addressRegion,[0.91913378 0.92036927 0.92133033 0.94633704 0.99999982],"['Organization', 'Event/name', 'EventAttendanceModeEnumeration', 'addressLocality', 'addressRegion']",addressRegion
+19,2,addressLocality,"Column 1: Name of restaurant
+Column 2: Postal code
+Column 3: Payment accepted
+Column 4: Region of address
+Column 5: Locality of address",locality of address,addressLocality,[0.9142319  0.91784942 0.91849869 0.9463371  1.00000012],"['Restaurant/name', 'Event/name', 'Organization', 'addressRegion', 'addressLocality']",addressLocality
+20,3,Restaurant/name,"Description of restaurant, telephone, description of event, locality of address, region of address, payment accepted, postal code, coordinate, time, day of week.",description of restaurant,Restaurant/description,[0.96344411 0.96372652 0.97377247 0.98280478 0.99999988],"['Hotel/description', 'Event/description', 'Hotel/description', 'Restaurant/description', 'Restaurant/description']",Restaurant/description
+21,3,telephone,"Description of restaurant, telephone, description of event, locality of address, region of address, payment accepted, postal code, coordinate, time, day of week.",telephone,telephone,[0.89243859 0.89333737 0.89716375 0.90874869 0.99999994],"['priceRange', 'MusicRecording/name', 'Date', 'Duration', 'telephone']",telephone
+22,3,Restaurant/description,"Description of restaurant, telephone, description of event, locality of address, region of address, payment accepted, postal code, coordinate, time, day of week.",description of event,Event/description,[0.95340085 0.95842171 0.96372652 0.96891713 1.        ],"['Restaurant/description', 'Hotel/description', 'Restaurant/description', 'Event/name', 'Event/description']",Event/description
+23,3,addressLocality,"Description of restaurant, telephone, description of event, locality of address, region of address, payment accepted, postal code, coordinate, time, day of week.",locality of address,addressLocality,[0.9142319  0.91784942 0.91849869 0.9463371  1.00000012],"['Restaurant/name', 'Event/name', 'Organization', 'addressRegion', 'addressLocality']",addressLocality
+24,3,addressRegion,"Description of restaurant, telephone, description of event, locality of address, region of address, payment accepted, postal code, coordinate, time, day of week.",region of address,addressRegion,[0.91913378 0.92036927 0.92133033 0.94633704 0.99999982],"['Organization', 'Event/name', 'EventAttendanceModeEnumeration', 'addressLocality', 'addressRegion']",addressRegion
+25,3,paymentAccepted,"Description of restaurant, telephone, description of event, locality of address, region of address, payment accepted, postal code, coordinate, time, day of week.",payment accepted,paymentAccepted,[0.86827344 0.87291992 0.87366402 0.87661231 1.        ],"['LocationFeatureSpecification', 'EventStatusType', 'priceRange', 'Time', 'paymentAccepted']",paymentAccepted
+26,3,postalCode,"Description of restaurant, telephone, description of event, locality of address, region of address, payment accepted, postal code, coordinate, time, day of week.",postal code,postalCode,[0.88954216 0.88961637 0.8896479  0.89414907 0.99999994],"['Restaurant/name', 'Hotel/name', 'Organization', 'Event/name', 'postalCode']",postalCode
+27,3,CoordinateAT,"Description of restaurant, telephone, description of event, locality of address, region of address, payment accepted, postal code, coordinate, time, day of week.",coordinate,CoordinateAT,[0.89723802 0.89960229 0.90587628 0.9172405  1.        ],"['Time', 'Date', 'Organization', 'Duration', 'CoordinateAT']",CoordinateAT
+28,3,CoordinateAT,"Description of restaurant, telephone, description of event, locality of address, region of address, payment accepted, postal code, coordinate, time, day of week.",time,Time,[0.91883945 0.9207198  0.93802845 0.94864035 1.00000012],"['currency', 'Country', 'Duration', 'Date', 'Time']",Time
+29,3,Time,"Description of restaurant, telephone, description of event, locality of address, region of address, payment accepted, postal code, coordinate, time, day of week.",day of week,DayOfWeek,[0.89901298 0.89937884 0.90221512 0.90234852 1.00000036],"['Organization', 'DateTime', 'addressRegion', 'Event/name', 'DayOfWeek']",DayOfWeek
+30,3,DayOfWeek,"Description of restaurant, telephone, description of event, locality of address, region of address, payment accepted, postal code, coordinate, time, day of week.",-,-,0,[],-
+31,4,Restaurant/name,"Column 1: Name of restaurant
+Column 2: Price range
+Column 3: Telephone
+(Note: None of the other classes listed in the task are applicable to this table)",name of restaurant,Restaurant/name,[0.96583289 0.96584755 0.96740007 0.97968745 0.99999988],"['Hotel/name', 'Event/name', 'Organization', 'Hotel/name', 'Restaurant/name']",Restaurant/name
+32,4,priceRange,"Column 1: Name of restaurant
+Column 2: Price range
+Column 3: Telephone
+(Note: None of the other classes listed in the task are applicable to this table)",price range,priceRange,[0.91023839 0.91261685 0.91614968 0.91853905 1.00000024],"['Time', 'Country', 'Duration', 'Date', 'priceRange']",priceRange
+33,4,telephone,"Column 1: Name of restaurant
+Column 2: Price range
+Column 3: Telephone
+(Note: None of the other classes listed in the task are applicable to this table)",telephone,telephone,[0.89243859 0.89333737 0.89716375 0.90874869 0.99999994],"['priceRange', 'MusicRecording/name', 'Date', 'Duration', 'telephone']",telephone
+34,5,Restaurant/name,"description of restaurant, telephone, price range, country, region of address, postal code, coordinate, locality of address, description of event, name of restaurant",description of restaurant,Restaurant/description,[0.96344411 0.96372652 0.97377247 0.98280478 0.99999988],"['Hotel/description', 'Event/description', 'Hotel/description', 'Restaurant/description', 'Restaurant/description']",Restaurant/description
+35,5,telephone,"description of restaurant, telephone, price range, country, region of address, postal code, coordinate, locality of address, description of event, name of restaurant",telephone,telephone,[0.89243859 0.89333737 0.89716375 0.90874869 0.99999994],"['priceRange', 'MusicRecording/name', 'Date', 'Duration', 'telephone']",telephone
+36,5,priceRange,"description of restaurant, telephone, price range, country, region of address, postal code, coordinate, locality of address, description of event, name of restaurant",price range,priceRange,[0.91023839 0.91261685 0.91614968 0.91853905 1.00000024],"['Time', 'Country', 'Duration', 'Date', 'priceRange']",priceRange
+37,5,Country,"description of restaurant, telephone, price range, country, region of address, postal code, coordinate, locality of address, description of event, name of restaurant",country,Country,[0.91340989 0.91425383 0.9207198  0.93141145 0.99999994],"['Duration', 'currency', 'Time', 'Date', 'Country']",Country
+38,5,addressRegion,"description of restaurant, telephone, price range, country, region of address, postal code, coordinate, locality of address, description of event, name of restaurant",region of address,addressRegion,[0.91913378 0.92036927 0.92133033 0.94633704 0.99999982],"['Organization', 'Event/name', 'EventAttendanceModeEnumeration', 'addressLocality', 'addressRegion']",addressRegion
+39,5,postalCode,"description of restaurant, telephone, price range, country, region of address, postal code, coordinate, locality of address, description of event, name of restaurant",postal code,postalCode,[0.88954216 0.88961637 0.8896479  0.89414907 0.99999994],"['Restaurant/name', 'Hotel/name', 'Organization', 'Event/name', 'postalCode']",postalCode
+40,5,CoordinateAT,"description of restaurant, telephone, price range, country, region of address, postal code, coordinate, locality of address, description of event, name of restaurant",coordinate,CoordinateAT,[0.89723802 0.89960229 0.90587628 0.9172405  1.        ],"['Time', 'Date', 'Organization', 'Duration', 'CoordinateAT']",CoordinateAT
+41,5,CoordinateAT,"description of restaurant, telephone, price range, country, region of address, postal code, coordinate, locality of address, description of event, name of restaurant",locality of address,addressLocality,[0.9142319  0.91784942 0.91849869 0.9463371  1.00000012],"['Restaurant/name', 'Event/name', 'Organization', 'addressRegion', 'addressLocality']",addressLocality
+42,5,addressLocality,"description of restaurant, telephone, price range, country, region of address, postal code, coordinate, locality of address, description of event, name of restaurant",description of event,Event/description,[0.95340085 0.95842171 0.96372652 0.96891713 1.        ],"['Restaurant/description', 'Hotel/description', 'Restaurant/description', 'Event/name', 'Event/description']",Event/description
+43,5,Review,"description of restaurant, telephone, price range, country, region of address, postal code, coordinate, locality of address, description of event, name of restaurant",name of restaurant,Restaurant/name,[0.96583289 0.96584755 0.96740007 0.97968745 0.99999988],"['Hotel/name', 'Event/name', 'Organization', 'Hotel/name', 'Restaurant/name']",Restaurant/name
+44,6,Restaurant/name,"Description of restaurant, telephone, locality of address, postal code.",description of restaurant,Restaurant/description,[0.96344411 0.96372652 0.97377247 0.98280478 0.99999988],"['Hotel/description', 'Event/description', 'Hotel/description', 'Restaurant/description', 'Restaurant/description']",Restaurant/description
+45,6,telephone,"Description of restaurant, telephone, locality of address, postal code.",telephone,telephone,[0.89243859 0.89333737 0.89716375 0.90874869 0.99999994],"['priceRange', 'MusicRecording/name', 'Date', 'Duration', 'telephone']",telephone
+46,6,addressLocality,"Description of restaurant, telephone, locality of address, postal code.",locality of address,addressLocality,[0.9142319  0.91784942 0.91849869 0.9463371  1.00000012],"['Restaurant/name', 'Event/name', 'Organization', 'addressRegion', 'addressLocality']",addressLocality
+47,6,postalCode,"Description of restaurant, telephone, locality of address, postal code.",postal code,postalCode,[0.88954216 0.88961637 0.8896479  0.89414907 0.99999994],"['Restaurant/name', 'Hotel/name', 'Organization', 'Event/name', 'postalCode']",postalCode
+48,7,Restaurant/name,"Description of restaurant, telephone, description of event, region of address, price range, country, locality of address, postal code.",description of restaurant,Restaurant/description,[0.96344411 0.96372652 0.97377247 0.98280478 0.99999988],"['Hotel/description', 'Event/description', 'Hotel/description', 'Restaurant/description', 'Restaurant/description']",Restaurant/description
+49,7,telephone,"Description of restaurant, telephone, description of event, region of address, price range, country, locality of address, postal code.",telephone,telephone,[0.89243859 0.89333737 0.89716375 0.90874869 0.99999994],"['priceRange', 'MusicRecording/name', 'Date', 'Duration', 'telephone']",telephone
+50,7,Restaurant/description,"Description of restaurant, telephone, description of event, region of address, price range, country, locality of address, postal code.",description of event,Event/description,[0.95340085 0.95842171 0.96372652 0.96891713 1.        ],"['Restaurant/description', 'Hotel/description', 'Restaurant/description', 'Event/name', 'Event/description']",Event/description
+51,7,addressRegion,"Description of restaurant, telephone, description of event, region of address, price range, country, locality of address, postal code.",region of address,addressRegion,[0.91913378 0.92036927 0.92133033 0.94633704 0.99999982],"['Organization', 'Event/name', 'EventAttendanceModeEnumeration', 'addressLocality', 'addressRegion']",addressRegion
+52,7,priceRange,"Description of restaurant, telephone, description of event, region of address, price range, country, locality of address, postal code.",price range,priceRange,[0.91023839 0.91261685 0.91614968 0.91853905 1.00000024],"['Time', 'Country', 'Duration', 'Date', 'priceRange']",priceRange
+53,7,Country,"Description of restaurant, telephone, description of event, region of address, price range, country, locality of address, postal code.",country,Country,[0.91340989 0.91425383 0.9207198  0.93141145 0.99999994],"['Duration', 'currency', 'Time', 'Date', 'Country']",Country
+54,7,addressLocality,"Description of restaurant, telephone, description of event, region of address, price range, country, locality of address, postal code.",locality of address,addressLocality,[0.9142319  0.91784942 0.91849869 0.9463371  1.00000012],"['Restaurant/name', 'Event/name', 'Organization', 'addressRegion', 'addressLocality']",addressLocality
+55,7,postalCode,"Description of restaurant, telephone, description of event, region of address, price range, country, locality of address, postal code.",postal code,postalCode,[0.88954216 0.88961637 0.8896479  0.89414907 0.99999994],"['Restaurant/name', 'Hotel/name', 'Organization', 'Event/name', 'postalCode']",postalCode
+56,8,Restaurant/name,"Description of restaurant, telephone, price range, postal code, coordinate, region of address, country.",description of restaurant,Restaurant/description,[0.96344411 0.96372652 0.97377247 0.98280478 0.99999988],"['Hotel/description', 'Event/description', 'Hotel/description', 'Restaurant/description', 'Restaurant/description']",Restaurant/description
+57,8,telephone,"Description of restaurant, telephone, price range, postal code, coordinate, region of address, country.",telephone,telephone,[0.89243859 0.89333737 0.89716375 0.90874869 0.99999994],"['priceRange', 'MusicRecording/name', 'Date', 'Duration', 'telephone']",telephone
+58,8,Restaurant/description,"Description of restaurant, telephone, price range, postal code, coordinate, region of address, country.",price range,priceRange,[0.91023839 0.91261685 0.91614968 0.91853905 1.00000024],"['Time', 'Country', 'Duration', 'Date', 'priceRange']",priceRange
+59,8,priceRange,"Description of restaurant, telephone, price range, postal code, coordinate, region of address, country.",postal code,postalCode,[0.88954216 0.88961637 0.8896479  0.89414907 0.99999994],"['Restaurant/name', 'Hotel/name', 'Organization', 'Event/name', 'postalCode']",postalCode
+60,8,postalCode,"Description of restaurant, telephone, price range, postal code, coordinate, region of address, country.",coordinate,CoordinateAT,[0.89723802 0.89960229 0.90587628 0.9172405  1.        ],"['Time', 'Date', 'Organization', 'Duration', 'CoordinateAT']",CoordinateAT
+61,8,CoordinateAT,"Description of restaurant, telephone, price range, postal code, coordinate, region of address, country.",region of address,addressRegion,[0.91913378 0.92036927 0.92133033 0.94633704 0.99999982],"['Organization', 'Event/name', 'EventAttendanceModeEnumeration', 'addressLocality', 'addressRegion']",addressRegion
+62,8,CoordinateAT,"Description of restaurant, telephone, price range, postal code, coordinate, region of address, country.",country,Country,[0.91340989 0.91425383 0.9207198  0.93141145 0.99999994],"['Duration', 'currency', 'Time', 'Date', 'Country']",Country
+63,8,addressRegion,"Description of restaurant, telephone, price range, postal code, coordinate, region of address, country.",-,-,0,[],-
+64,9,telephone,"Column 1: Telephone
+Column 2: Name of restaurant
+Column 3: Price range
+Column 4: Locality of address
+Column 5: Postal code
+Column 6: Coordinate
+Column 7: Country
+Column 8: Description of restaurant
+Column 9: I don't know (the given information does not provide enough context to classify this column)",telephone,telephone,[0.89243859 0.89333737 0.89716375 0.90874869 0.99999994],"['priceRange', 'MusicRecording/name', 'Date', 'Duration', 'telephone']",telephone
+65,9,Restaurant/name,"Column 1: Telephone
+Column 2: Name of restaurant
+Column 3: Price range
+Column 4: Locality of address
+Column 5: Postal code
+Column 6: Coordinate
+Column 7: Country
+Column 8: Description of restaurant
+Column 9: I don't know (the given information does not provide enough context to classify this column)",name of restaurant,Restaurant/name,[0.96583289 0.96584755 0.96740007 0.97968745 0.99999988],"['Hotel/name', 'Event/name', 'Organization', 'Hotel/name', 'Restaurant/name']",Restaurant/name
+66,9,priceRange,"Column 1: Telephone
+Column 2: Name of restaurant
+Column 3: Price range
+Column 4: Locality of address
+Column 5: Postal code
+Column 6: Coordinate
+Column 7: Country
+Column 8: Description of restaurant
+Column 9: I don't know (the given information does not provide enough context to classify this column)",price range,priceRange,[0.91023839 0.91261685 0.91614968 0.91853905 1.00000024],"['Time', 'Country', 'Duration', 'Date', 'priceRange']",priceRange
+67,9,addressLocality,"Column 1: Telephone
+Column 2: Name of restaurant
+Column 3: Price range
+Column 4: Locality of address
+Column 5: Postal code
+Column 6: Coordinate
+Column 7: Country
+Column 8: Description of restaurant
+Column 9: I don't know (the given information does not provide enough context to classify this column)",locality of address,addressLocality,[0.9142319  0.91784942 0.91849869 0.9463371  1.00000012],"['Restaurant/name', 'Event/name', 'Organization', 'addressRegion', 'addressLocality']",addressLocality
+68,9,postalCode,"Column 1: Telephone
+Column 2: Name of restaurant
+Column 3: Price range
+Column 4: Locality of address
+Column 5: Postal code
+Column 6: Coordinate
+Column 7: Country
+Column 8: Description of restaurant
+Column 9: I don't know (the given information does not provide enough context to classify this column)",postal code,postalCode,[0.88954216 0.88961637 0.8896479  0.89414907 0.99999994],"['Restaurant/name', 'Hotel/name', 'Organization', 'Event/name', 'postalCode']",postalCode
+69,9,CoordinateAT,"Column 1: Telephone
+Column 2: Name of restaurant
+Column 3: Price range
+Column 4: Locality of address
+Column 5: Postal code
+Column 6: Coordinate
+Column 7: Country
+Column 8: Description of restaurant
+Column 9: I don't know (the given information does not provide enough context to classify this column)",coordinate,CoordinateAT,[0.89723802 0.89960229 0.90587628 0.9172405  1.        ],"['Time', 'Date', 'Organization', 'Duration', 'CoordinateAT']",CoordinateAT
+70,9,CoordinateAT,"Column 1: Telephone
+Column 2: Name of restaurant
+Column 3: Price range
+Column 4: Locality of address
+Column 5: Postal code
+Column 6: Coordinate
+Column 7: Country
+Column 8: Description of restaurant
+Column 9: I don't know (the given information does not provide enough context to classify this column)",country,Country,[0.91340989 0.91425383 0.9207198  0.93141145 0.99999994],"['Duration', 'currency', 'Time', 'Date', 'Country']",Country
+71,9,Country,"Column 1: Telephone
+Column 2: Name of restaurant
+Column 3: Price range
+Column 4: Locality of address
+Column 5: Postal code
+Column 6: Coordinate
+Column 7: Country
+Column 8: Description of restaurant
+Column 9: I don't know (the given information does not provide enough context to classify this column)",description of restaurant,Restaurant/description,[0.96344411 0.96372652 0.97377247 0.98280478 0.99999988],"['Hotel/description', 'Event/description', 'Hotel/description', 'Restaurant/description', 'Restaurant/description']",Restaurant/description
+72,9,Review,"Column 1: Telephone
+Column 2: Name of restaurant
+Column 3: Price range
+Column 4: Locality of address
+Column 5: Postal code
+Column 6: Coordinate
+Column 7: Country
+Column 8: Description of restaurant
+Column 9: I don't know (the given information does not provide enough context to classify this column)",i don't know,-,[0.85878652 0.85946172 0.86245811 0.86270541 1.00000024],"['Organization', 'Time', 'DateTime', 'Time', '-']",-
+73,10,Restaurant/name,"description of restaurant, price range, country, payment accepted, coordinate, day of week, review.",description of restaurant,Restaurant/description,[0.96344411 0.96372652 0.97377247 0.98280478 0.99999988],"['Hotel/description', 'Event/description', 'Hotel/description', 'Restaurant/description', 'Restaurant/description']",Restaurant/description
+74,10,telephone,"description of restaurant, price range, country, payment accepted, coordinate, day of week, review.",price range,priceRange,[0.91023839 0.91261685 0.91614968 0.91853905 1.00000024],"['Time', 'Country', 'Duration', 'Date', 'priceRange']",priceRange
+75,10,Restaurant/description,"description of restaurant, price range, country, payment accepted, coordinate, day of week, review.",country,Country,[0.91340989 0.91425383 0.9207198  0.93141145 0.99999994],"['Duration', 'currency', 'Time', 'Date', 'Country']",Country
+76,10,priceRange,"description of restaurant, price range, country, payment accepted, coordinate, day of week, review.",payment accepted,paymentAccepted,[0.86827344 0.87291992 0.87366402 0.87661231 1.        ],"['LocationFeatureSpecification', 'EventStatusType', 'priceRange', 'Time', 'paymentAccepted']",paymentAccepted
+77,10,Country,"description of restaurant, price range, country, payment accepted, coordinate, day of week, review.",coordinate,CoordinateAT,[0.89723802 0.89960229 0.90587628 0.9172405  1.        ],"['Time', 'Date', 'Organization', 'Duration', 'CoordinateAT']",CoordinateAT
+78,10,addressLocality,"description of restaurant, price range, country, payment accepted, coordinate, day of week, review.",day of week,DayOfWeek,[0.89901298 0.89937884 0.90221512 0.90234852 1.00000036],"['Organization', 'DateTime', 'addressRegion', 'Event/name', 'DayOfWeek']",DayOfWeek
+79,10,paymentAccepted,"description of restaurant, price range, country, payment accepted, coordinate, day of week, review.",review,Review,[0.87455124 0.87505418 0.88763928 0.92599422 1.        ],"['Date', 'Hotel/description', 'Duration', 'Rating', 'Review']",Review
+80,10,CoordinateAT,"description of restaurant, price range, country, payment accepted, coordinate, day of week, review.",-,-,0,[],-
+81,10,CoordinateAT,"description of restaurant, price range, country, payment accepted, coordinate, day of week, review.",-,-,0,[],-
+82,10,Time,"description of restaurant, price range, country, payment accepted, coordinate, day of week, review.",-,-,0,[],-
+83,10,DayOfWeek,"description of restaurant, price range, country, payment accepted, coordinate, day of week, review.",-,-,0,[],-
+84,10,Review,"description of restaurant, price range, country, payment accepted, coordinate, day of week, review.",-,-,0,[],-
+85,11,DateTime,"description of event, date, name of event, event attendance mode, event status",description of event,Event/description,[0.95340085 0.95842171 0.96372652 0.96891713 1.        ],"['Restaurant/description', 'Hotel/description', 'Restaurant/description', 'Event/name', 'Event/description']",Event/description
+86,11,Event/name,"description of event, date, name of event, event attendance mode, event status",date,Date,[0.93141145 0.93412334 0.94021839 0.94864035 0.9999997 ],"['Country', 'Duration', 'DateTime', 'Time', 'Date']",Date
+87,11,Event/description,"description of event, date, name of event, event attendance mode, event status",name of event,Event/name,[0.96478236 0.96584755 0.96891713 0.97654372 1.00000012],"['Hotel/name', 'Restaurant/name', 'Event/description', 'Organization', 'Event/name']",Event/name
+88,11,DateTime,"description of event, date, name of event, event attendance mode, event status",event attendance mode,EventAttendanceModeEnumeration,[0.91106194 0.91307157 0.91758454 0.91862208 1.        ],"['EventAttendanceModeEnumeration', 'Event/name', 'EventStatusType', 'LocationFeatureSpecification', 'EventAttendanceModeEnumeration']",EventAttendanceModeEnumeration
+89,11,EventStatusType,"description of event, date, name of event, event attendance mode, event status",event status,EventStatusType,[0.91947085 0.91983473 0.95079172 0.95376408 0.99999976],"['Event/name', 'Time', 'Event/name', 'Event/description', 'EventStatusType']",EventStatusType
+90,12,DateTime,"description of event, date, event attendance mode",description of event,Event/description,[0.95340085 0.95842171 0.96372652 0.96891713 1.        ],"['Restaurant/description', 'Hotel/description', 'Restaurant/description', 'Event/name', 'Event/description']",Event/description
+91,12,Event/name,"description of event, date, event attendance mode",date,Date,[0.93141145 0.93412334 0.94021839 0.94864035 0.9999997 ],"['Country', 'Duration', 'DateTime', 'Time', 'Date']",Date
+92,12,EventStatusType,"description of event, date, event attendance mode",event attendance mode,EventAttendanceModeEnumeration,[0.91106194 0.91307157 0.91758454 0.91862208 1.        ],"['EventAttendanceModeEnumeration', 'Event/name', 'EventStatusType', 'LocationFeatureSpecification', 'EventAttendanceModeEnumeration']",EventAttendanceModeEnumeration
+93,12,DateTime,"description of event, date, event attendance mode",-,-,0,[],-
+94,12,EventAttendanceModeEnumeration,"description of event, date, event attendance mode",-,-,0,[],-
+95,13,DateTime,"Name of event, description of event, locality of address, date, event attendance mode, currency, organization.",name of event,Event/name,[0.96478236 0.96584755 0.96891713 0.97654372 1.00000012],"['Hotel/name', 'Restaurant/name', 'Event/description', 'Organization', 'Event/name']",Event/name
+96,13,Event/name,"Name of event, description of event, locality of address, date, event attendance mode, currency, organization.",description of event,Event/description,[0.95340085 0.95842171 0.96372652 0.96891713 1.        ],"['Restaurant/description', 'Hotel/description', 'Restaurant/description', 'Event/name', 'Event/description']",Event/description
+97,13,Event/description,"Name of event, description of event, locality of address, date, event attendance mode, currency, organization.",locality of address,addressLocality,[0.9142319  0.91784942 0.91849869 0.9463371  1.00000012],"['Restaurant/name', 'Event/name', 'Organization', 'addressRegion', 'addressLocality']",addressLocality
+98,13,DateTime,"Name of event, description of event, locality of address, date, event attendance mode, currency, organization.",date,Date,[0.93141145 0.93412334 0.94021839 0.94864035 0.9999997 ],"['Country', 'Duration', 'DateTime', 'Time', 'Date']",Date
+99,13,EventStatusType,"Name of event, description of event, locality of address, date, event attendance mode, currency, organization.",event attendance mode,EventAttendanceModeEnumeration,[0.91106194 0.91307157 0.91758454 0.91862208 1.        ],"['EventAttendanceModeEnumeration', 'Event/name', 'EventStatusType', 'LocationFeatureSpecification', 'EventAttendanceModeEnumeration']",EventAttendanceModeEnumeration
+100,13,EventAttendanceModeEnumeration,"Name of event, description of event, locality of address, date, event attendance mode, currency, organization.",currency,currency,[0.90870512 0.91425383 0.91883945 0.92668802 1.00000024],"['Date', 'Country', 'Time', 'Duration', 'currency']",currency
+101,13,currency,"Name of event, description of event, locality of address, date, event attendance mode, currency, organization.",organization,Organization,[0.89014268 0.8922832  0.90177351 0.90587628 1.00000024],"['Country', 'Organization', 'Duration', 'CoordinateAT', 'Organization']",Organization
+102,13,Organization,"Name of event, description of event, locality of address, date, event attendance mode, currency, organization.",-,-,0,[],-
+103,14,DateTime,"description of event, date and time, name of event, price range",description of event,Event/description,[0.95340085 0.95842171 0.96372652 0.96891713 1.        ],"['Restaurant/description', 'Hotel/description', 'Restaurant/description', 'Event/name', 'Event/description']",Event/description
+104,14,Event/name,"description of event, date and time, name of event, price range",date and time,DateTime,[0.9194141  0.92085248 0.92538655 0.94021839 1.00000024],"['Hotel/name', 'Organization', 'Event/name', 'Date', 'DateTime']",DateTime
+105,14,Event/description,"description of event, date and time, name of event, price range",name of event,Event/name,[0.96478236 0.96584755 0.96891713 0.97654372 1.00000012],"['Hotel/name', 'Restaurant/name', 'Event/description', 'Organization', 'Event/name']",Event/name
+106,14,DateTime,"description of event, date and time, name of event, price range",price range,priceRange,[0.91023839 0.91261685 0.91614968 0.91853905 1.00000024],"['Time', 'Country', 'Duration', 'Date', 'priceRange']",priceRange
+107,14,currency,"description of event, date and time, name of event, price range",-,-,0,[],-
+108,15,Event/name,"description of event, date and time, telephone, locality of address, name of event, organization, review",description of event,Event/description,[0.95340085 0.95842171 0.96372652 0.96891713 1.        ],"['Restaurant/description', 'Hotel/description', 'Restaurant/description', 'Event/name', 'Event/description']",Event/description
+109,15,DateTime,"description of event, date and time, telephone, locality of address, name of event, organization, review",date and time,DateTime,[0.9194141  0.92085248 0.92538655 0.94021839 1.00000024],"['Hotel/name', 'Organization', 'Event/name', 'Date', 'DateTime']",DateTime
+110,15,Event/description,"description of event, date and time, telephone, locality of address, name of event, organization, review",telephone,telephone,[0.89243859 0.89333737 0.89716375 0.90874869 0.99999994],"['priceRange', 'MusicRecording/name', 'Date', 'Duration', 'telephone']",telephone
+111,15,telephone,"description of event, date and time, telephone, locality of address, name of event, organization, review",locality of address,addressLocality,[0.9142319  0.91784942 0.91849869 0.9463371  1.00000012],"['Restaurant/name', 'Event/name', 'Organization', 'addressRegion', 'addressLocality']",addressLocality
+112,15,Organization,"description of event, date and time, telephone, locality of address, name of event, organization, review",name of event,Event/name,[0.96478236 0.96584755 0.96891713 0.97654372 1.00000012],"['Hotel/name', 'Restaurant/name', 'Event/description', 'Organization', 'Event/name']",Event/name
+113,16,Date,"description of event, name of event, date, event attendance mode, event status",description of event,Event/description,[0.95340085 0.95842171 0.96372652 0.96891713 1.        ],"['Restaurant/description', 'Hotel/description', 'Restaurant/description', 'Event/name', 'Event/description']",Event/description
+114,16,Event/name,"description of event, name of event, date, event attendance mode, event status",name of event,Event/name,[0.96478236 0.96584755 0.96891713 0.97654372 1.00000012],"['Hotel/name', 'Restaurant/name', 'Event/description', 'Organization', 'Event/name']",Event/name
+115,16,Event/description,"description of event, name of event, date, event attendance mode, event status",date,Date,[0.93141145 0.93412334 0.94021839 0.94864035 0.9999997 ],"['Country', 'Duration', 'DateTime', 'Time', 'Date']",Date
+116,16,Date,"description of event, name of event, date, event attendance mode, event status",event attendance mode,EventAttendanceModeEnumeration,[0.91106194 0.91307157 0.91758454 0.91862208 1.        ],"['EventAttendanceModeEnumeration', 'Event/name', 'EventStatusType', 'LocationFeatureSpecification', 'EventAttendanceModeEnumeration']",EventAttendanceModeEnumeration
+117,16,EventAttendanceModeEnumeration,"description of event, name of event, date, event attendance mode, event status",event status,EventStatusType,[0.91947085 0.91983473 0.95079172 0.95376408 0.99999976],"['Event/name', 'Time', 'Event/name', 'Event/description', 'EventStatusType']",EventStatusType
+118,16,EventStatusType,"description of event, name of event, date, event attendance mode, event status",-,-,0,[],-
+119,17,Event/name,"description of event, name of event, date, time, locality of address, organization, event attendance mode, event status, postal code",description of event,Event/description,[0.95340085 0.95842171 0.96372652 0.96891713 1.        ],"['Restaurant/description', 'Hotel/description', 'Restaurant/description', 'Event/name', 'Event/description']",Event/description
+120,17,EventStatusType,"description of event, name of event, date, time, locality of address, organization, event attendance mode, event status, postal code",name of event,Event/name,[0.96478236 0.96584755 0.96891713 0.97654372 1.00000012],"['Hotel/name', 'Restaurant/name', 'Event/description', 'Organization', 'Event/name']",Event/name
+121,17,Event/description,"description of event, name of event, date, time, locality of address, organization, event attendance mode, event status, postal code",date,Date,[0.93141145 0.93412334 0.94021839 0.94864035 0.9999997 ],"['Country', 'Duration', 'DateTime', 'Time', 'Date']",Date
+122,17,Organization,"description of event, name of event, date, time, locality of address, organization, event attendance mode, event status, postal code",time,Time,[0.91883945 0.9207198  0.93802845 0.94864035 1.00000012],"['currency', 'Country', 'Duration', 'Date', 'Time']",Time
+123,17,EventAttendanceModeEnumeration,"description of event, name of event, date, time, locality of address, organization, event attendance mode, event status, postal code",locality of address,addressLocality,[0.9142319  0.91784942 0.91849869 0.9463371  1.00000012],"['Restaurant/name', 'Event/name', 'Organization', 'addressRegion', 'addressLocality']",addressLocality
+124,18,Date,"description of event, date, event attendance mode, currency, name of event",description of event,Event/description,[0.95340085 0.95842171 0.96372652 0.96891713 1.        ],"['Restaurant/description', 'Hotel/description', 'Restaurant/description', 'Event/name', 'Event/description']",Event/description
+125,18,Event/name,"description of event, date, event attendance mode, currency, name of event",date,Date,[0.93141145 0.93412334 0.94021839 0.94864035 0.9999997 ],"['Country', 'Duration', 'DateTime', 'Time', 'Date']",Date
+126,18,Date,"description of event, date, event attendance mode, currency, name of event",event attendance mode,EventAttendanceModeEnumeration,[0.91106194 0.91307157 0.91758454 0.91862208 1.        ],"['EventAttendanceModeEnumeration', 'Event/name', 'EventStatusType', 'LocationFeatureSpecification', 'EventAttendanceModeEnumeration']",EventAttendanceModeEnumeration
+127,18,EventAttendanceModeEnumeration,"description of event, date, event attendance mode, currency, name of event",currency,currency,[0.90870512 0.91425383 0.91883945 0.92668802 1.00000024],"['Date', 'Country', 'Time', 'Duration', 'currency']",currency
+128,18,currency,"description of event, date, event attendance mode, currency, name of event",name of event,Event/name,[0.96478236 0.96584755 0.96891713 0.97654372 1.00000012],"['Hotel/name', 'Restaurant/name', 'Event/description', 'Organization', 'Event/name']",Event/name
+129,18,Event/description,"description of event, date, event attendance mode, currency, name of event",-,-,0,[],-
+130,19,Date,"description of event, date, event attendance mode, currency",description of event,Event/description,[0.95340085 0.95842171 0.96372652 0.96891713 1.        ],"['Restaurant/description', 'Hotel/description', 'Restaurant/description', 'Event/name', 'Event/description']",Event/description
+131,19,Event/name,"description of event, date, event attendance mode, currency",date,Date,[0.93141145 0.93412334 0.94021839 0.94864035 0.9999997 ],"['Country', 'Duration', 'DateTime', 'Time', 'Date']",Date
+132,19,Date,"description of event, date, event attendance mode, currency",event attendance mode,EventAttendanceModeEnumeration,[0.91106194 0.91307157 0.91758454 0.91862208 1.        ],"['EventAttendanceModeEnumeration', 'Event/name', 'EventStatusType', 'LocationFeatureSpecification', 'EventAttendanceModeEnumeration']",EventAttendanceModeEnumeration
+133,19,Event/description,"description of event, date, event attendance mode, currency",currency,currency,[0.90870512 0.91425383 0.91883945 0.92668802 1.00000024],"['Date', 'Country', 'Time', 'Duration', 'currency']",currency
+134,19,EventAttendanceModeEnumeration,"description of event, date, event attendance mode, currency",-,-,0,[],-
+135,19,currency,"description of event, date, event attendance mode, currency",-,-,0,[],-
+136,19,EventStatusType,"description of event, date, event attendance mode, currency",-,-,0,[],-
+137,20,Event/name,"description of event, name of event, description of restaurant, locality of address, postal code, region of address, country, payment accepted, day of week, review, organization, date and time, telephone, event attendance mode, event status.",description of event,Event/description,[0.95340085 0.95842171 0.96372652 0.96891713 1.        ],"['Restaurant/description', 'Hotel/description', 'Restaurant/description', 'Event/name', 'Event/description']",Event/description
+138,20,Event/description,"description of event, name of event, description of restaurant, locality of address, postal code, region of address, country, payment accepted, day of week, review, organization, date and time, telephone, event attendance mode, event status.",name of event,Event/name,[0.96478236 0.96584755 0.96891713 0.97654372 1.00000012],"['Hotel/name', 'Restaurant/name', 'Event/description', 'Organization', 'Event/name']",Event/name
+139,20,EventAttendanceModeEnumeration,"description of event, name of event, description of restaurant, locality of address, postal code, region of address, country, payment accepted, day of week, review, organization, date and time, telephone, event attendance mode, event status.",description of restaurant,Restaurant/description,[0.96344411 0.96372652 0.97377247 0.98280478 0.99999988],"['Hotel/description', 'Event/description', 'Hotel/description', 'Restaurant/description', 'Restaurant/description']",Restaurant/description
+140,20,DateTime,"description of event, name of event, description of restaurant, locality of address, postal code, region of address, country, payment accepted, day of week, review, organization, date and time, telephone, event attendance mode, event status.",locality of address,addressLocality,[0.9142319  0.91784942 0.91849869 0.9463371  1.00000012],"['Restaurant/name', 'Event/name', 'Organization', 'addressRegion', 'addressLocality']",addressLocality
+141,20,Organization,"description of event, name of event, description of restaurant, locality of address, postal code, region of address, country, payment accepted, day of week, review, organization, date and time, telephone, event attendance mode, event status.",postal code,postalCode,[0.88954216 0.88961637 0.8896479  0.89414907 0.99999994],"['Restaurant/name', 'Hotel/name', 'Organization', 'Event/name', 'postalCode']",postalCode
+142,20,telephone,"description of event, name of event, description of restaurant, locality of address, postal code, region of address, country, payment accepted, day of week, review, organization, date and time, telephone, event attendance mode, event status.",region of address,addressRegion,[0.91913378 0.92036927 0.92133033 0.94633704 0.99999982],"['Organization', 'Event/name', 'EventAttendanceModeEnumeration', 'addressLocality', 'addressRegion']",addressRegion
+143,21,Hotel/name,"description of restaurant, telephone, email, description of hotel, name of hotel, locality of address, postal code, region of address, country.",description of restaurant,Restaurant/description,[0.96344411 0.96372652 0.97377247 0.98280478 0.99999988],"['Hotel/description', 'Event/description', 'Hotel/description', 'Restaurant/description', 'Restaurant/description']",Restaurant/description
+144,21,telephone,"description of restaurant, telephone, email, description of hotel, name of hotel, locality of address, postal code, region of address, country.",telephone,telephone,[0.89243859 0.89333737 0.89716375 0.90874869 0.99999994],"['priceRange', 'MusicRecording/name', 'Date', 'Duration', 'telephone']",telephone
+145,21,email,"description of restaurant, telephone, email, description of hotel, name of hotel, locality of address, postal code, region of address, country.",email,email,[0.87512779 0.87557167 0.88015699 0.92607594 1.00000012],"['Date', 'telephone', 'Duration', 'email', 'email']",email
+146,21,faxNumber,"description of restaurant, telephone, email, description of hotel, name of hotel, locality of address, postal code, region of address, country.",description of hotel,Hotel/description,[0.9638657  0.96952915 0.97377247 0.98573977 1.        ],"['Hotel/name', 'LocationFeatureSpecification', 'Restaurant/description', 'Hotel/description', 'Hotel/description']",Hotel/description
+147,21,Hotel/description,"description of restaurant, telephone, email, description of hotel, name of hotel, locality of address, postal code, region of address, country.",name of hotel,Hotel/name,[0.9638657  0.96478236 0.97968745 0.9835369  1.        ],"['Hotel/description', 'Event/name', 'Restaurant/name', 'Hotel/name', 'Hotel/name']",Hotel/name
+148,21,postalCode,"description of restaurant, telephone, email, description of hotel, name of hotel, locality of address, postal code, region of address, country.",locality of address,addressLocality,[0.9142319  0.91784942 0.91849869 0.9463371  1.00000012],"['Restaurant/name', 'Event/name', 'Organization', 'addressRegion', 'addressLocality']",addressLocality
+149,21,Country,"description of restaurant, telephone, email, description of hotel, name of hotel, locality of address, postal code, region of address, country.",postal code,postalCode,[0.88954216 0.88961637 0.8896479  0.89414907 0.99999994],"['Restaurant/name', 'Hotel/name', 'Organization', 'Event/name', 'postalCode']",postalCode
+150,22,Hotel/name,"Description of hotel, telephone, description of hotel, time, locality of address, postal code, time, country, payment accepted, NONE.",description of hotel,Hotel/description,[0.9638657  0.96952915 0.97377247 0.98573977 1.        ],"['Hotel/name', 'LocationFeatureSpecification', 'Restaurant/description', 'Hotel/description', 'Hotel/description']",Hotel/description
+151,22,telephone,"Description of hotel, telephone, description of hotel, time, locality of address, postal code, time, country, payment accepted, NONE.",telephone,telephone,[0.89243859 0.89333737 0.89716375 0.90874869 0.99999994],"['priceRange', 'MusicRecording/name', 'Date', 'Duration', 'telephone']",telephone
+152,22,Hotel/description,"Description of hotel, telephone, description of hotel, time, locality of address, postal code, time, country, payment accepted, NONE.",description of hotel,Hotel/description,[0.9638657  0.96952915 0.97377247 0.98573977 1.        ],"['Hotel/name', 'LocationFeatureSpecification', 'Restaurant/description', 'Hotel/description', 'Hotel/description']",Hotel/description
+153,22,faxNumber,"Description of hotel, telephone, description of hotel, time, locality of address, postal code, time, country, payment accepted, NONE.",time,Time,[0.91883945 0.9207198  0.93802845 0.94864035 1.00000012],"['currency', 'Country', 'Duration', 'Date', 'Time']",Time
+154,22,Time,"Description of hotel, telephone, description of hotel, time, locality of address, postal code, time, country, payment accepted, NONE.",locality of address,addressLocality,[0.9142319  0.91784942 0.91849869 0.9463371  1.00000012],"['Restaurant/name', 'Event/name', 'Organization', 'addressRegion', 'addressLocality']",addressLocality
+155,22,addressLocality,"Description of hotel, telephone, description of hotel, time, locality of address, postal code, time, country, payment accepted, NONE.",postal code,postalCode,[0.88954216 0.88961637 0.8896479  0.89414907 0.99999994],"['Restaurant/name', 'Hotel/name', 'Organization', 'Event/name', 'postalCode']",postalCode
+156,22,postalCode,"Description of hotel, telephone, description of hotel, time, locality of address, postal code, time, country, payment accepted, NONE.",time,Time,[0.91883945 0.9207198  0.93802845 0.94864035 1.00000012],"['currency', 'Country', 'Duration', 'Date', 'Time']",Time
+157,22,Time,"Description of hotel, telephone, description of hotel, time, locality of address, postal code, time, country, payment accepted, NONE.",country,Country,[0.91340989 0.91425383 0.9207198  0.93141145 0.99999994],"['Duration', 'currency', 'Time', 'Date', 'Country']",Country
+158,22,Country,"Description of hotel, telephone, description of hotel, time, locality of address, postal code, time, country, payment accepted, NONE.",payment accepted,paymentAccepted,[0.86827344 0.87291992 0.87366402 0.87661231 1.        ],"['LocationFeatureSpecification', 'EventStatusType', 'priceRange', 'Time', 'paymentAccepted']",paymentAccepted
+159,22,LocationFeatureSpecification,"Description of hotel, telephone, description of hotel, time, locality of address, postal code, time, country, payment accepted, NONE.",none,Duration,[0.87383783 0.87404764 0.87575752 0.88203639 0.89535838],"['CoordinateAT', 'Date', 'Rating', 'telephone', 'Duration']",-
+160,23,Hotel/name,"Description of hotel, telephone, locality of address, time, postal code, region of address, country, price range, payment accepted, location feature.",description of hotel,Hotel/description,[0.9638657  0.96952915 0.97377247 0.98573977 1.        ],"['Hotel/name', 'LocationFeatureSpecification', 'Restaurant/description', 'Hotel/description', 'Hotel/description']",Hotel/description
+161,23,telephone,"Description of hotel, telephone, locality of address, time, postal code, region of address, country, price range, payment accepted, location feature.",telephone,telephone,[0.89243859 0.89333737 0.89716375 0.90874869 0.99999994],"['priceRange', 'MusicRecording/name', 'Date', 'Duration', 'telephone']",telephone
+162,23,Hotel/description,"Description of hotel, telephone, locality of address, time, postal code, region of address, country, price range, payment accepted, location feature.",locality of address,addressLocality,[0.9142319  0.91784942 0.91849869 0.9463371  1.00000012],"['Restaurant/name', 'Event/name', 'Organization', 'addressRegion', 'addressLocality']",addressLocality
+163,23,Time,"Description of hotel, telephone, locality of address, time, postal code, region of address, country, price range, payment accepted, location feature.",time,Time,[0.91883945 0.9207198  0.93802845 0.94864035 1.00000012],"['currency', 'Country', 'Duration', 'Date', 'Time']",Time
+164,23,Time,"Description of hotel, telephone, locality of address, time, postal code, region of address, country, price range, payment accepted, location feature.",postal code,postalCode,[0.88954216 0.88961637 0.8896479  0.89414907 0.99999994],"['Restaurant/name', 'Hotel/name', 'Organization', 'Event/name', 'postalCode']",postalCode
+165,23,postalCode,"Description of hotel, telephone, locality of address, time, postal code, region of address, country, price range, payment accepted, location feature.",region of address,addressRegion,[0.91913378 0.92036927 0.92133033 0.94633704 0.99999982],"['Organization', 'Event/name', 'EventAttendanceModeEnumeration', 'addressLocality', 'addressRegion']",addressRegion
+166,23,addressLocality,"Description of hotel, telephone, locality of address, time, postal code, region of address, country, price range, payment accepted, location feature.",country,Country,[0.91340989 0.91425383 0.9207198  0.93141145 0.99999994],"['Duration', 'currency', 'Time', 'Date', 'Country']",Country
+167,23,Country,"Description of hotel, telephone, locality of address, time, postal code, region of address, country, price range, payment accepted, location feature.",price range,priceRange,[0.91023839 0.91261685 0.91614968 0.91853905 1.00000024],"['Time', 'Country', 'Duration', 'Date', 'priceRange']",priceRange
+168,23,priceRange,"Description of hotel, telephone, locality of address, time, postal code, region of address, country, price range, payment accepted, location feature.",payment accepted,paymentAccepted,[0.86827344 0.87291992 0.87366402 0.87661231 1.        ],"['LocationFeatureSpecification', 'EventStatusType', 'priceRange', 'Time', 'paymentAccepted']",paymentAccepted
+169,23,LocationFeatureSpecification,"Description of hotel, telephone, locality of address, time, postal code, region of address, country, price range, payment accepted, location feature.",location feature,LocationFeatureSpecification,[0.90128547 0.90254915 0.90558863 0.91862208 0.99999994],"['Duration', 'EventStatusType', 'LocationFeatureSpecification', 'EventAttendanceModeEnumeration', 'LocationFeatureSpecification']",LocationFeatureSpecification
+170,24,Hotel/name,"Classify the columns of a given table with only one of the following classes that are separated with comma: description of event, description of restaurant, locality of address, postal code, region of address, country, price range, telephone, date, name of restaurant, payment accepted, day of week, review, organization, date and time, coordinate, name of event, event attendance mode, event status, currency, time, description of hotel, name of hotel, location feature, rating, fax number, email, photograph, name of music recording, music artist, name of album, duration.
+
+Column 1: Name of hotel
+Column 2: Description of hotel
+Column 3: Rating
+Column 4: Price range",description of event,Event/description,[0.95340085 0.95842171 0.96372652 0.96891713 1.        ],"['Restaurant/description', 'Hotel/description', 'Restaurant/description', 'Event/name', 'Event/description']",Hotel/name
+171,24,Hotel/description,"Classify the columns of a given table with only one of the following classes that are separated with comma: description of event, description of restaurant, locality of address, postal code, region of address, country, price range, telephone, date, name of restaurant, payment accepted, day of week, review, organization, date and time, coordinate, name of event, event attendance mode, event status, currency, time, description of hotel, name of hotel, location feature, rating, fax number, email, photograph, name of music recording, music artist, name of album, duration.
+
+Column 1: Name of hotel
+Column 2: Description of hotel
+Column 3: Rating
+Column 4: Price range",name of hotel,Hotel/name,[0.9638657  0.96478236 0.97968745 0.9835369  1.        ],"['Hotel/description', 'Event/name', 'Restaurant/name', 'Hotel/name', 'Hotel/name']",Hotel/description
+172,24,Rating,"Classify the columns of a given table with only one of the following classes that are separated with comma: description of event, description of restaurant, locality of address, postal code, region of address, country, price range, telephone, date, name of restaurant, payment accepted, day of week, review, organization, date and time, coordinate, name of event, event attendance mode, event status, currency, time, description of hotel, name of hotel, location feature, rating, fax number, email, photograph, name of music recording, music artist, name of album, duration.
+
+Column 1: Name of hotel
+Column 2: Description of hotel
+Column 3: Rating
+Column 4: Price range",description of hotel,Hotel/description,[0.9638657  0.96952915 0.97377247 0.98573977 1.        ],"['Hotel/name', 'LocationFeatureSpecification', 'Restaurant/description', 'Hotel/description', 'Hotel/description']",Rating
+173,24,priceRange,"Classify the columns of a given table with only one of the following classes that are separated with comma: description of event, description of restaurant, locality of address, postal code, region of address, country, price range, telephone, date, name of restaurant, payment accepted, day of week, review, organization, date and time, coordinate, name of event, event attendance mode, event status, currency, time, description of hotel, name of hotel, location feature, rating, fax number, email, photograph, name of music recording, music artist, name of album, duration.
+
+Column 1: Name of hotel
+Column 2: Description of hotel
+Column 3: Rating
+Column 4: Price range",rating,Rating,[0.89614618 0.90445495 0.91656798 0.92599422 0.99999994],"['Time', 'Date', 'Duration', 'Review', 'Rating']",priceRange
+174,25,Hotel/name,"description of hotel, name of hotel, locality of address, check-in time, price range, rating, check-out time, amenities",in time,DateTime,[0.88802189 0.89599985 0.90457731 0.90890366 0.91330338],"['Time', 'Duration', 'Date', 'Time', 'DateTime']",Hotel/description
+175,25,Hotel/description,"description of hotel, name of hotel, locality of address, check-in time, price range, rating, check-out time, amenities",out time,Time,[0.87766945 0.88682449 0.88873142 0.90464664 0.90753913],"['DateTime', 'Duration', 'Time', 'Time', 'Time']",Hotel/name
+176,25,Photograph,"description of hotel, name of hotel, locality of address, check-in time, price range, rating, check-out time, amenities",-,-,0,[],addressLocality
+177,25,Time,"description of hotel, name of hotel, locality of address, check-in time, price range, rating, check-out time, amenities",-,-,0,[],Time
+178,25,priceRange,"description of hotel, name of hotel, locality of address, check-in time, price range, rating, check-out time, amenities",-,-,0,[],priceRange
+179,25,Rating,"description of hotel, name of hotel, locality of address, check-in time, price range, rating, check-out time, amenities",-,-,0,[],Rating
+180,25,Time,"description of hotel, name of hotel, locality of address, check-in time, price range, rating, check-out time, amenities",-,-,0,[],Time
+181,25,LocationFeatureSpecification,"description of hotel, name of hotel, locality of address, check-in time, price range, rating, check-out time, amenities",-,-,0,[],LocationFeatureSpecification
+182,26,addressLocality,Description of hotel,description of hotel,Hotel/description,[0.9638657  0.96952915 0.97377247 0.98573977 1.        ],"['Hotel/name', 'LocationFeatureSpecification', 'Restaurant/description', 'Hotel/description', 'Hotel/description']",Hotel/description
+183,26,Hotel/name,Description of hotel,-,-,0,[],-
+184,26,Rating,Description of hotel,-,-,0,[],-
+185,26,Country,Description of hotel,-,-,0,[],-
+186,26,Review,Description of hotel,-,-,0,[],-
+187,27,Hotel/name,"Description of hotel, email, photograph, name of hotel, location feature, rating.",description of hotel,Hotel/description,[0.9638657  0.96952915 0.97377247 0.98573977 1.        ],"['Hotel/name', 'LocationFeatureSpecification', 'Restaurant/description', 'Hotel/description', 'Hotel/description']",Hotel/description
+188,27,email,"Description of hotel, email, photograph, name of hotel, location feature, rating.",email,email,[0.87512779 0.87557167 0.88015699 0.92607594 1.00000012],"['Date', 'telephone', 'Duration', 'email', 'email']",email
+189,27,Photograph,"Description of hotel, email, photograph, name of hotel, location feature, rating.",photograph,Photograph,[0.87970698 0.88220441 0.88253266 0.89362156 0.99999994],"['telephone', 'Organization', 'CoordinateAT', 'MusicRecording/name', 'Photograph']",Photograph
+190,27,Country,"Description of hotel, email, photograph, name of hotel, location feature, rating.",name of hotel,Hotel/name,[0.9638657  0.96478236 0.97968745 0.9835369  1.        ],"['Hotel/description', 'Event/name', 'Restaurant/name', 'Hotel/name', 'Hotel/name']",Hotel/name
+191,27,addressLocality,"Description of hotel, email, photograph, name of hotel, location feature, rating.",location feature,LocationFeatureSpecification,[0.90128547 0.90254915 0.90558863 0.91862208 0.99999994],"['Duration', 'EventStatusType', 'LocationFeatureSpecification', 'EventAttendanceModeEnumeration', 'LocationFeatureSpecification']",LocationFeatureSpecification
+192,27,Rating,"Description of hotel, email, photograph, name of hotel, location feature, rating.",rating,Rating,[0.89614618 0.90445495 0.91656798 0.92599422 0.99999994],"['Time', 'Date', 'Duration', 'Review', 'Rating']",Rating
+193,27,Hotel/description,"Description of hotel, email, photograph, name of hotel, location feature, rating.",-,-,0,[],-
+194,28,Hotel/name,"Column 1: Name of hotel
+Column 2: Description of hotel
+Column 3: NONE
+Column 4: Postal code
+Column 5: Locality of address
+Column 6: Country
+Column 7: Rating
+Column 8: Location feature
+Column 9: Payment accepted
+Column 10: NONE",name of hotel,Hotel/name,[0.9638657  0.96478236 0.97968745 0.9835369  1.        ],"['Hotel/description', 'Event/name', 'Restaurant/name', 'Hotel/name', 'Hotel/name']",Hotel/name
+195,28,Hotel/description,"Column 1: Name of hotel
+Column 2: Description of hotel
+Column 3: NONE
+Column 4: Postal code
+Column 5: Locality of address
+Column 6: Country
+Column 7: Rating
+Column 8: Location feature
+Column 9: Payment accepted
+Column 10: NONE",description of hotel,Hotel/description,[0.9638657  0.96952915 0.97377247 0.98573977 1.        ],"['Hotel/name', 'LocationFeatureSpecification', 'Restaurant/description', 'Hotel/description', 'Hotel/description']",Hotel/description
+196,28,Time,"Column 1: Name of hotel
+Column 2: Description of hotel
+Column 3: NONE
+Column 4: Postal code
+Column 5: Locality of address
+Column 6: Country
+Column 7: Rating
+Column 8: Location feature
+Column 9: Payment accepted
+Column 10: NONE",none,Duration,[0.87383783 0.87404764 0.87575752 0.88203639 0.89535838],"['CoordinateAT', 'Date', 'Rating', 'telephone', 'Duration']",-
+197,28,Time,"Column 1: Name of hotel
+Column 2: Description of hotel
+Column 3: NONE
+Column 4: Postal code
+Column 5: Locality of address
+Column 6: Country
+Column 7: Rating
+Column 8: Location feature
+Column 9: Payment accepted
+Column 10: NONE",postal code,postalCode,[0.88954216 0.88961637 0.8896479  0.89414907 0.99999994],"['Restaurant/name', 'Hotel/name', 'Organization', 'Event/name', 'postalCode']",postalCode
+198,28,postalCode,"Column 1: Name of hotel
+Column 2: Description of hotel
+Column 3: NONE
+Column 4: Postal code
+Column 5: Locality of address
+Column 6: Country
+Column 7: Rating
+Column 8: Location feature
+Column 9: Payment accepted
+Column 10: NONE",locality of address,addressLocality,[0.9142319  0.91784942 0.91849869 0.9463371  1.00000012],"['Restaurant/name', 'Event/name', 'Organization', 'addressRegion', 'addressLocality']",addressLocality
+199,28,addressLocality,"Column 1: Name of hotel
+Column 2: Description of hotel
+Column 3: NONE
+Column 4: Postal code
+Column 5: Locality of address
+Column 6: Country
+Column 7: Rating
+Column 8: Location feature
+Column 9: Payment accepted
+Column 10: NONE",country,Country,[0.91340989 0.91425383 0.9207198  0.93141145 0.99999994],"['Duration', 'currency', 'Time', 'Date', 'Country']",Country
+200,28,Country,"Column 1: Name of hotel
+Column 2: Description of hotel
+Column 3: NONE
+Column 4: Postal code
+Column 5: Locality of address
+Column 6: Country
+Column 7: Rating
+Column 8: Location feature
+Column 9: Payment accepted
+Column 10: NONE",rating,Rating,[0.89614618 0.90445495 0.91656798 0.92599422 0.99999994],"['Time', 'Date', 'Duration', 'Review', 'Rating']",Rating
+201,28,Rating,"Column 1: Name of hotel
+Column 2: Description of hotel
+Column 3: NONE
+Column 4: Postal code
+Column 5: Locality of address
+Column 6: Country
+Column 7: Rating
+Column 8: Location feature
+Column 9: Payment accepted
+Column 10: NONE",location feature,LocationFeatureSpecification,[0.90128547 0.90254915 0.90558863 0.91862208 0.99999994],"['Duration', 'EventStatusType', 'LocationFeatureSpecification', 'EventAttendanceModeEnumeration', 'LocationFeatureSpecification']",LocationFeatureSpecification
+202,28,LocationFeatureSpecification,"Column 1: Name of hotel
+Column 2: Description of hotel
+Column 3: NONE
+Column 4: Postal code
+Column 5: Locality of address
+Column 6: Country
+Column 7: Rating
+Column 8: Location feature
+Column 9: Payment accepted
+Column 10: NONE",payment accepted,paymentAccepted,[0.86827344 0.87291992 0.87366402 0.87661231 1.        ],"['LocationFeatureSpecification', 'EventStatusType', 'priceRange', 'Time', 'paymentAccepted']",paymentAccepted
+203,28,paymentAccepted,"Column 1: Name of hotel
+Column 2: Description of hotel
+Column 3: NONE
+Column 4: Postal code
+Column 5: Locality of address
+Column 6: Country
+Column 7: Rating
+Column 8: Location feature
+Column 9: Payment accepted
+Column 10: NONE",none,Duration,[0.87383783 0.87404764 0.87575752 0.88203639 0.89535838],"['CoordinateAT', 'Date', 'Rating', 'telephone', 'Duration']",-
+204,29,Hotel/name,"Description of event, description of restaurant, email, photograph.",description of event,Event/description,[0.95340085 0.95842171 0.96372652 0.96891713 1.        ],"['Restaurant/description', 'Hotel/description', 'Restaurant/description', 'Event/name', 'Event/description']",Event/description
+205,29,email,"Description of event, description of restaurant, email, photograph.",description of restaurant,Restaurant/description,[0.96344411 0.96372652 0.97377247 0.98280478 0.99999988],"['Hotel/description', 'Event/description', 'Hotel/description', 'Restaurant/description', 'Restaurant/description']",Restaurant/description
+206,29,Hotel/description,"Description of event, description of restaurant, email, photograph.",email,email,[0.87512779 0.87557167 0.88015699 0.92607594 1.00000012],"['Date', 'telephone', 'Duration', 'email', 'email']",email
+207,29,Photograph,"Description of event, description of restaurant, email, photograph.",photograph,Photograph,[0.87970698 0.88220441 0.88253266 0.89362156 0.99999994],"['telephone', 'Organization', 'CoordinateAT', 'MusicRecording/name', 'Photograph']",Photograph
+208,30,Hotel/name,"Description of hotel, name of hotel, location feature, rating, payment accepted, fax number.",description of hotel,Hotel/description,[0.9638657  0.96952915 0.97377247 0.98573977 1.        ],"['Hotel/name', 'LocationFeatureSpecification', 'Restaurant/description', 'Hotel/description', 'Hotel/description']",Hotel/description
+209,30,Hotel/description,"Description of hotel, name of hotel, location feature, rating, payment accepted, fax number.",name of hotel,Hotel/name,[0.9638657  0.96478236 0.97968745 0.9835369  1.        ],"['Hotel/description', 'Event/name', 'Restaurant/name', 'Hotel/name', 'Hotel/name']",Hotel/name
+210,30,paymentAccepted,"Description of hotel, name of hotel, location feature, rating, payment accepted, fax number.",location feature,LocationFeatureSpecification,[0.90128547 0.90254915 0.90558863 0.91862208 0.99999994],"['Duration', 'EventStatusType', 'LocationFeatureSpecification', 'EventAttendanceModeEnumeration', 'LocationFeatureSpecification']",LocationFeatureSpecification
+211,30,Rating,"Description of hotel, name of hotel, location feature, rating, payment accepted, fax number.",rating,Rating,[0.89614618 0.90445495 0.91656798 0.92599422 0.99999994],"['Time', 'Date', 'Duration', 'Review', 'Rating']",Rating
+212,30,faxNumber,"Description of hotel, name of hotel, location feature, rating, payment accepted, fax number.",payment accepted,paymentAccepted,[0.86827344 0.87291992 0.87366402 0.87661231 1.        ],"['LocationFeatureSpecification', 'EventStatusType', 'priceRange', 'Time', 'paymentAccepted']",paymentAccepted
+213,31,MusicRecording/name,I don't know.,i don't know,-,[0.85878652 0.85946172 0.86245811 0.86270541 1.00000024],"['Organization', 'Time', 'DateTime', 'Time', '-']",-
+214,31,Duration,I don't know.,-,-,0,[],-
+215,31,MusicAlbum/name,I don't know.,-,-,0,[],-
+216,31,MusicArtistAT,I don't know.,-,-,0,[],-
+217,32,MusicRecording/name,I don't know.,i don't know,-,[0.85878652 0.85946172 0.86245811 0.86270541 1.00000024],"['Organization', 'Time', 'DateTime', 'Time', '-']",-
+218,32,Duration,I don't know.,-,-,0,[],-
+219,32,MusicAlbum/name,I don't know.,-,-,0,[],-
+220,32,MusicArtistAT,I don't know.,-,-,0,[],-
+221,33,MusicRecording/name,"Name of music recording, duration, music artist.",name of music recording,MusicRecording/name,[0.94115454 0.95031488 0.95439613 0.96021485 0.99999988],"['Restaurant/name', 'MusicRecording/name', 'MusicArtistAT', 'MusicAlbum/name', 'MusicRecording/name']",MusicRecording/name
+222,33,Duration,"Name of music recording, duration, music artist.",duration,Duration,[0.9172405  0.92668802 0.93412334 0.93802845 0.99999988],"['CoordinateAT', 'currency', 'Date', 'Time', 'Duration']",Duration
+223,33,MusicArtistAT,"Name of music recording, duration, music artist.",music artist,MusicArtistAT,[0.88730252 0.90872163 0.93909913 0.95120257 0.99999994],"['Duration', 'MusicArtistAT', 'MusicRecording/name', 'MusicAlbum/name', 'MusicArtistAT']",MusicArtistAT
+224,34,MusicRecording/name,I don't know. The table provided does not have column headers or any clear indication of what information is contained in each column.,i don't know,-,[0.85878652 0.85946172 0.86245811 0.86270541 1.00000024],"['Organization', 'Time', 'DateTime', 'Time', '-']",-
+225,34,Duration,I don't know. The table provided does not have column headers or any clear indication of what information is contained in each column.,-,-,0,[],-
+226,34,MusicArtistAT,I don't know. The table provided does not have column headers or any clear indication of what information is contained in each column.,-,-,0,[],-
+227,35,MusicRecording/name,I don't know. The table does not contain any columns that fit the given classes.,i don't know,-,[0.85878652 0.85946172 0.86245811 0.86270541 1.00000024],"['Organization', 'Time', 'DateTime', 'Time', '-']",-
+228,35,Duration,I don't know. The table does not contain any columns that fit the given classes.,-,-,0,[],-
+229,35,MusicArtistAT,I don't know. The table does not contain any columns that fit the given classes.,-,-,0,[],-
+230,35,MusicAlbum/name,I don't know. The table does not contain any columns that fit the given classes.,-,-,0,[],-
+231,36,Duration,"Name of music recording, Music artist, Name of album, Duration.",name of music recording,MusicRecording/name,[0.94115454 0.95031488 0.95439613 0.96021485 0.99999988],"['Restaurant/name', 'MusicRecording/name', 'MusicArtistAT', 'MusicAlbum/name', 'MusicRecording/name']",MusicRecording/name
+232,36,MusicRecording/name,"Name of music recording, Music artist, Name of album, Duration.",music artist,MusicArtistAT,[0.88730252 0.90872163 0.93909913 0.95120257 0.99999994],"['Duration', 'MusicArtistAT', 'MusicRecording/name', 'MusicAlbum/name', 'MusicArtistAT']",MusicArtistAT
+233,36,MusicAlbum/name,"Name of music recording, Music artist, Name of album, Duration.",name of album,MusicAlbum/name,[0.95333028 0.95364583 0.96717215 0.97457868 1.00000024],"['Restaurant/name', 'Organization', 'MusicRecording/name', 'MusicAlbum/name', 'MusicAlbum/name']",MusicAlbum/name
+234,36,MusicArtistAT,"Name of music recording, Music artist, Name of album, Duration.",duration,Duration,[0.9172405  0.92668802 0.93412334 0.93802845 0.99999988],"['CoordinateAT', 'currency', 'Date', 'Time', 'Duration']",Duration
+235,37,MusicRecording/name,"Name of music recording, music artist, name of album, duration.",name of music recording,MusicRecording/name,[0.94115454 0.95031488 0.95439613 0.96021485 0.99999988],"['Restaurant/name', 'MusicRecording/name', 'MusicArtistAT', 'MusicAlbum/name', 'MusicRecording/name']",MusicRecording/name
+236,37,Duration,"Name of music recording, music artist, name of album, duration.",music artist,MusicArtistAT,[0.88730252 0.90872163 0.93909913 0.95120257 0.99999994],"['Duration', 'MusicArtistAT', 'MusicRecording/name', 'MusicAlbum/name', 'MusicArtistAT']",MusicArtistAT
+237,37,MusicArtistAT,"Name of music recording, music artist, name of album, duration.",name of album,MusicAlbum/name,[0.95333028 0.95364583 0.96717215 0.97457868 1.00000024],"['Restaurant/name', 'Organization', 'MusicRecording/name', 'MusicAlbum/name', 'MusicAlbum/name']",MusicAlbum/name
+238,37,MusicAlbum/name,"Name of music recording, music artist, name of album, duration.",duration,Duration,[0.9172405  0.92668802 0.93412334 0.93802845 0.99999988],"['CoordinateAT', 'currency', 'Date', 'Time', 'Duration']",Duration
+239,38,MusicRecording/name,I don't know.,i don't know,-,[0.85878652 0.85946172 0.86245811 0.86270541 1.00000024],"['Organization', 'Time', 'DateTime', 'Time', '-']",-
+240,38,Duration,I don't know.,-,-,0,[],-
+241,38,MusicArtistAT,I don't know.,-,-,0,[],-
+242,39,MusicRecording/name,I don't know.,i don't know,-,[0.85878652 0.85946172 0.86245811 0.86270541 1.00000024],"['Organization', 'Time', 'DateTime', 'Time', '-']",-
+243,39,Duration,I don't know.,-,-,0,[],-
+244,39,MusicAlbum/name,I don't know.,-,-,0,[],-
+245,39,MusicArtistAT,I don't know.,-,-,0,[],-
+246,40,MusicRecording/name,I don't know. The table provided does not contain any of the categories listed in the task. It appears to be a list of song titles and their durations.,i don't know,-,[0.85878652 0.85946172 0.86245811 0.86270541 1.00000024],"['Organization', 'Time', 'DateTime', 'Time', '-']",-
+247,40,Duration,I don't know. The table provided does not contain any of the categories listed in the task. It appears to be a list of song titles and their durations.,-,-,0,[],-
+248,40,MusicAlbum/name,I don't know. The table provided does not contain any of the categories listed in the task. It appears to be a list of song titles and their durations.,-,-,0,[],-
+249,40,MusicArtistAT,I don't know. The table provided does not contain any of the categories listed in the task. It appears to be a list of song titles and their durations.,-,-,0,[],-

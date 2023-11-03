@@ -1,3 +1,4 @@
+import json
 import boto3
 
 
@@ -9,48 +10,122 @@ from sentence_transformers import SentenceTransformer
 from semantic_search import query
 from csv import writer
 from datetime import datetime
+from sqlalchemy.sql import text
 
+st.set_page_config(page_title="Semantic Annotation Benchmark", layout="wide")
 
 CUSTOM_OPTION = "Another option..."
 BUCKET = "semantic-annotation-tables"
 
 
-def get_next_table():
-    st.session_state.table_id += 1
+def get_data_from_s3(example_name: str, file_format: str):
+    print(example_name)
+    obj = s3.get_object(Bucket=BUCKET, Key=example_name)
+    if file_format == "csv":
+        return pd.read_csv(obj["Body"], index_col=0)
+    elif file_format == "csv_3rows":
+        return pd.read_csv(obj["Body"], index_col=0, header=[0, 1, 2])
+    elif file_format == "tsv":
+        return pd.read_csv(obj["Body"], sep="\t")
+
+
+def get_initial_table():
+    print("Get initial table")
+    st.session_state.table_id = conn.query(
+        f"SELECT current_table_id FROM annotators WHERE name = '{st.session_state.selected_annotator}';"
+    ).iloc[0]["current_table_id"]
+    print(st.session_state.table_id)
     example = tables["name"].iloc[st.session_state.table_id]
     file_format = tables["file_format"].iloc[st.session_state.table_id]
-    obj = s3.get_object(Bucket=BUCKET, Key=example)
-    if file_format == "csv":
-        st.session_state.df = pd.read_csv(obj["Body"], index_col=0)
-    elif file_format == "tsv":
-        st.session_state.df = pd.read_csv(obj["Body"], sep="\t")
+    print(example, file_format)
+    df = get_data_from_s3(example, file_format)
+    st.session_state.df = df.rename(
+        columns={column: f"{column} (Column {idx})" for idx, column in enumerate(df.columns)}
+    )
 
 
-# def get_dataset():
-#     print("Get new dataset", st.session_state.selected_dataset)
-#     st.session_state.table_id = 0
-#     st.session_state.filtered_table = tables[tables["dataset"] == st.session_state.selected_dataset]
+def get_next_table():
+    print("Get next table")
+    while True:
+        st.session_state.table_id += 1
+        example = tables["name"].iloc[st.session_state.table_id]
+        label_count = conn.query(f"SELECT count(table_name) FROM labels WHERE table_name = '{example}'").iloc[0][
+            "count(table_name)"
+        ]
+        print(label_count)
+        if label_count < 3:
+            break
+    with conn.session as s:
+        s.execute(
+            text(
+                f"UPDATE annotators SET current_table_id = {st.session_state.table_id} WHERE name = '{st.session_state.selected_annotator}';"
+            )
+        )
+        s.commit()
+    print("Updated")
+    example = tables["name"].iloc[st.session_state.table_id]
+    file_format = tables["file_format"].iloc[st.session_state.table_id]
+    df = get_data_from_s3(example, file_format)
+    st.session_state.df = df.rename(
+        columns={column: f"{column} (Column {idx})" for idx, column in enumerate(df.columns)}
+    )
 
 
-def append_labels():
-    column_labels = []
+def search_glossary(text_search: str) -> list[str]:
+    if text_search:
+        results = query(model, index, text_search)
+        if results:
+            return [match["id"] for match in results["matches"]]
+    return []
+
+
+def validate_submission() -> bool:
+    print("Validating submission")
+    # Checking if all the fields are non empty
     for i in range(len(st.session_state.df.columns)):
-        if st.session_state[f"col{i}"] == CUSTOM_OPTION:
+        if st.session_state[f"col{i}"] is None and st.session_state[f"unable_col{i}"] == False:
+            return False
+    return True
+
+
+def upload_submission():
+    if not validate_submission():
+        return
+    print("Append label")
+    column_labels = []
+    custom_labeled_cols = []
+    suggested_concepts = {}
+    for i in range(len(st.session_state.df.columns)):
+        if st.session_state[f"unable_col{i}"]:
+            column_labels.append("Unable to label")
+        elif st.session_state[f"col{i}"] == CUSTOM_OPTION:
             column_labels.append(st.session_state[f"custom_col{i}"])
-            st.session_state[f"custom_col{i}"] = ""
+            custom_labeled_cols.append(i)
         else:
             column_labels.append(st.session_state[f"col{i}"])
+        suggested_concepts[st.session_state[f"concept_col{i}"]] = (
+            st.session_state[f"concept_search_col{i}"] if f"concept_search_col{i}" in st.session_state else []
+        )
         st.session_state[f"col{i}"] = ""
         st.session_state[f"concept_col{i}"] = ""
-    new_row = [
-        tables["name"].iloc[st.session_state.table_id],
-        datetime.utcnow(),
-        selected_annotator,
-        column_labels,
-    ]
-    with open("labels.csv", "a") as f_object:
-        writer_object = writer(f_object)
-        writer_object.writerow(new_row)
+        st.session_state[f"custom_col{i}"] = ""
+        st.session_state[f"unable_col{i}"] = False
+    new_row = {
+        "table_name": tables["name"].iloc[st.session_state.table_id],
+        "date": datetime.utcnow(),
+        "annotator": st.session_state.selected_annotator,
+        "labels": str(column_labels),
+        "custom_labeled_cols": str(custom_labeled_cols),
+        "suggested_terms": json.dumps(suggested_concepts),
+    }
+    with conn.session as s:
+        s.execute(
+            text(
+                "INSERT INTO labels (table_name, date, annotator, labels, custom_labeled_cols, suggested_terms) VALUES (:table_name, :date, :annotator, :labels, :custom_labeled_cols, :suggested_terms);"
+            ),
+            params=new_row,
+        )
+        s.commit()
 
 
 # Load env file with API KEY using full path
@@ -58,6 +133,8 @@ config = dotenv_values("../.env")
 s3 = boto3.client(
     "s3", aws_access_key_id=config["AWS_ACCESS_KEY_ID"], aws_secret_access_key=config["AWS_SECRET_ACCESS_KEY"]
 )
+# Create the SQL connection to pets_db as specified in your secrets file.
+conn = st.connection("semantic_annotation_backend_db", type="sql")
 
 
 @st.cache_resource
@@ -73,41 +150,40 @@ def init_index():
     return pinecone.Index(index_name)
 
 
-st.set_page_config(page_title="Semantic Annotation Benchmark", layout="wide")
-
 model = init_model()
 index = init_index()
 
-tables = pd.read_csv("current_dataset.csv")
+tables = pd.read_csv("current_dataset_subset.csv")
 st.title("Semantic Annotation Benchmark Creator")
-annotators = ["Lionel", "Udayan", "Sainyam Galhotra"]
-selected_annotator = st.selectbox("Annotator", annotators)
 
+# Insert some data with conn.session.
+with conn.session as s:
+    s.execute(text("CREATE TABLE IF NOT EXISTS annotators (name TEXT, current_table_id INTEGER);"))
+    s.execute(
+        text(
+            "CREATE TABLE IF NOT EXISTS labels (table_name TEXT, date TEXT, annotator TEXT, labels TEXT, custom_labeled_cols TEXT, suggested_terms TEXT);"
+        )
+    )
+    row_length = conn.query("SELECT count(name) FROM annotators;")
+    if row_length.loc[0]["count(name)"] == 0:
+        s.execute(
+            text("DELETE FROM annotators;"),
+        )
+        annotators_init = {"Lionel": 22, "Udayan": 0, "Sainyam Galhotra": 0}
+        for k, id in annotators_init.items():
+            s.execute(
+                text("INSERT INTO annotators (name, current_table_id) VALUES (:name, :current_table_id);"),
+                params=dict(name=k, current_table_id=id),
+            )
+    s.commit()
+annotators_names = conn.query("SELECT name FROM annotators")["name"].to_list()
+selected_annotator = st.selectbox("Annotator", annotators_names, key="selected_annotator", on_change=get_initial_table)
 
-def search_glossary(text_search: str) -> list[str]:
-    if text_search:
-        results = query(model, index, text_search)
-        if results:
-            return [match["metadata"]["original"] for match in results["matches"]]
-        return results
-    return []
+if "df" not in st.session_state:
+    get_initial_table()
 
 
 left_column, right_column = st.columns([3, 2], gap="medium")
-
-if "df" not in st.session_state:
-    st.session_state.table_id = -1
-    get_next_table()
-
-
-def form_submission():
-    # Checking if all the fields are non empty
-    for i in range(len(st.session_state.df.columns)):
-        if st.session_state[f"col{i}"] is not None:
-            append_labels()
-            break
-    # else:
-    #     st.warning("Please fill at least one field")
 
 
 with left_column:
@@ -122,10 +198,23 @@ with right_column:
             suggestion = st.text_input(f"Search for concepts", key=f"concept_col{i}")
             options = search_glossary(suggestion)
             if options:
+                st.session_state[f"concept_search_col{i}"] = options
                 options.append(CUSTOM_OPTION)
             selection = st.selectbox(f"Select suggested concepts", options, key=f"col{i}")
             if selection == CUSTOM_OPTION:
                 otherOption = st.text_input("Enter your other option...", key=f"custom_col{i}")
-    submit_form = st.button("Submit", on_click=form_submission)
+            unable_to_label = st.checkbox("Unable to label", key=f"unable_col{i}")
+    submit_form = st.button("Submit", on_click=upload_submission)
     if submit_form:
-        st.success("Submitted")
+        if validate_submission():
+            st.success("Submitted")
+        else:
+            st.warning(
+                "Please label all the columns with a selected concept or suggested concept or indicate that you were unable to label."
+            )
+
+# df = conn.query("SELECT * from annotators;", ttl=0)
+# st.write(df)
+
+# df2 = conn.query("SELECT * from labels;", ttl=0)
+# st.write(df2)

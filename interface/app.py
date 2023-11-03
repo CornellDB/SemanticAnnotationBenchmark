@@ -169,7 +169,7 @@ with conn.session as s:
         s.execute(
             text("DELETE FROM annotators;"),
         )
-        annotators_init = {"Lionel": 22, "Udayan": 0, "Sainyam Galhotra": 0}
+        annotators_init = {"Lionel": 0, "Udayan": 0, "Sainyam Galhotra": 0}
         for k, id in annotators_init.items():
             s.execute(
                 text("INSERT INTO annotators (name, current_table_id) VALUES (:name, :current_table_id);"),

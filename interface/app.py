@@ -27,7 +27,7 @@ def get_data_from_s3(example_name: str, file_format: str):
     if file_format == "csv":
         df = pd.read_csv(obj["Body"], index_col=0)
     elif file_format == "csv_3rows":
-        df = pd.read_csv(obj["Body"]yyp, index_col=0, header=[0, 1, 2])
+        df = pd.read_csv(obj["Body"], index_col=0, header=[0, 1, 2])
     elif file_format == "tsv":
         df = pd.read_csv(obj["Body"], sep="\t")
     return df.iloc[:MAX_ROWS, :MAX_COLS]

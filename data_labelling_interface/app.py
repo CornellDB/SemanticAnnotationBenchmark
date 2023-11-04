@@ -37,9 +37,13 @@ def execute_sql_query(command: str):
     return result
 
 
-def execute_sql_command(command: str, params):
+def execute_sql_command(command: str, params=None):
     conn = sqlite3.connect("semantic_annotation_backend.db")
-    conn.execute(command, params)
+    if params:
+        conn.execute(command, params)
+    else:
+        conn.execute(command)
+    conn.commit()
     conn.close()
 
 
@@ -182,15 +186,13 @@ index = init_index()
 tables = pd.read_csv("current_dataset_subset.csv")
 st.title("Semantic Annotation Benchmark Creator")
 
-execute_sql_query("CREATE TABLE IF NOT EXISTS annotators (name TEXT, current_table_id INTEGER);")
-execute_sql_query(
+execute_sql_command("CREATE TABLE IF NOT EXISTS annotators (name TEXT, current_table_id INTEGER);")
+execute_sql_command(
     "CREATE TABLE IF NOT EXISTS labels (table_name TEXT, date TEXT, annotator TEXT, labels TEXT, custom_labeled_cols TEXT, suggested_terms TEXT);"
 )
-row_length = execute_sql_query("SELECT count(name) FROM annotators;")[0]
+row_length = execute_sql_query("SELECT count(name) FROM annotators;")[0][0]
 if row_length == 0:
-    execute_sql_command(
-        "DELETE FROM annotators;",
-    )
+    execute_sql_command("DELETE FROM annotators;")
     annotators_init = {"Lionel": 0, "Udayan": 0, "Sainyam Galhotra": 0, "Participant 1": 0}
     for k, id in annotators_init.items():
         execute_sql_command(f"INSERT INTO annotators (name, current_table_id) VALUES (?, ?);", (k, id))

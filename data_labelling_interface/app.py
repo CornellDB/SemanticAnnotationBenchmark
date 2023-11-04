@@ -1,4 +1,6 @@
 import json
+import logging
+import sqlite3
 from datetime import datetime
 
 import boto3
@@ -7,9 +9,6 @@ import pinecone
 import streamlit as st
 from dotenv import dotenv_values
 from sentence_transformers import SentenceTransformer
-from sqlalchemy.sql import text
-import logging
-
 
 from semantic_search import query
 
@@ -30,6 +29,20 @@ MAX_ROWS = 100
 MAX_COLS = 10
 
 
+def execute_sql_query(command: str):
+    # Create the SQL connection to semantic_annotation_backend_db as specified in your secrets file.
+    conn = sqlite3.connect("semantic_annotation_backend.db")
+    result = conn.execute(command).fetchall()
+    conn.close()
+    return result
+
+
+def execute_sql_command(command: str, params):
+    conn = sqlite3.connect("semantic_annotation_backend.db")
+    conn.execute(command, params)
+    conn.close()
+
+
 def get_data_from_s3(example_name: str, file_format: str):
     logger.info(example_name)
     obj = s3.get_object(Bucket=BUCKET, Key=example_name)
@@ -45,9 +58,9 @@ def get_data_from_s3(example_name: str, file_format: str):
 
 def get_initial_table():
     logger.info("Get initial table")
-    st.session_state.table_id = conn.query(
-        f"SELECT current_table_id FROM annotators WHERE name = '{st.session_state.selected_annotator}';", ttl=0
-    ).iloc[0]["current_table_id"]
+    st.session_state.table_id = execute_sql_query(
+        f"SELECT current_table_id FROM annotators WHERE name = '{st.session_state.selected_annotator}';"
+    )[0][0]
     logger.info(f"Table id {st.session_state.table_id}")
     example = tables["name"].iloc[st.session_state.table_id]
     file_format = tables["file_format"].iloc[st.session_state.table_id]
@@ -63,19 +76,14 @@ def get_next_table():
     while True:
         st.session_state.table_id += 1
         example = tables["name"].iloc[st.session_state.table_id]
-        label_count = conn.query(f"SELECT count(table_name) FROM labels WHERE table_name = '{example}';", ttl=0).iloc[
-            0
-        ]["count(table_name)"]
+        label_count = execute_sql_query(f"SELECT count(table_name) FROM labels WHERE table_name = '{example}';")[0][0]
         logger.info(f"Label count {label_count}, table {st.session_state.table_id}")
         if label_count < 3:
             break
-    with conn.session as s:
-        s.execute(
-            text(
-                f"UPDATE annotators SET current_table_id = {st.session_state.table_id} WHERE name = '{st.session_state.selected_annotator}';"
-            )
-        )
-        s.commit()
+    execute_sql_command(
+        f"UPDATE annotators SET current_table_id = ? WHERE name = ?;",
+        (st.session_state.table_id, st.session_state.selected_annotator),
+    )
     logger.info("Updated")
     example = tables["name"].iloc[st.session_state.table_id]
     file_format = tables["file_format"].iloc[st.session_state.table_id]
@@ -133,14 +141,17 @@ def upload_submission():
         "custom_labeled_cols": str(custom_labeled_cols),
         "suggested_terms": json.dumps(suggested_concepts),
     }
-    with conn.session as s:
-        s.execute(
-            text(
-                "INSERT INTO labels (table_name, date, annotator, labels, custom_labeled_cols, suggested_terms) VALUES (:table_name, :date, :annotator, :labels, :custom_labeled_cols, :suggested_terms);"
-            ),
-            params=new_row,
-        )
-        s.commit()
+    execute_sql_command(
+        f"INSERT INTO labels (table_name, date, annotator, labels, custom_labeled_cols, suggested_terms) VALUES (?, ?, ?, ?, ?, ?)",
+        (
+            new_row["table_name"],
+            new_row["date"],
+            new_row["annotator"],
+            new_row["labels"],
+            new_row["custom_labeled_cols"],
+            new_row["suggested_terms"],
+        ),
+    )
     get_next_table()
     st.session_state["submission_success"] = True
 
@@ -150,8 +161,6 @@ config = dotenv_values("../.env")
 s3 = boto3.client(
     "s3", aws_access_key_id=config["AWS_ACCESS_KEY_ID"], aws_secret_access_key=config["AWS_SECRET_ACCESS_KEY"]
 )
-# Create the SQL connection to pets_db as specified in your secrets file.
-conn = st.connection("semantic_annotation_backend_db", type="sql")
 
 
 @st.cache_resource
@@ -173,27 +182,19 @@ index = init_index()
 tables = pd.read_csv("current_dataset_subset.csv")
 st.title("Semantic Annotation Benchmark Creator")
 
-# Insert some data with conn.session.
-with conn.session as s:
-    s.execute(text("CREATE TABLE IF NOT EXISTS annotators (name TEXT, current_table_id INTEGER);"))
-    s.execute(
-        text(
-            "CREATE TABLE IF NOT EXISTS labels (table_name TEXT, date TEXT, annotator TEXT, labels TEXT, custom_labeled_cols TEXT, suggested_terms TEXT);"
-        )
+execute_sql_query("CREATE TABLE IF NOT EXISTS annotators (name TEXT, current_table_id INTEGER);")
+execute_sql_query(
+    "CREATE TABLE IF NOT EXISTS labels (table_name TEXT, date TEXT, annotator TEXT, labels TEXT, custom_labeled_cols TEXT, suggested_terms TEXT);"
+)
+row_length = execute_sql_query("SELECT count(name) FROM annotators;")[0]
+if row_length == 0:
+    execute_sql_command(
+        "DELETE FROM annotators;",
     )
-    row_length = conn.query("SELECT count(name) FROM annotators;", ttl=0)
-    if row_length.loc[0]["count(name)"] == 0:
-        s.execute(
-            text("DELETE FROM annotators;"),
-        )
-        annotators_init = {"Lionel": 0, "Udayan": 0, "Sainyam Galhotra": 0, "Participant 1": 0}
-        for k, id in annotators_init.items():
-            s.execute(
-                text("INSERT INTO annotators (name, current_table_id) VALUES (:name, :current_table_id);"),
-                params=dict(name=k, current_table_id=id),
-            )
-    s.commit()
-annotators_names = conn.query("SELECT name FROM annotators", ttl=0)["name"].to_list()
+    annotators_init = {"Lionel": 0, "Udayan": 0, "Sainyam Galhotra": 0, "Participant 1": 0}
+    for k, id in annotators_init.items():
+        execute_sql_command(f"INSERT INTO annotators (name, current_table_id) VALUES (?, ?);", (k, id))
+annotators_names = [row[0] for row in execute_sql_query("SELECT name FROM annotators")]
 selected_annotator = st.selectbox("Annotator", annotators_names, key="selected_annotator", on_change=get_initial_table)
 
 if "df" not in st.session_state:
@@ -231,8 +232,8 @@ with right_column:
                 "Please label all the columns with a selected concept or suggested concept or indicate that you were unable to label."
             )
 
-# df = conn.query("SELECT * from annotators;", ttl=0)
+# df = conn.query("SELECT * from annotators;")
 # st.write(df)
 
-# df2 = conn.query("SELECT * from labels;", ttl=0)
+# df2 = conn.query("SELECT * from labels;")
 # st.write(df2)

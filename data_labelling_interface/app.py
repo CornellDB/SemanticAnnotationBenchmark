@@ -1,17 +1,27 @@
 import json
+from datetime import datetime
+
 import boto3
-
-
-from dotenv import dotenv_values
-import streamlit as st
 import pandas as pd
 import pinecone
+import streamlit as st
+from dotenv import dotenv_values
 from sentence_transformers import SentenceTransformer
-from semantic_search import query
-from csv import writer
-from datetime import datetime
 from sqlalchemy.sql import text
+import logging
 
+
+from semantic_search import query
+
+logging.basicConfig(
+    filename="semantic_annotation.log",
+    filemode="a",
+    format="%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s",
+    datefmt="%H:%M:%S",
+    level=logging.INFO,
+)
+
+logger = logging.getLogger("app.py")
 st.set_page_config(page_title="Semantic Annotation Benchmark", layout="wide")
 
 CUSTOM_OPTION = "Another option..."
@@ -21,7 +31,7 @@ MAX_COLS = 10
 
 
 def get_data_from_s3(example_name: str, file_format: str):
-    print(example_name)
+    logger.info(example_name)
     obj = s3.get_object(Bucket=BUCKET, Key=example_name)
     df = None
     if file_format == "csv":
@@ -34,14 +44,14 @@ def get_data_from_s3(example_name: str, file_format: str):
 
 
 def get_initial_table():
-    print("Get initial table")
+    logger.info("Get initial table")
     st.session_state.table_id = conn.query(
         f"SELECT current_table_id FROM annotators WHERE name = '{st.session_state.selected_annotator}';", ttl=0
     ).iloc[0]["current_table_id"]
-    print(st.session_state.table_id)
+    logger.info(f"Table id {st.session_state.table_id}")
     example = tables["name"].iloc[st.session_state.table_id]
     file_format = tables["file_format"].iloc[st.session_state.table_id]
-    print(example, file_format)
+    logger.info(f"{example}, {file_format}")
     df = get_data_from_s3(example, file_format)
     st.session_state.df = df.rename(
         columns={column: f"{column} (Column {idx})" for idx, column in enumerate(df.columns)}
@@ -49,14 +59,14 @@ def get_initial_table():
 
 
 def get_next_table():
-    print("Get next table")
+    logger.info("Get next table")
     while True:
         st.session_state.table_id += 1
         example = tables["name"].iloc[st.session_state.table_id]
         label_count = conn.query(f"SELECT count(table_name) FROM labels WHERE table_name = '{example}';", ttl=0).iloc[
             0
         ]["count(table_name)"]
-        print(f"Label count {label_count}, table {st.session_state.table_id}")
+        logger.info(f"Label count {label_count}, table {st.session_state.table_id}")
         if label_count < 3:
             break
     with conn.session as s:
@@ -66,7 +76,7 @@ def get_next_table():
             )
         )
         s.commit()
-    print("Updated")
+    logger.info("Updated")
     example = tables["name"].iloc[st.session_state.table_id]
     file_format = tables["file_format"].iloc[st.session_state.table_id]
     df = get_data_from_s3(example, file_format)
@@ -84,7 +94,7 @@ def search_glossary(text_search: str) -> list[str]:
 
 
 def validate_submission() -> bool:
-    print("Validating submission")
+    logger.info("Validating submission")
     # Checking if all the fields are non empty
     for i in range(len(st.session_state.df.columns)):
         if st.session_state[f"col{i}"] is None and st.session_state[f"unable_col{i}"] == False:
@@ -96,7 +106,7 @@ def upload_submission():
     if not validate_submission():
         st.session_state["submission_success"] = False
         return
-    print("Append label")
+    logger.info("Append label")
     column_labels = []
     custom_labeled_cols = []
     suggested_concepts = {}

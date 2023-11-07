@@ -77,24 +77,28 @@ def get_initial_table():
 
 def get_next_table():
     logger.info("Get next table")
-    while True:
+    while st.session_state.table_id < len(tables) - 1:
         st.session_state.table_id += 1
         example = tables["name"].iloc[st.session_state.table_id]
         label_count = execute_sql_query(f"SELECT count(table_name) FROM labels WHERE table_name = '{example}';")[0][0]
         logger.info(f"Label count {label_count}, table {st.session_state.table_id}")
         if label_count < 3:
             break
-    execute_sql_command(
-        f"UPDATE annotators SET current_table_id = ? WHERE name = ?;",
-        (st.session_state.table_id, st.session_state.selected_annotator),
-    )
-    logger.info("Updated")
-    example = tables["name"].iloc[st.session_state.table_id]
-    file_format = tables["file_format"].iloc[st.session_state.table_id]
-    df = get_data_from_s3(example, file_format)
-    st.session_state.df = df.rename(
-        columns={column: f"{column} (Column {idx})" for idx, column in enumerate(df.columns)}
-    )
+
+    if st.session_state.table_id == len(tables):
+        st.success("No more tables to label")
+    else:
+        execute_sql_command(
+            f"UPDATE annotators SET current_table_id = ? WHERE name = ?;",
+            (st.session_state.table_id, st.session_state.selected_annotator),
+        )
+        logger.info("Updated")
+        example = tables["name"].iloc[st.session_state.table_id]
+        file_format = tables["file_format"].iloc[st.session_state.table_id]
+        df = get_data_from_s3(example, file_format)
+        st.session_state.df = df.rename(
+            columns={column: f"{column} (Column {idx})" for idx, column in enumerate(df.columns)}
+        )
 
 
 def search_glossary(text_search: str) -> list[str]:
@@ -109,7 +113,7 @@ def validate_submission() -> bool:
     logger.info("Validating submission")
     # Checking if all the fields are non empty
     for i in range(len(st.session_state.df.columns)):
-        if st.session_state[f"col{i}"] is None and st.session_state[f"unable_col{i}"] == False:
+        if len(st.session_state[f"col{i}"]) == 0 and st.session_state[f"unable_col{i}"] == False:
             return False
     return True
 
@@ -133,10 +137,11 @@ def upload_submission():
         suggested_concepts[st.session_state[f"concept_col{i}"]] = (
             st.session_state[f"concept_search_col{i}"] if f"concept_search_col{i}" in st.session_state else []
         )
-        st.session_state[f"col{i}"] = ""
+        st.session_state[f"col{i}"] = []
         st.session_state[f"concept_col{i}"] = ""
         st.session_state[f"custom_col{i}"] = ""
         st.session_state[f"unable_col{i}"] = False
+        st.session_state[f"currently_selected_col{i}"] = []
     new_row = {
         "table_name": tables["name"].iloc[st.session_state.table_id],
         "date": datetime.utcnow(),
@@ -219,11 +224,22 @@ with right_column:
             suggestion = st.text_input(f"Search for concepts", key=f"concept_col{i}")
             options = search_glossary(suggestion)
             if options:
+                if suggestion not in options:
+                    options = [suggestion] + options
                 st.session_state[f"concept_search_col{i}"] = options
-                options.append(CUSTOM_OPTION)
-            selection = st.selectbox(f"Select suggested concepts", options, key=f"col{i}")
-            if selection == CUSTOM_OPTION:
-                otherOption = st.text_input("Enter your other option...", key=f"custom_col{i}")
+                # options.append(CUSTOM_OPTION)
+            # selection = st.selectbox(f"Select suggested concepts", options, key=f"col{i}")
+            # Display the multiselect widget with dynamically filtered options
+            if f"currently_selected_col{i}" not in st.session_state:
+                st.session_state[f"currently_selected_col{i}"] = []
+            selected_options = st.multiselect(
+                "Select suggested concepts:",
+                options=st.session_state[f"currently_selected_col{i}"] + options,
+                default=st.session_state[f"currently_selected_col{i}"],
+                key=f"col{i}",
+            )
+            st.session_state[f"currently_selected_col{i}"] = selected_options if len(selected_options) > 0 else []
+            other_option = st.text_input("Specify your own custom concept...", key=f"custom_col{i}")
             unable_to_label = st.checkbox("Unable to label", key=f"unable_col{i}")
     submit_form = st.button("Submit", on_click=upload_submission)
     if submit_form:

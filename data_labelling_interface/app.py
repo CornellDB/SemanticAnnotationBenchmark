@@ -137,7 +137,7 @@ def upload_submission():
         suggested_concepts[st.session_state[f"concept_col{i}"]] = (
             st.session_state[f"concept_search_col{i}"] if f"concept_search_col{i}" in st.session_state else []
         )
-        st.session_state[f"col{i}"] = []
+        # st.session_state[f"col{i}"] = []
         st.session_state[f"concept_col{i}"] = ""
         st.session_state[f"custom_col{i}"] = ""
         st.session_state[f"unable_col{i}"] = False

@@ -52,9 +52,9 @@ def get_data_from_s3(example_name: str, file_format: str):
     obj = s3.get_object(Bucket=BUCKET, Key=example_name)
     df = None
     if file_format == "csv":
-        df = pd.read_csv(obj["Body"], index_col=0)
+        df = pd.read_csv(obj["Body"])
     elif file_format == "csv_3rows":
-        df = pd.read_csv(obj["Body"], index_col=0, header=[0, 1, 2])
+        df = pd.read_csv(obj["Body"], header=[0, 1, 2])
     elif file_format == "tsv":
         df = pd.read_csv(obj["Body"], sep="\t")
     return df.iloc[:MAX_ROWS, :MAX_COLS]
@@ -198,7 +198,8 @@ execute_sql_command(
 row_length = execute_sql_query("SELECT count(name) FROM annotators;")[0][0]
 if row_length == 0:
     execute_sql_command("DELETE FROM annotators;")
-    annotators_init = {"Lionel": 0, "Udayan": 0, "Sainyam Galhotra": 0, "Participant 1": 0}
+    dummy_participants = {f"Participant {i}": 0 for i in range(10)}
+    annotators_init = {"Lionel": 0, "Udayan": 0, "Sainyam Galhotra": 0, **dummy_participants}
     for k, id in annotators_init.items():
         execute_sql_command(f"INSERT INTO annotators (name, current_table_id) VALUES (?, ?);", (k, id))
 annotators_names = [row[0] for row in execute_sql_query("SELECT name FROM annotators")]
@@ -214,6 +215,7 @@ left_column, right_column = st.columns([3, 2], gap="medium")
 with left_column:
     st.subheader("Current table to label")
     st.write(f"Table Id: {st.session_state.table_id}")
+    st.write(f"Table File Name: {tables['name'].iloc[st.session_state.table_id]}")
     st.dataframe(st.session_state.df, use_container_width=True)
     next_table = st.button("Get next table", on_click=get_next_table)
 

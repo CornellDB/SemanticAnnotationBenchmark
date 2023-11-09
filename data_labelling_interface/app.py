@@ -188,7 +188,7 @@ def init_index():
 model = init_model()
 index = init_index()
 
-tables = pd.read_csv("current_dataset_subset.csv")
+tables = pd.read_csv("current_dataset.csv")
 st.title("Semantic Annotation Benchmark Creator")
 
 execute_sql_command("CREATE TABLE IF NOT EXISTS annotators (name TEXT, current_table_id INTEGER);")

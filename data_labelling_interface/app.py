@@ -24,6 +24,7 @@ logger = logging.getLogger("app.py")
 st.set_page_config(page_title="Semantic Annotation Benchmark", layout="wide")
 
 CUSTOM_OPTION = "Another option..."
+DEFAULT_ANNOTATOR = "<Select your name>"
 BUCKET = "semantic-annotation-tables"
 MAX_ROWS = 100
 MAX_COLS = 10
@@ -62,6 +63,8 @@ def get_data_from_s3(example_name: str, file_format: str):
 
 def get_initial_table():
     logger.info("Get initial table")
+    if st.session_state.selected_annotator == DEFAULT_ANNOTATOR:
+        return
     st.session_state.table_id = execute_sql_query(
         f"SELECT current_table_id FROM annotators WHERE name = '{st.session_state.selected_annotator}';"
     )[0][0]
@@ -203,57 +206,66 @@ if row_length == 0:
     for k, id in annotators_init.items():
         execute_sql_command(f"INSERT INTO annotators (name, current_table_id) VALUES (?, ?);", (k, id))
 annotators_names = [row[0] for row in execute_sql_query("SELECT name FROM annotators")]
-selected_annotator = st.selectbox("Annotator", annotators_names, key="selected_annotator", on_change=get_initial_table)
+selected_annotator = st.selectbox(
+    "Annotator", [DEFAULT_ANNOTATOR] + annotators_names, key="selected_annotator", on_change=get_initial_table
+)
 
-if "df" not in st.session_state:
-    get_initial_table()
+if selected_annotator != DEFAULT_ANNOTATOR:
+    if "df" not in st.session_state:
+        get_initial_table()
 
+    left_column, right_column = st.columns([3, 2], gap="large")
 
-left_column, right_column = st.columns([3, 2], gap="medium")
+    with left_column:
+        st.subheader("Current table to label")
+        st.write(f"Table Id: {st.session_state.table_id}")
+        st.write(f"Table File Name: {tables['name'].iloc[st.session_state.table_id]}")
+        st.dataframe(st.session_state.df, use_container_width=True)
+        next_table = st.button("Get next table", on_click=get_next_table)
 
+    with right_column:
+        st.subheader("Annotate labels")
+        for i in range(len(st.session_state.df.columns)):
+            with st.expander(f"Column {i}"):
+                suggestion = st.text_input(f"Search for concepts", key=f"concept_col{i}")
+                options = search_glossary(suggestion)
+                if options:
+                    if suggestion not in options:
+                        options = [suggestion] + options
+                    st.session_state[f"concept_search_col{i}"] = options
+                    # options.append(CUSTOM_OPTION)
+                # selection = st.selectbox(f"Select suggested concepts", options, key=f"col{i}")
+                # Display the multiselect widget with dynamically filtered options
+                if f"currently_selected_col{i}" not in st.session_state:
+                    st.session_state[f"currently_selected_col{i}"] = []
+                selected_options = st.multiselect(
+                    "Select suggested concepts:",
+                    options=st.session_state[f"currently_selected_col{i}"] + options,
+                    default=st.session_state[f"currently_selected_col{i}"],
+                    key=f"col{i}",
+                )
+                st.session_state[f"currently_selected_col{i}"] = selected_options if len(selected_options) > 0 else []
+                other_option = st.text_input("Specify your own custom concept...", key=f"custom_col{i}")
+                unable_to_label = st.checkbox("Unable to label", key=f"unable_col{i}")
+        submit_form = st.button("Submit", on_click=upload_submission)
+        if submit_form:
+            if st.session_state["submission_success"]:
+                st.success("Submitted")
+            else:
+                st.warning(
+                    "Please label all the columns with a selected concept or suggested concept or indicate that you were unable to label."
+                )
 
-with left_column:
-    st.subheader("Current table to label")
-    st.write(f"Table Id: {st.session_state.table_id}")
-    st.write(f"Table File Name: {tables['name'].iloc[st.session_state.table_id]}")
-    st.dataframe(st.session_state.df, use_container_width=True)
-    next_table = st.button("Get next table", on_click=get_next_table)
+css = """
+<style>
+    section.main>div {
+        padding-bottom: 1rem;
+    }
+    [data-testid="column"] {
+        overflow-y: auto;
+        max-height: 55vh;
+    }
+</style>
+"""
 
-with right_column:
-    st.subheader("Annotate labels")
-    for i in range(len(st.session_state.df.columns)):
-        with st.expander(f"Column {i}"):
-            suggestion = st.text_input(f"Search for concepts", key=f"concept_col{i}")
-            options = search_glossary(suggestion)
-            if options:
-                if suggestion not in options:
-                    options = [suggestion] + options
-                st.session_state[f"concept_search_col{i}"] = options
-                # options.append(CUSTOM_OPTION)
-            # selection = st.selectbox(f"Select suggested concepts", options, key=f"col{i}")
-            # Display the multiselect widget with dynamically filtered options
-            if f"currently_selected_col{i}" not in st.session_state:
-                st.session_state[f"currently_selected_col{i}"] = []
-            selected_options = st.multiselect(
-                "Select suggested concepts:",
-                options=st.session_state[f"currently_selected_col{i}"] + options,
-                default=st.session_state[f"currently_selected_col{i}"],
-                key=f"col{i}",
-            )
-            st.session_state[f"currently_selected_col{i}"] = selected_options if len(selected_options) > 0 else []
-            other_option = st.text_input("Specify your own custom concept...", key=f"custom_col{i}")
-            unable_to_label = st.checkbox("Unable to label", key=f"unable_col{i}")
-    submit_form = st.button("Submit", on_click=upload_submission)
-    if submit_form:
-        if st.session_state["submission_success"]:
-            st.success("Submitted")
-        else:
-            st.warning(
-                "Please label all the columns with a selected concept or suggested concept or indicate that you were unable to label."
-            )
-
-# df = conn.query("SELECT * from annotators;")
-# st.write(df)
-
-# df2 = conn.query("SELECT * from labels;")
-# st.write(df2)
+st.markdown(css, unsafe_allow_html=True)

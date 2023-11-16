@@ -263,7 +263,11 @@ css = """
     }
     [data-testid="column"] {
         overflow-y: auto;
+        overflow-x: hidden;
         max-height: 55vh;
+    }
+    [data-testid="column"]>div>div {
+        padding-right: 10px;
     }
 </style>
 """

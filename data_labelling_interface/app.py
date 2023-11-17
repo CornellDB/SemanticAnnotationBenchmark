@@ -221,7 +221,6 @@ if selected_annotator != DEFAULT_ANNOTATOR:
         st.write(f"Table Id: {st.session_state.table_id}")
         st.write(f"Table File Name: {tables['name'].iloc[st.session_state.table_id]}")
         st.dataframe(st.session_state.df, use_container_width=True)
-        next_table = st.button("Get next table", on_click=get_next_table)
 
     with right_column:
         st.subheader("Annotate labels")
@@ -247,6 +246,10 @@ if selected_annotator != DEFAULT_ANNOTATOR:
                 st.session_state[f"currently_selected_col{i}"] = selected_options if len(selected_options) > 0 else []
                 other_option = st.text_input("Specify your own custom concept...", key=f"custom_col{i}")
                 unable_to_label = st.checkbox("Unable to label", key=f"unable_col{i}")
+    left_column, right_column = st.columns([3, 2], gap="large")
+    with left_column:
+        next_table = st.button("Get next table", on_click=get_next_table)
+    with right_column:
         submit_form = st.button("Submit", on_click=upload_submission)
         if submit_form:
             if st.session_state["submission_success"]:

@@ -6,6 +6,7 @@ cds_climate/
 physionet/
 .streamlit/
 *.pem
+*.db
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

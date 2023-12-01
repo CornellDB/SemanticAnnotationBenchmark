@@ -32,15 +32,17 @@ The `data_scripts/` folder also contains the `eval.py` script that runs evaluati
 
 ## GPT Experiments
 
-This folder contains jupyter notebooks based of [Github repository of the 'Column Type Annotation using ChatGPT' paper](https://github.com/wbsg-uni-mannheim/TabAnnGPT), with modified prompts to experiment performance of predictions without the restriction of classes.
+This folder contains jupyter notebooks based of [Github repository of the 'Column Type Annotation using ChatGPT'](https://github.com/wbsg-uni-mannheim/TabAnnGPT) paper, with modified prompts to experiment performance of predictions without the restriction of classes.
 To run the experiments, you will first have to set up the conda environment using `conda env create -f llm.yml`
 
-Predictions were done on both the sotab dataset used in the ['Column Type Annotation using ChatGPT' paper](https://arxiv.org/abs/2306.00745) paper as well as the dataset used for the [C2 paper](https://arxiv.org/abs/2012.08594).
+Predictions were done on both the sotab dataset used in the ['Column Type Annotation using ChatGPT'](https://arxiv.org/abs/2306.00745) paper as well as the dataset used for the [C2 paper](https://arxiv.org/abs/2012.08594).
 
 1. `Prompt-table-experiments.ipynb`
+
 This notebook loads the original sotab data used in the paper and is able to run multiple different prompts templates that we defined. The main new prompt that was tested was the "semantic_concept_template" prompt. It also allows you to change the table format to be column major. 
 
 Lastly, the notebook does evaluation. There is a modified evaluation method that uses bertscore to find the closest match between the predicted open-world concept by GPT and the ground truth defined classes. This creates a csv file in the predictions folder and an additional human evaluated step is required to analyze if the match is accurate.
 
 2. `Prompt-table-experiments-c2.ipynb`
+
 This notebook loads c2 data and is able to run and evaluate different prompt templates, similar to the other notebook.

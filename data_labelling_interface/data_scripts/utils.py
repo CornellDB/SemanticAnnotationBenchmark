@@ -5,6 +5,7 @@ from evaluate import load
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
+from nltk.corpus import wordnet
 import string
 from tenacity import (
     retry,
@@ -38,13 +39,14 @@ def calculate_bertscore_f1(pred: str, labels: list[str]) -> list[float]:
 @lru_cache()
 @retry(wait=wait_random_exponential(min=1, max=60), stop=stop_after_attempt(6))
 def get_hierarchy(concept: str, client) -> list[str]:
-    time.sleep(1)
+    time.sleep(2)
     prompt = (
-        f"Give me the dbpedia ontology hierarchy for {concept}. "
-        "If the concept cannot be found in the ontology, use the closest possible one."
-        "Please ONLY give me in a form of a comma delimited list, with the most granular concept first and the most general concept last."
+        f"Give me the ontology hierarchy for {concept}. "
+        # "If the concept cannot be found in the ontology, use the closest possible one."
         "Do not include the prefix in the concepts (e.g. foaf, owl, rdf)."
-        "If no suitable concept can be found, just return the original concept."
+        # "If no suitable concept can be found, just return the original concept."
+        "Please ONLY give me in a form of a comma delimited list, with the most granular concept first and the most general concept last."
+        "It must be without any reasoning or explanation."
     )
     chat_completion = client.chat.completions.create(
         messages=[
@@ -112,6 +114,14 @@ def preprocess_text(text: str, stopword_removal_and_lemmatization: bool = False)
         text = " ".join(tokens)
 
     return text
+
+
+def get_synonyms(word: str) -> set[str]:
+    synonyms = set()
+    for syn in wordnet.synsets(word):
+        for lemma in syn.lemmas():
+            synonyms.add(lemma.name())
+    return synonyms
 
 
 if __name__ == "__main__":

@@ -1,0 +1,8 @@
+Total columns 227
+Total score (bertscore) 87.02976190476191
+Accuracy (bertscore) 0.38339102160688066
+Total score (rougescore) 15.24689265536723
+Accuracy (rougescore) 0.06716692799721247
+Hierarchy precision (hierarchy score) 0.3915768763786384
+Hierarchy recall (hierarchy score) 0.3518962904878946
+Hierarchy fmeasure (hierarchy score) 0.32974874371782725

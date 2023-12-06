@@ -1,5 +1,6 @@
 import argparse
 import ast
+import csv
 import os
 from dotenv import dotenv_values
 import openai
@@ -56,6 +57,8 @@ def bertscore_based_matching(pred: str, labels: list[str]) -> float:
     """
     print("bertscore based matching")
     print(f"Pred {pred}, Label hierarchy {labels}")
+    if len(labels) == 0:
+        return 0
     bertscores = calculate_bertscore_f1(pred, labels)
     for hierarchy_level, label in enumerate(labels):
         if bertscores[hierarchy_level] > 0.6:
@@ -81,7 +84,7 @@ def hierarchy_matching(pred: str, labels: str):
     return rouge_results["rouge1"]
 
 
-def eval(postprocessed_labels: str, inference_outputs: str):
+def eval(postprocessed_labels: str, inference_outputs: str, results_file: str):
     """Run evaluation on csv with inference output and csv with postprocessed labels
 
     Args:
@@ -95,26 +98,48 @@ def eval(postprocessed_labels: str, inference_outputs: str):
 
     rougebased_score = bertbased_score = total_columns = 0
     hierarchy_precision = hierarchy_recall = hierarchy_fmeasure = 0
-    for idx, pred in enumerate(preds["output"]):
+    for idx, pred in enumerate(preds["output"][: len(gt_labels)]):
         label_hierarchies = gt_labels["label_hierarchies"][idx]
         print("=" * 10, gt_labels["table_name"][idx], "=" * 10)
+        col_idx = 0
         for col_labels, col_pred in zip(label_hierarchies, pred):
+            if len(col_labels) == 0:
+                col_idx += 1
+                continue
             total_columns += 1
             bertbased_score += bertscore_based_matching(col_pred, col_labels)
             rougebased_score += rougescore_based_matching(col_pred, col_labels)
             col_pred_hierarchy = [preprocess_text(concept, True) for concept in get_hierarchy(col_pred, client)]
             hierarchy_score = hierarchy_matching(" ".join(col_pred_hierarchy), " ".join(col_labels))
+            with open("debug_hierarchy.csv", "a", newline="") as file:
+                writer = csv.writer(file)
+                writer.writerows(
+                    [
+                        [
+                            idx,
+                            col_idx,
+                            " ".join(col_pred_hierarchy),
+                            " ".join(col_labels),
+                            hierarchy_score.precision,
+                            hierarchy_score.recall,
+                            hierarchy_score.fmeasure,
+                        ]
+                    ]
+                )
             hierarchy_precision += hierarchy_score.precision
             hierarchy_recall += hierarchy_score.recall
             hierarchy_fmeasure += hierarchy_score.fmeasure
-    print(f"Total columns {total_columns}")
-    print(f"Total score (bertscore) {bertbased_score}")
-    print(f"Accuracy (bertscore) {bertbased_score / total_columns}")
-    print(f"Total score (rougescore) {rougebased_score}")
-    print(f"Accuracy (rougescore) {rougebased_score / total_columns}")
-    print(f"Hierarchy precision (hierarchy score) {hierarchy_precision / total_columns}")
-    print(f"Hierarchy recall (hierarchy score) {hierarchy_recall / total_columns}")
-    print(f"Hierarchy fmeasure (hierarchy score) {hierarchy_fmeasure / total_columns}")
+            col_idx += 1
+
+    with open(f"{results_file}.txt", "w") as f:
+        f.write(f"Total columns {total_columns}\n")
+        f.write(f"Total score (bertscore) {bertbased_score}\n")
+        f.write(f"Accuracy (bertscore) {bertbased_score / total_columns}\n")
+        f.write(f"Total score (rougescore) {rougebased_score}\n")
+        f.write(f"Accuracy (rougescore) {rougebased_score / total_columns}\n")
+        f.write(f"Hierarchy precision (hierarchy score) {hierarchy_precision / total_columns}\n")
+        f.write(f"Hierarchy recall (hierarchy score) {hierarchy_recall / total_columns}\n")
+        f.write(f"Hierarchy fmeasure (hierarchy score) {hierarchy_fmeasure / total_columns}\n")
 
 
 if __name__ == "__main__":
@@ -129,5 +154,10 @@ if __name__ == "__main__":
         type=str,
         default="outputs.csv",
     )
+    parser.add_argument(
+        "--results",
+        type=str,
+        default="experiment_results",
+    )
     args = parser.parse_args()
-    eval(args.postprocessed_labels, args.inference_outputs)
+    eval(args.postprocessed_labels, args.inference_outputs, args.results)

@@ -29,6 +29,7 @@ To run the application and deploy it on EC2 instance, here are the next few step
 
 This folder also contains the `data_scripts/` folder which contains scripts to run postprocessing. Download the latest labels from the s3 bucket and run `python3 postprocessing.py --label-filename {label_filename}`. This will generate a new csv file called postprocessed_labels.csv.
 The `data_scripts/` folder also contains the `eval.py` script that runs evaluation of outputs on the benchmarks.
+To run evaluation, run `python3 eval.py --postprocessed-labels {postprocessed_labels.csv} --inference-outputs {outputs.csv} --results {filename to output results to}` 
 
 ## GPT Experiments
 

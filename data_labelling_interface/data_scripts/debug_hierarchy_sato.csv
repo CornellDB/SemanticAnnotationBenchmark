@@ -1,0 +1,227 @@
+0,0,name label thing,person agent thing,0.3333333333333333,0.3333333333333333,0.3333333333333333
+0,1,financial product product owl thing,person function activity,0.0,0.0,0.0
+0,2,sport team organisation agent thing,populate place settlement region place spatial thing,0.2,0.14285714285714285,0.16666666666666666
+0,3,financial product product owl thing,agent thing,0.2,0.5,0.28571428571428575
+0,4,sport team organisation agent thing,constituency populate place place thing,0.2,0.2,0.20000000000000004
+0,5,sport team organisation agent thing,region populate place place thing,0.2,0.2,0.20000000000000004
+1,0,artist person agent,person agent thing,0.6666666666666666,0.6666666666666666,0.6666666666666666
+1,1,name label thing,person agent thing,0.3333333333333333,0.3333333333333333,0.3333333333333333
+1,2,populate place place spatial thing,city settlement populate place place spatial thing,1.0,0.7142857142857143,0.8333333333333333
+2,0,name label thing,lake body water natural place place thing,0.3333333333333333,0.14285714285714285,0.2
+2,1,weight physical quantity quantity owl thing,latitude angle quantity physical quantity property thing,0.6666666666666666,0.5714285714285714,0.6153846153846153
+2,2,weight physical quantity quantity owl thing,longitude angular measure measure quantity physical thing thing,0.5,0.375,0.42857142857142855
+2,3,military rank rank person function role social role abstract thing,physical quantity quantity measure owl thing,0.1,0.16666666666666666,0.125
+2,4,name label thing,lake body water natural place place spatial thing,0.3333333333333333,0.125,0.18181818181818182
+3,0,position person function agent function function socially construct object abstraction thing,person agent thing,0.2727272727272727,1.0,0.42857142857142855
+3,1,county administrative region region populate place place thing,person agent thing,0.125,0.3333333333333333,0.18181818181818182
+4,0,name label thing,person agent thing,0.3333333333333333,0.3333333333333333,0.3333333333333333
+4,1,sport team organisation agent thing,company organisation agent thing,0.6,0.75,0.6666666666666665
+4,2,county administrative region region populate place place thing,city settlement populate place place spatial thing,0.5,0.5714285714285714,0.5333333333333333
+5,0,name label thing,message document work thing,0.3333333333333333,0.25,0.28571428571428575
+5,1,time period periodical work thing,time period periodical work thing,1.0,1.0,1.0
+5,2,time period periodical work thing,month time period period time time interval thing,0.8,0.5,0.6153846153846154
+5,3,age property thing,date time period interval thing,0.3333333333333333,0.2,0.25
+5,4,time period period time time interval thing,time period periodical literature work document physical thing thing,0.5714285714285714,0.4444444444444444,0.5
+6,0,name label thing,person agent thing,0.3333333333333333,0.3333333333333333,0.3333333333333333
+6,1,artist person agent,educational institution organisation agent thing,0.3333333333333333,0.2,0.25
+6,2,year time period period time time interval temporal entity,year time period interval thing,0.4444444444444444,0.8,0.5714285714285714
+6,3,position person function agent function function socially construct object abstraction thing,athlete person agent system thing,0.2727272727272727,0.6,0.37499999999999994
+6,4,name label thing,thing,0.3333333333333333,1.0,0.5
+6,6,military rank rank person function role social role abstract thing,athlete person agent thing,0.2,0.5,0.28571428571428575
+6,7,military rank rank person function role social role abstract thing,athlete person agent thing,0.2,0.5,0.28571428571428575
+6,8,weight physical quantity quantity owl thing,thing,0.16666666666666666,1.0,0.2857142857142857
+6,9,play work creative work thing,basketball player stat athlete person agent thing,0.2,0.14285714285714285,0.16666666666666666
+7,0,populate place place spatial thing,document work creative work thing,0.2,0.2,0.20000000000000004
+7,1,command activity,keyword thing,0.0,0.0,0.0
+8,0,city settlement populate place place spatial thing,organisation societal system social system agent,0.0,0.0,0.0
+8,1,name label thing,organisation societal system social system agent,0.0,0.0,0.0
+9,0,year time period period time time interval temporal entity,date time period periodical work thing,0.3333333333333333,0.5,0.4
+9,1,name label thing,organisation agent social person person thing,0.3333333333333333,0.16666666666666666,0.2222222222222222
+9,2,country populate place place thing,country code populate place place thing,1.0,0.8333333333333334,0.9090909090909091
+9,3,sport team organisation agent thing,company organisation agent thing,0.6,0.75,0.6666666666666665
+9,4,agent person organisation,company organisation agent,0.6666666666666666,0.6666666666666666,0.6666666666666666
+9,5,populate place place spatial thing,security incident event societal event activity happen occurrence situation thing,0.2,0.1,0.13333333333333333
+9,6,thing,work thing,1.0,0.5,0.6666666666666666
+9,7,populate place place spatial thing,data type thing,0.2,0.3333333333333333,0.25
+9,8,populate place place spatial thing,place location,0.2,0.5,0.28571428571428575
+9,9,condition thing,agent person organisation,0.0,0.0,0.0
+10,0,name label thing,work thing,0.3333333333333333,0.5,0.4
+10,1,album musical work work thing,artist person agent,0.0,0.0,0.0
+10,2,time period period time time interval thing,play count work creative work,0.0,0.0,0.0
+11,0,populate place place spatial thing,place populate place region administrative region country state,0.6,0.375,0.4615384615384615
+11,1,time period period time time interval thing,count person agent,0.0,0.0,0.0
+11,2,time period period time time interval thing,election result result event societal event work thing,0.14285714285714285,0.125,0.13333333333333333
+11,3,elevation place spatial thing,population place populate place thing,0.5,0.4,0.4444444444444445
+12,0,thing,organisation agent,0.0,0.0,0.0
+12,1,populate place place spatial thing,rat work product physical thing thing,0.2,0.16666666666666666,0.1818181818181818
+12,2,populate place place spatial thing,election result result event societal event work thing,0.2,0.125,0.15384615384615385
+13,0,album musical work work thing,dive individual sport summer sport olympic sport sport activity,0.0,0.0,0.0
+13,1,gender person social person agent,gender person social person agent social personality abstraction thing,1.0,0.5555555555555556,0.7142857142857143
+13,2,artist person agent,person agent thing,0.6666666666666666,0.6666666666666666,0.6666666666666666
+13,3,year time period period time time interval temporal entity,year time period interval thing,0.4444444444444444,0.8,0.5714285714285714
+13,4,country populate place place thing,place populate place settlement city architectural structure natural place mountain continent country island lake river sea stream region administrative region body water protect area forest religious build church cemetery monument statue historic place castle theatre museum stadium arena amusement park attraction mountain range volcano valley waterfall desert cave beach park garden route transportation road railway line railway tunnel bridge airport space shuttle land site spaceport port canal spacecraft land site spacecraft launch pad space station spacecraft space mission space probe planet planet mean mean thing,1.0,0.058823529411764705,0.1111111111111111
+13,5,military rank rank person function role social role abstract thing,record work product creative work thing,0.1,0.16666666666666666,0.125
+14,0,sport team organisation agent thing,place populate place city settlement spatial thing,0.2,0.14285714285714285,0.16666666666666666
+14,1,financial product product owl thing,person function activity,0.0,0.0,0.0
+14,2,age property thing,party membership organisation agent thing,0.3333333333333333,0.2,0.25
+14,3,sport team organisation agent thing,constituency populate place place spatial thing,0.2,0.16666666666666666,0.1818181818181818
+15,0,sport team organisation agent thing,university educational institution organisation agent,0.4,0.4,0.4000000000000001
+15,1,year time period period time time interval temporal entity,year time period periodical work thing,0.4444444444444444,0.6666666666666666,0.5333333333333333
+15,2,play work creative work thing,crime societal event event happen occurrence situation thing,0.2,0.125,0.15384615384615385
+15,3,military rank rank person function role social role abstract thing,military rank person function agent function function social object abstraction thing,0.7,0.6363636363636364,0.6666666666666666
+15,4,military rank rank person function role social role abstract thing,person agent,0.1,0.5,0.16666666666666669
+15,5,military rank rank person function role social role abstract thing,violation student person agent,0.1,0.25,0.14285714285714288
+16,0,sport team organisation agent thing,place populate place region administrative region country state,0.0,0.0,0.0
+16,1,depth property thing,unemployment economic concept concept,0.0,0.0,0.0
+16,2,depth property thing,unemployment economic concept concept,0.0,0.0,0.0
+16,3,depth property thing,unemployment economic concept concept,0.0,0.0,0.0
+16,4,depth property thing,unemployment economic concept concept,0.0,0.0,0.0
+16,5,age property thing,unemployment economic concept concept,0.0,0.0,0.0
+16,6,weight physical quantity quantity owl thing,unemployment economic concept concept,0.0,0.0,0.0
+16,7,depth property thing,unemployment economic concept concept,0.0,0.0,0.0
+16,8,populate place place spatial thing,crime act event agent system thing,0.2,0.16666666666666666,0.1818181818181818
+16,9,depth property thing,crime act event agent system thing,0.3333333333333333,0.16666666666666666,0.2222222222222222
+17,0,name label thing,person agent thing,0.3333333333333333,0.3333333333333333,0.3333333333333333
+18,0,financial product product owl thing,person function activity,0.0,0.0,0.0
+18,1,sport team organisation agent thing,place populate place city settlement thing,0.2,0.16666666666666666,0.1818181818181818
+18,2,thing,party membership organisation agent thing,1.0,0.2,0.33333333333333337
+18,3,sport team organisation agent thing,constituency populate place place thing,0.2,0.2,0.20000000000000004
+19,0,sport team organisation agent thing,company organisation agent thing,0.6,0.75,0.6666666666666665
+20,1,category resource,educational institution organisation agent,0.0,0.0,0.0
+20,2,name label thing,populate place place spatial thing,0.3333333333333333,0.2,0.25
+20,3,military rank rank person function role social role abstract thing,enrolment activity societal event event happen occurrence situation thing,0.1,0.1111111111111111,0.10526315789473685
+20,4,populate place place spatial thing,settlement populate place place,0.6,0.75,0.6666666666666665
+20,5,name label thing,head person agent,0.0,0.0,0.0
+21,1,name label thing,educational institution organisation agent,0.0,0.0,0.0
+21,2,thing,educational institution organisation agent,0.0,0.0,0.0
+21,3,age property thing,parent response rate,0.0,0.0,0.0
+21,4,age property thing,teacher response rate,0.0,0.0,0.0
+21,5,age property thing,student response rate,0.0,0.0,0.0
+21,6,weight physical quantity quantity owl thing,score attribute thing,0.16666666666666666,0.3333333333333333,0.2222222222222222
+21,9,weight physical quantity quantity owl thing,safety work activity thing respect reverence social concept concept thing,0.16666666666666666,0.1,0.125
+22,1,name label thing,educational institution organisation agent,0.0,0.0,0.0
+22,2,thing,administrative region region populate place place thing,1.0,0.14285714285714285,0.25
+22,3,thing,educational institution organisation agent,0.0,0.0,0.0
+22,4,name label thing,scholarship award thing,0.3333333333333333,0.3333333333333333,0.3333333333333333
+22,5,thing,scholarship award thing,1.0,0.3333333333333333,0.5
+22,6,thing,scholarship award thing,1.0,0.3333333333333333,0.5
+22,7,thing,scholarship award thing,1.0,0.3333333333333333,0.5
+22,8,thing,scholarship award thing,1.0,0.3333333333333333,0.5
+22,9,note document work thing,educational program program work thing,0.5,0.4,0.4444444444444445
+23,0,postal address place spatial thing,postal address place spatial thing,1.0,1.0,1.0
+23,1,military rank rank person function role social role abstract thing,borough region populate place place thing,0.1,0.16666666666666666,0.125
+23,2,elevation place spatial thing,region populate place place thing,0.5,0.4,0.4444444444444445
+23,3,city settlement populate place place spatial thing,place populate place settlement city architectural structure natural place mountain continent country island lake river sea stream region administrative region body water protect area forest religious build church cemetery monument statue historic place castle theatre museum stadium arena amusement park attraction mountain range volcano valley waterfall desert cave beach park garden route transportation road railway line railway tunnel bridge airport space shuttle land site spaceport port canal spacecraft land site spacecraft launch pad space station spacecraft space mission space probe planet planet mean mean thing,0.8571428571428571,0.07058823529411765,0.13043478260869565
+23,5,condition thing,identifier thing,0.5,0.5,0.5
+23,6,name label thing,name attribute,0.3333333333333333,0.5,0.4
+23,7,populate place place spatial thing,place populate place region administrative region country state,0.6,0.375,0.4615384615384615
+23,9,software work thing,postal code populate place place spatial thing,0.3333333333333333,0.14285714285714285,0.2
+24,1,thing,activity work task event agent system thing,1.0,0.14285714285714285,0.25
+24,2,postal address place spatial thing,activity work event thing,0.2,0.25,0.22222222222222224
+24,4,elevation place spatial thing,thing,0.25,1.0,0.4
+25,0,military rank rank person function role social role abstract thing,identifier thing,0.1,0.5,0.16666666666666669
+25,1,name label thing,defect abnormal physical state state physical thing thing,0.3333333333333333,0.125,0.18181818181818182
+25,7,company organisation agent,identifier thing,0.0,0.0,0.0
+25,8,product physical thing thing,identifier thing,0.25,0.5,0.3333333333333333
+25,9,result work event thing,date time period period thing,0.25,0.2,0.22222222222222224
+26,0,software work thing,identifier thing,0.3333333333333333,0.5,0.4
+26,1,thing,thing,1.0,1.0,1.0
+26,2,company organisation agent,organisation agent,0.6666666666666666,1.0,0.8
+26,3,thing,organisation agent,0.0,0.0,0.0
+26,4,thing,industry economic sector sector economic branch activity work,0.0,0.0,0.0
+26,5,thing,identifier thing,1.0,0.5,0.6666666666666666
+26,6,condition thing,fee price amount quantitative value value thing,0.5,0.14285714285714285,0.22222222222222224
+26,7,thing,thing,1.0,1.0,1.0
+26,8,software work thing,amount price quantitative value value thing,0.3333333333333333,0.16666666666666666,0.2222222222222222
+27,0,time period period time time interval thing,identifier thing,0.14285714285714285,0.5,0.22222222222222224
+27,1,name label thing,software work activity thing,0.3333333333333333,0.25,0.28571428571428575
+27,2,thing,government agency organisation agent thing,1.0,0.2,0.33333333333333337
+27,4,thing,thing,1.0,1.0,1.0
+27,5,thing,thing,1.0,1.0,1.0
+27,6,note document work thing,thing,0.25,1.0,0.4
+27,7,organisation agent,organisation agent,1.0,1.0,1.0
+27,8,thing,website work organisation agent thing,1.0,0.2,0.33333333333333337
+27,9,note document work thing,eligibility condition thing,0.25,0.3333333333333333,0.28571428571428575
+28,0,city settlement populate place place spatial thing,borough region populate place place,0.42857142857142855,0.6,0.5
+28,1,year time period period time time interval temporal entity,time period periodical work thing,0.3333333333333333,0.6,0.42857142857142855
+28,2,condition thing,request status status concept,0.0,0.0,0.0
+28,3,military rank rank person function role social role abstract thing,quantity property,0.0,0.0,0.0
+29,0,software work thing,identifier thing,0.3333333333333333,0.5,0.4
+29,1,sport team organisation agent thing,organisation agent thing,0.6,1.0,0.7499999999999999
+29,2,condition thing,condition quality abstraction,0.5,0.3333333333333333,0.4
+29,3,thing,work thing,1.0,0.5,0.6666666666666666
+29,4,condition thing,category resource,0.0,0.0,0.0
+29,5,category resource,thing,0.0,0.0,0.0
+29,8,thing,thing,1.0,1.0,1.0
+29,9,condition thing,thing,0.5,1.0,0.6666666666666666
+30,0,software work thing,identifier thing,0.3333333333333333,0.5,0.4
+30,1,software work thing,document license document work product creative work thing,0.6666666666666666,0.25,0.36363636363636365
+30,2,name label thing,organisation agent,0.0,0.0,0.0
+30,3,result work event thing,date time period period thing,0.25,0.2,0.22222222222222224
+30,4,album musical work work thing,industry economic sector sector concept,0.0,0.0,0.0
+30,5,city settlement populate place place spatial thing,settlement populate place place,0.5714285714285714,1.0,0.7272727272727273
+30,6,thing,physical quantity quantity owl thing,1.0,0.2,0.33333333333333337
+30,7,military rank rank person function role social role abstract thing,quantity property thing,0.1,0.3333333333333333,0.15384615384615383
+30,8,condition thing,result event societal event activity work thing,0.5,0.14285714285714285,0.22222222222222224
+30,9,military rank rank person function role social role abstract thing,quantity property,0.0,0.0,0.0
+31,0,year time period period time time interval temporal entity,academic year time period periodical work thing,0.4444444444444444,0.5714285714285714,0.5
+31,1,sport team organisation agent thing,place populate place settlement city location thing,0.2,0.14285714285714285,0.16666666666666666
+31,2,year time period period time time interval temporal entity,organization agent thing,0.0,0.0,0.0
+31,3,thing,discharge event work thing,1.0,0.25,0.4
+31,4,agent person organisation,property thing,0.0,0.0,0.0
+32,0,note document work thing,time period periodical literature work document thing,0.75,0.42857142857142855,0.5454545454545454
+32,1,company organisation agent,organisation agent thing,0.6666666666666666,0.6666666666666666,0.6666666666666666
+32,2,name label thing,identifier thing,0.3333333333333333,0.5,0.4
+32,4,thing,purpose thing,1.0,0.5,0.6666666666666666
+32,6,region place thing,postal code populate place place spatial thing,0.6666666666666666,0.2857142857142857,0.4
+32,7,result work event thing,start date work event thing,0.75,0.6,0.6666666666666665
+32,8,result work event thing,end date work event thing,0.75,0.6,0.6666666666666665
+32,9,result work event thing,start date work event time period thing,0.75,0.42857142857142855,0.5454545454545454
+33,0,military rank rank person function role social role abstract thing,populate place place spatial thing,0.1,0.2,0.13333333333333333
+33,1,software work thing,populate place place spatial thing,0.3333333333333333,0.2,0.25
+33,2,name label thing,educational institution organisation agent,0.0,0.0,0.0
+33,3,thing,thing,1.0,1.0,1.0
+33,4,city settlement populate place place spatial thing,populate place place spatial thing,0.7142857142857143,1.0,0.8333333333333333
+33,5,postal address place spatial thing,postal address place spatial thing,1.0,1.0,1.0
+33,6,software work thing,build architectural structure place thing,0.3333333333333333,0.2,0.25
+33,7,thing,accessibility work human make object physical thing thing,1.0,0.125,0.2222222222222222
+33,8,software work thing,device product physical thing thing,0.3333333333333333,0.2,0.25
+33,9,command activity,website work product creative work thing,0.0,0.0,0.0
+34,0,symbol mean transportation product physical thing thing,identifier thing,0.14285714285714285,0.5,0.22222222222222224
+34,1,software work thing,identifier thing,0.3333333333333333,0.5,0.4
+34,2,thing,chemical substance substance physical object thing,1.0,0.16666666666666666,0.2857142857142857
+34,3,result work event thing,time period periodical work thing,0.5,0.4,0.4444444444444445
+34,4,thing,thing,1.0,1.0,1.0
+35,0,county administrative region region populate place place thing,settlement populate place place,0.375,0.75,0.5
+35,1,age property thing,educational organization organization agent,0.0,0.0,0.0
+35,2,year time period period time time interval temporal entity,time period periodical work thing,0.3333333333333333,0.6,0.42857142857142855
+35,3,sport team organisation agent thing,disability health problem condition thing,0.2,0.2,0.20000000000000004
+35,4,military rank rank person function role social role abstract thing,number topical concept,0.0,0.0,0.0
+35,5,depth property thing,score work thing,0.3333333333333333,0.3333333333333333,0.3333333333333333
+36,0,category resource,government agency organisation agent thing,0.0,0.0,0.0
+36,1,thing,document work activity thing,1.0,0.25,0.4
+36,2,thing,document work thing,1.0,0.3333333333333333,0.5
+36,3,time period period time time interval thing,frequency property thing,0.14285714285714285,0.3333333333333333,0.2
+36,4,time period period time time interval thing,legal case work document thing,0.14285714285714285,0.2,0.16666666666666666
+36,5,postal address place spatial thing,document work thing,0.2,0.3333333333333333,0.25
+36,6,thing,document work thing,1.0,0.3333333333333333,0.5
+36,7,year time period period time time interval temporal entity,date time period period thing,0.3333333333333333,0.6,0.42857142857142855
+37,0,company organisation agent,organisation agent thing,0.6666666666666666,0.6666666666666666,0.6666666666666666
+37,1,sport team organisation agent thing,organisation agent thing,0.6,1.0,0.7499999999999999
+37,2,position person function agent function function socially construct object abstraction thing,telephone device product physical thing thing,0.09090909090909091,0.16666666666666666,0.11764705882352942
+37,3,result work event thing,start date work event time period thing,0.75,0.42857142857142855,0.5454545454545454
+38,0,thing,administrative region region place thing,1.0,0.2,0.33333333333333337
+38,3,software work thing,identifier thing,0.3333333333333333,0.5,0.4
+38,4,populate place place spatial thing,build architectural structure place thing,0.4,0.4,0.4000000000000001
+38,5,software work thing,identifier thing,0.3333333333333333,0.5,0.4
+38,6,populate place place spatial thing,name label thing,0.2,0.3333333333333333,0.25
+38,7,populate place place spatial thing,room place location physical thing thing,0.4,0.3333333333333333,0.3636363636363636
+38,8,thing,thing,1.0,1.0,1.0
+38,9,region place thing,property thing,0.3333333333333333,0.5,0.4
+39,0,year time period period time time interval temporal entity,time period periodical work thing,0.3333333333333333,0.6,0.42857142857142855
+39,1,category resource,place spatial thing,0.0,0.0,0.0
+39,2,category resource,person agent,0.0,0.0,0.0
+39,4,thing,person agent,0.0,0.0,0.0
+39,5,thing,thing,1.0,1.0,1.0
+39,6,agent person organisation,number students organisation agent,0.6666666666666666,0.5,0.5714285714285715
+39,7,military rank rank person function role social role abstract thing,number students organisation agent,0.0,0.0,0.0
